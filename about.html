@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/pointer.png">
+    <title>GRIT | About Us</title>
+    <meta name="description" content="The story behind GRIT. Born from a belief that everyday clothing should be anything but ordinary.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="marquee-content">
+            <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
+            <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
+            <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
+        </div>
+    </div>
+
+    <canvas id="interactive-bg"></canvas>
+    <div class="dragon-bg"></div>
+    <div class="custom-cursor" id="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="GRIT" style="height:90px;width:auto;"></a>
+            <div class="nav-links">
+                <div class="nav-item-dropdown">
+                    <a href="collection.html?category=men">Men</a>
+                    <div class="dropdown-content">
+                        <a href="collection.html?category=men#section-t-shirts">T-Shirts</a>
+                        <a href="collection.html?category=men#section-shirt">Shirt</a>
+                        <a href="collection.html?category=men#section-hoodie">Hoodie</a>
+                    </div>
+                </div>
+                <div class="nav-item-dropdown">
+                    <a href="collection.html?category=women">Women</a>
+                    <div class="dropdown-content">
+                        <a href="collection.html?category=women#section-t-shirt">T-Shirt</a>
+                        <a href="collection.html?category=women#section-crop-top">Crop-Top</a>
+                        <a href="collection.html?category=women#section-dress">Dress</a>
+                    </div>
+                </div>
+                <a href="collection.html?category=others">Others</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" id="account-link" class="icon-button" aria-label="Account">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </a>
+                <button id="search-toggle" class="icon-button" aria-label="Open Search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+                <button id="wishlist-toggle" class="icon-button" aria-label="Open Wishlist">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                </button>
+                <button id="cart-toggle" class="icon-button" aria-label="Open Cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <p class="collection-breadcrumb"><a href="index.html">Home</a> / About</p>
+            <h1 class="about-headline">Born from Grit.</h1>
+            <p class="about-subheadline">We build clothing for people who don't settle.</p>
+        </div>
+    </section>
+
+    <!-- Brand Story -->
+    <section class="about-story">
+        <div class="about-story-image">
+            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1200&auto=format&fit=crop" alt="GRIT Brand Story" loading="lazy">
+        </div>
+        <div class="about-story-text">
+            <h2>The Story</h2>
+            <p>GRIT was founded on a simple frustration — most clothing was either cheap and disposable, or expensive and pretentious. There was no middle ground for people who wanted to dress well without overthinking it.</p>
+            <p>We set out to change that. Every piece in the GRIT lineup is designed with intention: clean silhouettes, premium materials, and cuts that work in the real world — whether you're at a meeting, at the gym, or just living your day.</p>
+            <p>We believe your wardrobe should reflect who you are, not what's trending. That's why we don't follow fast fashion. We create essentials that are built to last, season after season.</p>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="about-stats-bar">
+        <div class="about-stat">
+            <div class="about-stat-number">500+</div>
+            <div class="about-stat-label">Products</div>
+        </div>
+        <div class="about-stat">
+            <div class="about-stat-number">10,000+</div>
+            <div class="about-stat-label">Happy Customers</div>
+        </div>
+        <div class="about-stat">
+            <div class="about-stat-number">4.8&#9733;</div>
+            <div class="about-stat-label">Average Rating</div>
+        </div>
+        <div class="about-stat">
+            <div class="about-stat-number">14-Day</div>
+            <div class="about-stat-label">Easy Returns</div>
+        </div>
+    </div>
+
+    <!-- Values -->
+    <section class="about-values">
+        <div class="section-header" style="margin-bottom:3rem;">
+            <h2>What We Stand For</h2>
+            <p>Three principles that drive every decision we make.</p>
+        </div>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">&#129529;</div>
+                <h3>Premium Materials</h3>
+                <p>We source only the finest fabrics — breathable cottons, durable blends, and high-GSM knits. Feel the difference from the first wear.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">&#9986;&#65039;</div>
+                <h3>Precision Crafted</h3>
+                <p>Every stitch is intentional. Our manufacturing partners go through rigorous quality checks so that what reaches you is exactly what was designed.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">&#9851;&#65039;</div>
+                <h3>Built to Last</h3>
+                <p>We don't do trends. GRIT pieces are designed as timeless additions to your wardrobe — not disposable fashion that falls apart after three washes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="about-cta">
+        <h2>Ready to Elevate Your Wardrobe?</h2>
+        <p>Explore the collection and find your next favourite piece.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+            <a href="collection.html?category=men" class="btn btn-outline">Shop Men</a>
+            <a href="collection.html?category=women" class="btn btn-outline">Shop Women</a>
+        </div>
+    </section>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-container">
+            <button class="close-search" id="close-search">&times;</button>
+            <input type="text" id="search-input" placeholder="Search products..." autocomplete="off">
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Wishlist Overlay -->
+    <div class="cart-overlay" id="wishlist-overlay">
+        <div class="cart-drawer">
+            <div class="cart-header">
+                <h2>Wishlist</h2>
+                <button class="close-cart" id="close-wishlist">&times;</button>
+            </div>
+            <div class="cart-items" id="wishlist-items">
+                <p class="empty-cart-msg">Your wishlist is empty.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-drawer">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart" id="close-cart">&times;</button>
+            </div>
+            <div class="shipping-progress-container" id="shipping-progress-container">
+                <p class="shipping-message" id="shipping-message">Add ₹5,000 to unlock free shipping.</p>
+                <div class="shipping-bar-bg"><div class="shipping-bar-fill" id="shipping-bar-fill"></div></div>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <p class="empty-cart-msg">Your cart is currently empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total"><span>Subtotal:</span><span id="cart-total-price">₹0.00</span></div>
+                <button class="btn btn-primary w-100" id="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>GRIT</h3>
+                <p>Modern essentials for the conscious mind.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="collection.html?category=men">Men</a>
+                <a href="collection.html?category=women">Women</a>
+                <a href="collection.html?category=others">Others</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="contact.html#faq">FAQ</a>
+                <a href="contact.html#shipping">Shipping &amp; Returns</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">My Account</a>
+            </div>
+            <div class="footer-links">
+                <h4>Follow Us</h4>
+                <a href="https://www.instagram.com/grit__nation?igsh=MTZ2bHFzeXU5OTF3Zg==" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.4rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+                    Instagram
+                </a>
+                <a href="https://wa.me/919999999999" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.4rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GRIT. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="auth.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // About-page specific animations (after main.js loads)
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+            gsap.registerPlugin(ScrollTrigger);
+
+            const sections = [
+                '.about-hero-content',
+                '.about-story',
+                '.about-stats-bar',
+                '.about-values .section-header',
+                '.values-grid',
+                '.about-cta'
+            ];
+            sections.forEach(sel => {
+                const el = document.querySelector(sel);
+                if (!el) return;
+                gsap.from(el, {
+                    y: 40, opacity: 0, duration: 0.9, ease: 'power2.out',
+                    scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
+                });
+            });
+
+            gsap.from('.about-stat', {
+                y: 30, opacity: 0, duration: 0.7, stagger: 0.15, ease: 'power2.out',
+                scrollTrigger: { trigger: '.about-stats-bar', start: 'top 85%' }
+            });
+
+            gsap.from('.value-card', {
+                y: 30, opacity: 0, duration: 0.7, stagger: 0.15, ease: 'power2.out',
+                scrollTrigger: { trigger: '.values-grid', start: 'top 85%' }
+            });
+        });
+    </script>
+</body>
+</html>

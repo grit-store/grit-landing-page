@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/pointer.png">
+    <title>GRIT | Premium Clothing</title>
+    <meta name="description" content="Discover GRIT. Elevated essentials and premium clothing for the modern wardrobe.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="marquee-content">
+            <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
+            <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
+            <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
+            <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
+        </div>
+    </div>
+
+    <canvas id="interactive-bg"></canvas>
+    <div class="dragon-bg"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><img src="assets/logo.png" alt="GRIT" style="height: 90px; width: auto;"></a>
+            <div class="nav-links">
+                <div class="nav-item-dropdown">
+                    <a href="collection.html?category=men">Men</a>
+                    <div class="dropdown-content">
+                        <a href="collection.html?category=men#section-t-shirts">T-Shirts</a>
+                        <a href="collection.html?category=men#section-shirt">Shirt</a>
+                        <a href="collection.html?category=men#section-vest">Vest</a>
+                        <a href="collection.html?category=men#section-sweatpants">Sweatpants</a>
+                        <a href="collection.html?category=men#section-shorts">Shorts</a>
+                        <a href="collection.html?category=men#section-jackets">Jackets</a>
+                        <a href="collection.html?category=men#section-hoodie">Hoodie</a>
+                    </div>
+                </div>
+                <div class="nav-item-dropdown">
+                    <a href="collection.html?category=women">Women</a>
+                    <div class="dropdown-content columns-2">
+                        <a href="collection.html?category=women#section-t-shirt">T-Shirt</a>
+                        <a href="collection.html?category=women#section-tank-top">Tank-Top</a>
+                        <a href="collection.html?category=women#section-crop-top">Crop-Top</a>
+                        <a href="collection.html?category=women#section-tube-top">Tube-Top</a>
+                        <a href="collection.html?category=women#section-sports-bra">Sports-Bra</a>
+                        <a href="collection.html?category=women#section-crop-tank">Crop-Tank</a>
+                        <a href="collection.html?category=women#section-mini-skirt">Mini-Skirt</a>
+                        <a href="collection.html?category=women#section-pencil-skirt">Pencil-Skirt</a>
+                        <a href="collection.html?category=women#section-legging">Legging</a>
+                        <a href="collection.html?category=women#section-shorts">Shorts</a>
+                        <a href="collection.html?category=women#section-dress">Dress</a>
+                        <a href="collection.html?category=women#section-bomber-jacket">Bomber-Jacket</a>
+                        <a href="collection.html?category=women#section-cropped-hoodie">Cropped Hoodie</a>
+                    </div>
+                </div>
+                <div class="nav-item-dropdown">
+                    <a href="collection.html?category=others">Others</a>
+                    <div class="dropdown-content">
+                        <a href="collection.html?category=others#section-shirts">Shirts</a>
+                        <a href="collection.html?category=others#section-t-shirts">T-Shirts</a>
+                        <a href="collection.html?category=others#section-shorts">Shorts</a>
+                        <a href="collection.html?category=others#section-hoodie">Hoodie</a>
+                        <a href="collection.html?category=others#section-sweatshirt">Sweatshirt</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+
+
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" id="account-link" class="icon-button" aria-label="Account">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <button id="search-toggle" class="icon-button" aria-label="Open Search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <button id="wishlist-toggle" class="icon-button" aria-label="Open Wishlist">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </button>
+                <button id="cart-toggle" class="icon-button" aria-label="Open Cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Elevate Your Everyday.</h1>
+            <p class="hero-subtitle">Discover the new Fall Collection. Minimalist design meets uncompromising quality.</p>
+            <a href="#collection" class="btn btn-primary magnetic">Shop Collection</a>
+        </div>
+        <div class="hero-image-container slideshow">
+            <div class="hero-vertical-text">NEW ARRIVALS</div>
+        </div>
+    </header>
+
+    <!-- Product Catalog -->
+    <section id="collection" class="products-section">
+        <div class="section-header reveal">
+            <h2>The Essentials</h2>
+            <p>Curated pieces for a timeless wardrobe.</p>
+        </div>
+        
+        <div class="product-grid" id="product-grid">
+            <!-- Product Cards will be injected by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Social Proof / Lookbook -->
+    <section class="social-proof reveal">
+        <div class="section-header">
+            <h2>As Seen On You</h2>
+            <p>Tag @GRIT_official to be featured</p>
+        </div>
+        <div class="instagram-grid">
+            <div class="ig-post">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" alt="IG 1">
+                <div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+            </div>
+            <div class="ig-post">
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800&auto=format&fit=crop" alt="IG 2">
+                <div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+            </div>
+            <div class="ig-post">
+                <img src="https://images.unsplash.com/photo-1550614000-4b95d466f288?q=80&w=800&auto=format&fit=crop" alt="IG 3">
+                <div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+            </div>
+            <div class="ig-post">
+                <img src="https://images.unsplash.com/photo-1485231183945-fd660d71593c?q=80&w=800&auto=format&fit=crop" alt="IG 4">
+                <div class="ig-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-container">
+            <button class="close-search" id="close-search">&times;</button>
+            <input type="text" id="search-input" placeholder="Search products..." autocomplete="off">
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Wishlist Overlay -->
+    <div class="cart-overlay" id="wishlist-overlay">
+        <div class="cart-drawer">
+            <div class="cart-header">
+                <h2>Wishlist</h2>
+                <button class="close-cart" id="close-wishlist" aria-label="Close Wishlist">&times;</button>
+            </div>
+            <div class="cart-items" id="wishlist-items">
+                <p class="empty-cart-msg">Your wishlist is empty.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-drawer">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart" id="close-cart" aria-label="Close Cart">&times;</button>
+            </div>
+            
+            <!-- Shipping Progress Bar -->
+            <div class="shipping-progress-container" id="shipping-progress-container">
+                <p class="shipping-message" id="shipping-message">Add ₹5,000 to unlock free shipping.</p>
+                <div class="shipping-bar-bg">
+                    <div class="shipping-bar-fill" id="shipping-bar-fill"></div>
+                </div>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items injected here -->
+                <p class="empty-cart-msg">Your cart is currently empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cart-total-price">₹0.00</span>
+            </div>
+                <!-- This will eventually be replaced by the Shopify Checkout / Buy Button action -->
+                <button class="btn btn-primary w-100" id="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section reveal">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <h2>Stay in the Loop</h2>
+                <p>New drops, exclusive offers, and style guides &mdash; straight to your inbox.</p>
+            </div>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+            <p class="newsletter-success" id="newsletter-success" style="display:none;">&#10003; You're in! Welcome to the GRIT family.</p>
+            <p class="newsletter-note">No spam, ever. Unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer reveal">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>GRIT</h3>
+                <p>Modern essentials for the conscious mind.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="collection.html?category=men">Men</a>
+                <a href="collection.html?category=women">Women</a>
+                <a href="collection.html?category=others">Others</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="contact.html#faq">FAQ</a>
+                <a href="contact.html#shipping">Shipping &amp; Returns</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">My Account</a>
+            </div>
+            <div class="footer-links">
+                <h4>Follow Us</h4>
+                <a href="https://www.instagram.com/grit__nation?igsh=MTZ2bHFzeXU5OTF3Zg==" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.4rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+                    Instagram
+                </a>
+                <a href="https://wa.me/919999999999" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.4rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GRIT. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Shopify, GSAP -->
+    <script src="https://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="auth.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

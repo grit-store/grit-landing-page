@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/pointer.png">
+    <title>GRIT | Product Details</title>
+    <meta name="description" content="View product details on GRIT.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="marquee-content">
+            <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
+            <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
+            <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
+            <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
+        </div>
+    </div>
+
+    <canvas id="interactive-bg"></canvas>
+    <div class="dragon-bg"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="GRIT" style="height: 90px; width: auto;"></a>
+            <div class="nav-links">
+                <div class="nav-item-dropdown">
+                    <a href="collection.html?category=men">Men</a>
+                    <div class="dropdown-content">
+                        <a href="collection.html?category=men#section-t-shirts">T-Shirts</a>
+                        <a href="collection.html?category=men#section-shirt">Shirt</a>
+                        <a href="collection.html?category=men#section-vest">Vest</a>
+                        <a href="collection.html?category=men#section-sweatpants">Sweatpants</a>
+                        <a href="collection.html?category=men#section-shorts">Shorts</a>
+                        <a href="collection.html?category=men#section-jackets">Jackets</a>
+                        <a href="collection.html?category=men#section-hoodie">Hoodie</a>
+                    </div>
+                </div>
+                <div class="nav-item-dropdown">
+                    <a href="collection.html?category=women">Women</a>
+                    <div class="dropdown-content columns-2">
+                        <a href="collection.html?category=women#section-t-shirt">T-Shirt</a>
+                        <a href="collection.html?category=women#section-tank-top">Tank-Top</a>
+                        <a href="collection.html?category=women#section-crop-top">Crop-Top</a>
+                        <a href="collection.html?category=women#section-tube-top">Tube-Top</a>
+                        <a href="collection.html?category=women#section-sports-bra">Sports-Bra</a>
+                        <a href="collection.html?category=women#section-crop-tank">Crop-Tank</a>
+                        <a href="collection.html?category=women#section-mini-skirt">Mini-Skirt</a>
+                        <a href="collection.html?category=women#section-pencil-skirt">Pencil-Skirt</a>
+                        <a href="collection.html?category=women#section-legging">Legging</a>
+                        <a href="collection.html?category=women#section-shorts">Shorts</a>
+                        <a href="collection.html?category=women#section-dress">Dress</a>
+                        <a href="collection.html?category=women#section-bomber-jacket">Bomber-Jacket</a>
+                        <a href="collection.html?category=women#section-cropped-hoodie">Cropped Hoodie</a>
+                    </div>
+                </div>
+                <div class="nav-item-dropdown">
+                    <a href="collection.html?category=others">Others</a>
+                    <div class="dropdown-content">
+                        <a href="collection.html?category=others#section-shirts">Shirts</a>
+                        <a href="collection.html?category=others#section-t-shirts">T-Shirts</a>
+                        <a href="collection.html?category=others#section-shorts">Shorts</a>
+                        <a href="collection.html?category=others#section-hoodie">Hoodie</a>
+                        <a href="collection.html?category=others#section-sweatshirt">Sweatshirt</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" id="account-link" class="icon-button" aria-label="Account">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </a>
+                <button id="search-toggle" class="icon-button" aria-label="Open Search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <button id="wishlist-toggle" class="icon-button" aria-label="Open Wishlist">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </button>
+                <button id="cart-toggle" class="icon-button" aria-label="Open Cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <section class="pdp-section">
+        <div class="pdp-container" id="pdp-container">
+            <!-- Left: Image Gallery -->
+            <div class="pdp-gallery">
+                <div class="pdp-main-image-container" id="pdp-main-image-container">
+                    <img src="" alt="Product Image" id="pdp-main-img" class="pdp-main-image">
+                </div>
+                <div class="pdp-thumbnails" id="pdp-thumbnails-container">
+                    <!-- Thumbnails injected by JS -->
+                </div>
+            </div>
+
+            <!-- Right: Product Info -->
+            <div class="pdp-info reveal">
+                <div class="pdp-category" id="pdp-category">Category</div>
+                <h1 class="pdp-title" id="pdp-title">Loading...</h1>
+                <div class="pdp-price" id="pdp-price">₹0.00</div>
+                <div id="pdp-options-container" class="pdp-options"></div>
+
+                <div class="size-guide-link">
+                    <button id="open-size-guide" class="btn-link">Size Guide</button>
+                </div>
+                
+                <div class="pdp-actions">
+                    <button class="btn btn-primary w-100 magnetic" id="pdp-add-to-cart">Add to Cart</button>
+                    <button class="btn btn-outline w-100 magnetic" id="pdp-buy-now">Buy it Now</button>
+                </div>
+                
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <span>Secure Checkout</span>
+                    </div>
+                    <div class="trust-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <span>Premium Quality</span>
+                    </div>
+                    <div class="trust-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"></path></svg>
+                        <span>14-Day Returns</span>
+                    </div>
+                </div>
+                
+                <!-- Accordions -->
+                <div class="pdp-accordions">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Details & Material <span class="icon">+</span></button>
+                        <div class="accordion-content">
+                            <p class="pdp-description" id="pdp-description">
+                                This premium piece is designed with utmost attention to detail, utilizing the finest materials to ensure longevity and style. Perfect for any modern wardrobe seeking a touch of grit and elegance.
+                            </p>
+                            <ul class="pdp-details-list" id="pdp-dynamic-details">
+                                <li><strong>Material:</strong> 100% Premium Quality</li>
+                                <li><strong>Fit:</strong> True to size</li>
+                                <li><strong>Care:</strong> Dry clean only</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">Shipping & Returns <span class="icon">+</span></button>
+                        <div class="accordion-content">
+                            <p>Free shipping on orders over ₹5,000. Returns accepted within 14 days of delivery. <a href="#">Read our full policy.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Reviews Section -->
+        <div class="pdp-reviews reveal" id="pdp-reviews-section">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2>Customer Reviews</h2>
+            </div>
+            <div class="reviews-container">
+                <!-- Summary injected by JS -->
+                <div class="reviews-summary" id="reviews-summary">
+                    <div class="rating-large" id="reviews-avg">—</div>
+                    <div class="stars" id="reviews-stars"></div>
+                    <p id="reviews-count">No reviews yet</p>
+                    <button class="btn btn-outline" id="open-review-modal" style="margin-top: 1rem;">Write a Review</button>
+                </div>
+                <!-- Reviews list injected by JS -->
+                <div class="reviews-list" id="reviews-list">
+                    <p style="color:var(--color-text-light);">Loading reviews...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products Section -->
+        <div class="related-products reveal" style="margin-top: 6rem;">
+            <div class="section-header">
+                <h2>You May Also Like</h2>
+            </div>
+            <div class="product-grid" id="related-product-grid">
+                <!-- Injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Size Guide Modal -->
+    <div class="modal-overlay" id="size-guide-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-size-guide">&times;</button>
+            <h2>Size Guide</h2>
+            <div id="size-guide-image-container" style="margin-top: 1.5rem; text-align: center;">
+                <img src="" id="size-guide-dynamic-img" alt="Size Guide" style="max-width: 100%; height: auto; border-radius: 8px;">
+            </div>
+            <p id="size-guide-fallback-msg" style="margin-top: 1rem; font-size: 0.85rem; color: var(--color-text-light); display: none;">Size guide currently unavailable for this product.</p>
+        </div>
+    </div>
+
+    <!-- Write a Review Modal -->
+    <div class="modal-overlay" id="review-modal">
+        <div class="modal-content review-modal-content">
+            <button class="close-modal" id="close-review-modal">&times;</button>
+            <h2>Write a Review</h2>
+            <p id="review-modal-product-name" style="color:var(--color-text-light);margin-bottom:1.5rem;font-size:0.9rem;"></p>
+
+            <div id="review-login-prompt" style="display:none;text-align:center;padding:1rem 0;">
+                <p style="margin-bottom:1rem;">You need to be logged in to write a review.</p>
+                <a href="login.html" class="btn btn-primary">Log In</a>
+            </div>
+
+            <div id="review-not-purchased" style="display:none;text-align:center;padding:1.5rem 0;">
+                <div style="font-size:2.5rem;margin-bottom:1rem;">🛍️</div>
+                <h3 style="margin-bottom:0.75rem;">Purchase Required</h3>
+                <p style="color:var(--color-text-light);font-size:0.9rem;line-height:1.6;">Only customers who have purchased this product can leave a review.<br>Buy it first and come back to share your experience!</p>
+            </div>
+
+            <form id="review-form" style="display:none;">
+                <!-- Star Picker -->
+                <div class="form-group" style="margin-bottom:1.5rem;">
+                    <label style="font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">Your Rating *</label>
+                    <div class="star-picker" id="star-picker">
+                        <span data-value="1">★</span>
+                        <span data-value="2">★</span>
+                        <span data-value="3">★</span>
+                        <span data-value="4">★</span>
+                        <span data-value="5">★</span>
+                    </div>
+                    <input type="hidden" id="review-rating" value="0">
+                </div>
+
+                <div class="form-group" style="margin-bottom:1.5rem;">
+                    <label for="review-title" style="font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">Review Title *</label>
+                    <input type="text" id="review-title" placeholder="e.g. Perfect fit!" maxlength="80" required>
+                </div>
+
+                <div class="form-group" style="margin-bottom:1.5rem;">
+                    <label for="review-body" style="font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">Your Review *</label>
+                    <textarea id="review-body" placeholder="Share your experience with this product..." rows="4" maxlength="500" required style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(196,159,112,0.2);border-radius:6px;padding:0.8rem 1rem;color:var(--color-text);font-family:var(--font-main);resize:vertical;"></textarea>
+                </div>
+
+                <p id="review-form-error" style="color:#ff4d4d;font-size:0.85rem;display:none;margin-bottom:1rem;"></p>
+                <button type="submit" class="btn btn-primary w-100" id="review-submit-btn">Submit Review</button>
+            </form>
+
+            <div id="review-success" style="display:none;text-align:center;padding:1.5rem 0;">
+                <div style="font-size:3rem;margin-bottom:1rem;">🎉</div>
+                <h3>Thank you for your review!</h3>
+                <p style="color:var(--color-text-light);margin-top:0.5rem;">Your review has been published.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-container">
+            <button class="close-search" id="close-search">&times;</button>
+            <input type="text" id="search-input" placeholder="Search products..." autocomplete="off">
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Wishlist Overlay -->
+    <div class="cart-overlay" id="wishlist-overlay">
+        <div class="cart-drawer">
+            <div class="cart-header">
+                <h2>Wishlist</h2>
+                <button class="close-cart" id="close-wishlist" aria-label="Close Wishlist">&times;</button>
+            </div>
+            <div class="cart-items" id="wishlist-items">
+                <p class="empty-cart-msg">Your wishlist is empty.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-drawer">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart" id="close-cart" aria-label="Close Cart">&times;</button>
+            </div>
+            
+            <!-- Shipping Progress Bar -->
+            <div class="shipping-progress-container" id="shipping-progress-container">
+                <p class="shipping-message" id="shipping-message">Add ₹5,000 to unlock free shipping.</p>
+                <div class="shipping-bar-bg">
+                    <div class="shipping-bar-fill" id="shipping-bar-fill"></div>
+                </div>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items injected here -->
+                <p class="empty-cart-msg">Your cart is currently empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                <span>Subtotal:</span>
+                <span id="cart-total-price">₹0.00</span>
+            </div>
+                <!-- This will eventually be replaced by the Shopify Checkout / Buy Button action -->
+                <button class="btn btn-primary w-100" id="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Image Overlay -->
+    <div class="fullscreen-overlay" id="fullscreen-overlay">
+        <button class="close-fullscreen" id="close-fullscreen" aria-label="Exit Fullscreen">&times;</button>
+        <div class="zoom-controls">
+            <button id="zoom-out" aria-label="Zoom Out">-</button>
+            <button id="zoom-in" aria-label="Zoom In">+</button>
+        </div>
+        <div class="fullscreen-image-container" id="fullscreen-image-container">
+            <img src="" alt="Fullscreen Product" id="fullscreen-image">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer reveal">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>GRIT</h3>
+                <p>Modern essentials for the conscious mind.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="collection.html?category=men">Men</a>
+                <a href="collection.html?category=women">Women</a>
+                <a href="collection.html?category=others">Others</a>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="contact.html#faq">FAQ</a>
+                <a href="contact.html#shipping">Shipping &amp; Returns</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">My Account</a>
+            </div>
+            <div class="footer-links">
+                <h4>Follow Us</h4>
+                <a href="https://www.instagram.com/grit__nation?igsh=MTZ2bHFzeXU5OTF3Zg==" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.4rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+                    Instagram
+                </a>
+                <a href="https://wa.me/919999999999" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.4rem;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    WhatsApp
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GRIT. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Shopify, GSAP -->
+    <script src="https://sdks.shopifycdn.com/js-buy-sdk/v2/latest/index.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+
+    <script src="auth.js"></script>
+    <script src="main.js"></script>
+    
+
+</body>
+</html>
