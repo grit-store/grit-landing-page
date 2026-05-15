@@ -57,6 +57,11 @@ a {
     color: inherit;
 }
 
+option {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
 /* =========================================
    Dragon Background Theme
    ========================================= */
