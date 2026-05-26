@@ -1,4 +1,4 @@
-﻿/* =========================================
+/* =========================================
    Trust Badges & Reviews (Phase 4)
    ========================================= */
 
@@ -101,7 +101,7 @@
 
 .social-proof {
     padding: 6rem 5%;
-    background-color: var(--color-bg);
+    background-color: transparent;
 }
 
 .instagram-grid {
