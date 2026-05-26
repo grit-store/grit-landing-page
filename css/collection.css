@@ -1,0 +1,603 @@
+/* =========================================
+   Collection Page
+   ========================================= */
+.collection-hero {
+    padding: 10rem 5% 4rem;
+    border-bottom: 1px solid rgba(196, 159, 112, 0.2);
+}
+
+.collection-hero-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.collection-breadcrumb {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.collection-breadcrumb a {
+    color: var(--color-text-light);
+    transition: color var(--transition-fast);
+}
+
+.collection-breadcrumb a:hover { color: var(--color-text); }
+
+.collection-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.collection-subtitle {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.collection-loading {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 0;
+    gap: 1.5rem;
+    color: var(--color-text-light);
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(196, 159, 112, 0.2);
+    border-top-color: var(--color-accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* =========================================
+   Category Sections (Stacked Layout)
+   ========================================= */
+#category-sections-container {
+    padding: 2rem 0 6rem;
+}
+
+.category-section {
+    margin-bottom: 6rem; /* Gives about 2 row space between sections */
+}
+
+.category-section-title {
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    padding: 0 5%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-text);
+}
+
+
+/* =========================================
+   Announcement Bar
+   ========================================= */
+.announcement-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 101;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-content span {
+    padding: 0 2rem;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* =========================================
+   Cart Enhancements
+   ========================================= */
+.shipping-progress-container {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--color-accent);
+    background-color: var(--color-secondary);
+}
+
+.shipping-message {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.shipping-bar-bg {
+    width: 100%;
+    height: 6px;
+    background-color: #333;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.shipping-bar-fill {
+    height: 100%;
+    background-color: var(--color-primary);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--border-radius-sm);
+    margin-top: 0.5rem;
+    width: fit-content;
+}
+
+.quantity-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-text);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background var(--transition-fast);
+}
+
+.quantity-btn:hover {
+    background-color: var(--color-secondary);
+}
+
+.quantity-value {
+    font-size: 0.85rem;
+    width: 24px;
+    text-align: center;
+}
+
+.cart-item-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+/* =========================================
+   PDP Enhancements (Phase 2)
+   ========================================= */
+
+/* Image Zoom */
+.pdp-main-image-container {
+    width: 100%;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    position: relative;
+    cursor: zoom-in;
+    background-color: var(--color-secondary);
+}
+
+.pdp-main-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease-out;
+    transform-origin: center center;
+}
+
+.pdp-main-image-container:hover img {
+    transform: scale(2); /* Zoom level */
+}
+
+/* Size Guide Link */
+.size-guide-link {
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    text-decoration: underline;
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-family: var(--font-main);
+    transition: color var(--transition-fast);
+}
+
+.btn-link:hover {
+    color: var(--color-text);
+}
+
+/* Accordions */
+.pdp-accordions {
+    margin-top: 2rem;
+    border-top: 1px solid var(--color-accent);
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--color-accent);
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-text);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: var(--font-main);
+    text-align: left;
+}
+
+.accordion-header .icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+.accordion-content p, .accordion-content ul {
+    padding-bottom: 1.5rem;
+}
+
+.accordion-content ul {
+    list-style-type: none;
+}
+
+.accordion-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-fast);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: var(--color-bg);
+    padding: 3rem 2rem;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid var(--color-accent);
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-text-light);
+    cursor: pointer;
+}
+
+/* Size Table */
+.size-guide-table-wrapper {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+}
+
+.size-guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.size-guide-table th, .size-guide-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+.size-guide-table th {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.size-guide-table td {
+    color: var(--color-text-light);
+}
+
+/* Hide original list as it's now in accordion */
+.pdp-info > .pdp-details-list {
+    display: none;
+}
+
+/* =========================================
+   Collection Layout & Sidebar (Phase 3)
+   ========================================= */
+
+.collection-layout-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 5%;
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+    .collection-layout-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.collection-sidebar {
+    width: 100%;
+    background-color: var(--color-bg);
+}
+
+@media (min-width: 992px) {
+    .collection-sidebar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+        position: relative;
+        top: auto;
+        height: auto;
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
+        z-index: 50;
+    }
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-block {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--color-accent);
+    padding-bottom: 1.5rem;
+}
+
+.sidebar-block:last-child {
+    border-bottom: none;
+}
+
+.sidebar-block h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 992px) {
+    .sidebar-block {
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+        position: relative;
+    }
+    
+    .sidebar-block h3 {
+        margin-bottom: 0;
+        font-size: 0.95rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    /* Add dropdown arrow to Size and Color titles, but exclude Sort By since it's a select */
+    .sidebar-block h3:not(:has(+ .sort-select))::after {
+        content: '▼';
+        font-size: 0.6rem;
+        opacity: 0.7;
+    }
+}
+
+.sort-select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-accent);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    cursor: pointer;
+}
+
+.sort-select:focus {
+    outline: 1px solid var(--color-primary);
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (min-width: 992px) {
+    .sidebar-block .filter-options {
+        position: absolute;
+        top: calc(100% + 15px);
+        right: 0;
+        background-color: var(--color-secondary);
+        border: 1px solid var(--color-accent);
+        padding: 1.5rem;
+        min-width: 220px;
+        z-index: 100;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all var(--transition-fast);
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    .sidebar-block:hover .filter-options {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+.filter-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    transition: color var(--transition-fast);
+}
+
+.filter-checkbox-label:hover {
+    color: var(--color-text);
+}
+
+.filter-checkbox-label input {
+    accent-color: var(--color-primary);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.collection-main {
+    flex: 1;
+    width: 100%;
+}
+
+.mobile-filter-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-accent);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+    .mobile-filter-toggle {
+        display: none;
+    }
+}
+
+/* Mobile Sidebar Modal */
+@media (max-width: 991px) {
+    .collection-sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 85%;
+        max-width: 350px;
+        height: 100vh;
+        z-index: 2000;
+        padding: 2rem;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+    }
+
+    .collection-sidebar.active {
+        left: 0;
+    }
+
+    .close-filters {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: var(--color-text);
+        cursor: pointer;
+    }
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .mobile-only {
+        display: flex;
+    }
+}
+

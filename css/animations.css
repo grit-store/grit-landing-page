@@ -1,0 +1,122 @@
+/* =========================================
+   Custom Cursor Effect
+   ========================================= */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url('../assets/pointer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s;
+}
+
+.custom-cursor.hovering {
+    width: 60px;
+    height: 60px;
+}
+
+/* Hide custom cursor on mobile */
+@media (max-width: 768px) {
+    .custom-cursor {
+        display: none !important;
+    }
+}
+
+/* =========================================
+   Interactive Effects (Reveal, Magnetic, Glow)
+   ========================================= */
+
+/* 1. Scroll Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* 2. Magnetic Button overrides */
+.btn.magnetic {
+    transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast), transform 0.1s linear;
+    /* We handle transform in JS for the magnetic pull, so we reduce CSS transition on transform to avoid lag */
+}
+
+/* 3. Product Card Glow/Spotlight */
+.product-card {
+    position: relative;
+    border-radius: var(--border-radius-md);
+    background-color: transparent;
+}
+
+.product-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    /* We use JS to update --x and --y properties */
+    background: radial-gradient(
+        800px circle at var(--x, 50%) var(--y, 50%), 
+        var(--color-glow), /* Subtle gold glow */
+        transparent 40%
+    );
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover::before {
+    opacity: 1;
+}
+
+/* =========================================
+   Dragon Video Blending
+   ========================================= */
+.dragon-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen;
+    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1) translateX(-5%); /* Pushed slightly more to the left */
+    transition: opacity 0.3s ease;
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* simple mobile menu hiding for now */
+    }
+    
+    .hero-image-container {
+        width: 100%;
+        opacity: 0.3; /* Blend with background on mobile */
+    }
+    
+    .hero-overlay {
+        background: linear-gradient(to top, var(--color-bg) 0%, rgba(18, 18, 18, 0.7) 100%);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .pdp-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .pdp-section {
+        padding-top: 6rem;
+    }
+}

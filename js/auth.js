@@ -3,8 +3,6 @@
  * Uses Shopify Storefront API for real user persistence and order history.
  */
 
-const SHOPIFY_DOMAIN = 'grit-real.myshopify.com';
-const STOREFRONT_TOKEN = '876d4d48bd342fa15609c3a55aa20c29';
 const API_URL = `https://${SHOPIFY_DOMAIN}/api/2024-01/graphql.json`;
 
 const AUTH_TOKEN_KEY = 'grit_shopify_access_token';
@@ -168,13 +166,8 @@ class AuthService {
     // Create a native Storefront API checkout (Cart API)
     async createCheckoutUrl(items) {
         const lines = items.map(item => {
-            let decodedId = item.variantId;
-            // Decode base64 if it's not already a raw gid:// string
-            if (!decodedId.includes('gid://')) {
-                try { decodedId = atob(decodedId); } catch(e) {}
-            }
             return {
-                merchandiseId: decodedId,
+                merchandiseId: item.variantId,
                 quantity: parseInt(item.quantity, 10)
             };
         });
@@ -327,14 +320,14 @@ if (window.location.pathname.includes('account.html')) {
                     return `
                     <div class="order-card">
                         <div class="order-header">
-                            <span class="order-id">#${order.orderNumber}</span>
-                            <span class="order-date">${date}</span>
-                            <span class="order-status confirmed">${statusText}</span>
+                            <span class="order-id">#${escapeHTML(order.orderNumber)}</span>
+                            <span class="order-date">${escapeHTML(date)}</span>
+                            <span class="order-status confirmed">${escapeHTML(statusText)}</span>
                         </div>
                         <div class="order-items">
                             ${order.lineItems.edges.map(({node: item}) => `
                                 <div class="order-item">
-                                    <span>${item.title} x ${item.quantity}</span>
+                                    <span>${escapeHTML(item.title)} x ${item.quantity}</span>
                                     <span>₹${parseFloat(item.variant?.price?.amount || 0).toFixed(2)}</span>
                                 </div>
                             `).join('')}

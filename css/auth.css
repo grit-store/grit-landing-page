@@ -1,0 +1,53 @@
+/* =========================================
+   Auth & Account
+   ========================================= */
+.auth-container {
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(196, 159, 112, 0.2);
+    border-radius: var(--border-radius-lg);
+    width: 100%;
+    max-width: 450px;
+    padding: 3rem;
+    margin: 8rem auto 4rem;
+}
+
+.auth-tabs {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(196, 159, 112, 0.1);
+}
+
+.auth-tab {
+    color: var(--color-text-light);
+    padding-bottom: 0.75rem;
+    cursor: pointer;
+}
+
+.auth-tab.active {
+    color: var(--color-text);
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.form-group input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(196, 159, 112, 0.2);
+    padding: 0.8rem 1rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.account-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    padding: 8rem 5% 4rem;
+}
+
+@media (max-width: 768px) {
+    .account-grid {
+        grid-template-columns: 1fr;
+    }
+}
