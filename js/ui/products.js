@@ -35,7 +35,7 @@ function renderProducts(productList, targetGrid) {
         grid.appendChild(productCard);
     });
 
-    document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+    grid.querySelectorAll('.add-to-cart-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             addToCart(e.target.dataset.id);
         });
