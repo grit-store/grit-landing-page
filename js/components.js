@@ -34,10 +34,10 @@ function injectComponents() {
                     <a href="index.html" class="logo"><img src="assets/logo.png" alt="GRIT" style="height: 90px; width: auto;"></a>
                     ${isAuthPage ? `
                     <div class="nav-links">
-                        <a href="collection.html?category=men">Men</a>
-                        <a href="collection.html?category=women">Women</a>
-                        <a href="collection.html?category=others">Others</a>
-                        <a href="about.html">About</a>
+                        <a href="men">Men</a>
+                        <a href="women">Women</a>
+                        <a href="others">Others</a>
+                        <a href="about">About</a>
                     </div>
                     <div class="nav-actions">
                         <a href="index.html" class="icon-button">
@@ -50,46 +50,46 @@ function injectComponents() {
                     ` : `
                     <div class="nav-links">
                         <div class="nav-item-dropdown">
-                            <a href="collection.html?category=men">Men</a>
+                            <a href="men">Men</a>
                             <div class="dropdown-content">
-                                <a href="collection.html?category=men#section-t-shirts">T-Shirts</a>
-                                <a href="collection.html?category=men#section-shirt">Shirt</a>
-                                <a href="collection.html?category=men#section-vest">Vest</a>
-                                <a href="collection.html?category=men#section-sweatpants">Sweatpants</a>
-                                <a href="collection.html?category=men#section-shorts">Shorts</a>
-                                <a href="collection.html?category=men#section-jackets">Jackets</a>
-                                <a href="collection.html?category=men#section-hoodie">Hoodie</a>
+                                <a href="men#section-t-shirts">T-Shirts</a>
+                                <a href="men#section-shirt">Shirt</a>
+                                <a href="men#section-vest">Vest</a>
+                                <a href="men#section-sweatpants">Sweatpants</a>
+                                <a href="men#section-shorts">Shorts</a>
+                                <a href="men#section-jackets">Jackets</a>
+                                <a href="men#section-hoodie">Hoodie</a>
                             </div>
                         </div>
                         <div class="nav-item-dropdown">
-                            <a href="collection.html?category=women">Women</a>
+                            <a href="women">Women</a>
                             <div class="dropdown-content columns-2">
-                                <a href="collection.html?category=women#section-t-shirt">T-Shirt</a>
-                                <a href="collection.html?category=women#section-tank-top">Tank-Top</a>
-                                <a href="collection.html?category=women#section-crop-top">Crop-Top</a>
-                                <a href="collection.html?category=women#section-tube-top">Tube-Top</a>
-                                <a href="collection.html?category=women#section-sports-bra">Sports-Bra</a>
-                                <a href="collection.html?category=women#section-crop-tank">Crop-Tank</a>
-                                <a href="collection.html?category=women#section-mini-skirt">Mini-Skirt</a>
-                                <a href="collection.html?category=women#section-pencil-skirt">Pencil-Skirt</a>
-                                <a href="collection.html?category=women#section-legging">Legging</a>
-                                <a href="collection.html?category=women#section-shorts">Shorts</a>
-                                <a href="collection.html?category=women#section-dress">Dress</a>
-                                <a href="collection.html?category=women#section-bomber-jacket">Bomber-Jacket</a>
-                                <a href="collection.html?category=women#section-cropped-hoodie">Cropped Hoodie</a>
+                                <a href="women#section-t-shirt">T-Shirt</a>
+                                <a href="women#section-tank-top">Tank-Top</a>
+                                <a href="women#section-crop-top">Crop-Top</a>
+                                <a href="women#section-tube-top">Tube-Top</a>
+                                <a href="women#section-sports-bra">Sports-Bra</a>
+                                <a href="women#section-crop-tank">Crop-Tank</a>
+                                <a href="women#section-mini-skirt">Mini-Skirt</a>
+                                <a href="women#section-pencil-skirt">Pencil-Skirt</a>
+                                <a href="women#section-legging">Legging</a>
+                                <a href="women#section-shorts">Shorts</a>
+                                <a href="women#section-dress">Dress</a>
+                                <a href="women#section-bomber-jacket">Bomber-Jacket</a>
+                                <a href="women#section-cropped-hoodie">Cropped Hoodie</a>
                             </div>
                         </div>
                         <div class="nav-item-dropdown">
-                            <a href="collection.html?category=others">Others</a>
+                            <a href="others">Others</a>
                             <div class="dropdown-content">
-                                <a href="collection.html?category=others#section-shirts">Shirts</a>
-                                <a href="collection.html?category=others#section-t-shirts">T-Shirts</a>
-                                <a href="collection.html?category=others#section-shorts">Shorts</a>
-                                <a href="collection.html?category=others#section-hoodie">Hoodie</a>
-                                <a href="collection.html?category=others#section-sweatshirt">Sweatshirt</a>
+                                <a href="others#section-shirts">Shirts</a>
+                                <a href="others#section-t-shirts">T-Shirts</a>
+                                <a href="others#section-shorts">Shorts</a>
+                                <a href="others#section-hoodie">Hoodie</a>
+                                <a href="others#section-sweatshirt">Sweatshirt</a>
                             </div>
                         </div>
-                        <a href="about.html">About</a>
+                        <a href="about">About</a>
                     </div>
                     <div class="nav-actions">
                         <a href="login.html" id="account-link" class="icon-button" aria-label="Account">
@@ -289,9 +289,9 @@ function injectComponents() {
                         </div>
                         <div class="footer-links">
                             <h4>Shop</h4>
-                            <a href="collection.html?category=men">Men</a>
-                            <a href="collection.html?category=women">Women</a>
-                            <a href="collection.html?category=others">Others</a>
+                            <a href="men">Men</a>
+                            <a href="women">Women</a>
+                            <a href="others">Others</a>
                         </div>
                         <div class="footer-links">
                             <h4>Support</h4>

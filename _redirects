@@ -1,0 +1,4 @@
+# Clean URL Rewrites for GRIT Storefront Collections
+/men      /collection.html?category=men    200
+/women    /collection.html?category=women  200
+/others   /collection.html?category=others 200
