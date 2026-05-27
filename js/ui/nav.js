@@ -80,7 +80,7 @@ function initSearch() {
             searchResults.innerHTML = '';
             matched.forEach(p => {
                 const item = document.createElement('a');
-                item.href = `product.html?id=${p.id}`;
+                item.href = `product?id=${p.id}`;
                 item.className = 'search-result-item';
                 item.innerHTML = `<img src="${p.image}" alt="${escapeHTML(p.title)}" loading="lazy"><div><div class="search-result-title">${escapeHTML(p.title)}</div><div class="search-result-price">₹${p.price.toFixed(2)}</div></div>`;
                 searchResults.appendChild(item);
@@ -107,7 +107,7 @@ function initCategoryFilter() {
 function initUserStatus() {
     const accountLink = document.getElementById('account-link');
     if (accountLink && typeof auth !== 'undefined') {
-        if (auth.isLoggedIn()) { accountLink.href = 'account.html'; accountLink.style.color = 'var(--color-primary)'; }
-        else accountLink.href = 'login.html';
+        if (auth.isLoggedIn()) { accountLink.href = 'account'; accountLink.style.color = 'var(--color-primary)'; }
+        else accountLink.href = 'login';
     }
 }

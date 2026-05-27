@@ -144,7 +144,14 @@ function initCollectionFilters(category, productsList) {
 
 function loadCollectionPage() {
     const params = new URLSearchParams(window.location.search);
-    const category = (params.get('category') || 'all').toLowerCase();
+    let category = params.get('category');
+    if (!category) {
+        const path = window.location.pathname.toLowerCase();
+        if (path.includes('/men')) category = 'men';
+        else if (path.includes('/women')) category = 'women';
+        else if (path.includes('/others')) category = 'others';
+    }
+    category = (category || 'all').toLowerCase();
     const displayName = category.charAt(0).toUpperCase() + category.slice(1);
     document.title = `GRIT | ${displayName}`;
     const titleEl = document.getElementById('collection-title');

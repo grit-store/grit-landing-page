@@ -5,8 +5,8 @@
  */
 
 function injectComponents() {
-    const isAuthPage = location.pathname.includes('login.html') || location.pathname.includes('account.html');
-    const isProductPage = location.pathname.includes('product.html');
+    const isAuthPage = location.pathname.includes('login') || location.pathname.includes('account');
+    const isProductPage = location.pathname.includes('product');
 
     // Header Injection (Announcement Bar, Backgrounds, Custom Cursor, Navigation)
     const siteHeader = document.getElementById('site-header');
@@ -31,7 +31,7 @@ function injectComponents() {
             <!-- Navigation -->
             <nav class="navbar ${isAuthPage ? 'scrolled' : ''}">
                 <div class="nav-container">
-                    <a href="index.html" class="logo"><img src="assets/logo.png" alt="GRIT" style="height: 90px; width: auto;"></a>
+                    <a href="/" class="logo"><img src="assets/logo.png" alt="GRIT" style="height: 90px; width: auto;"></a>
                     ${isAuthPage ? `
                     <div class="nav-links">
                         <a href="men">Men</a>
@@ -40,7 +40,7 @@ function injectComponents() {
                         <a href="about">About</a>
                     </div>
                     <div class="nav-actions">
-                        <a href="index.html" class="icon-button">
+                        <a href="/" class="icon-button">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -92,7 +92,7 @@ function injectComponents() {
                         <a href="about">About</a>
                     </div>
                     <div class="nav-actions">
-                        <a href="login.html" id="account-link" class="icon-button" aria-label="Account">
+                        <a href="login" id="account-link" class="icon-button" aria-label="Account">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
@@ -295,17 +295,17 @@ function injectComponents() {
                         </div>
                         <div class="footer-links">
                             <h4>Support</h4>
-                            <a href="contact.html#faq">FAQ</a>
-                            <a href="contact.html">Contact Us</a>
-                            <a href="shipping-policy.html">Shipping Policy</a>
-                            <a href="refund-policy.html">Refund &amp; Returns</a>
+                            <a href="contact#faq">FAQ</a>
+                            <a href="contact">Contact Us</a>
+                            <a href="shipping-policy">Shipping Policy</a>
+                            <a href="refund-policy">Refund &amp; Returns</a>
                         </div>
                         <div class="footer-links">
                             <h4>Company</h4>
-                            <a href="about.html">About Us</a>
-                            <a href="privacy.html">Privacy Policy</a>
-                            <a href="terms.html">Terms of Service</a>
-                            <a href="login.html">My Account</a>
+                            <a href="about">About Us</a>
+                            <a href="privacy">Privacy Policy</a>
+                            <a href="terms">Terms of Service</a>
+                            <a href="login">My Account</a>
                         </div>
                         <div class="footer-links">
                             <h4>Follow Us</h4>
