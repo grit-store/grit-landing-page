@@ -13,6 +13,13 @@ function setupEventListeners() {
     if (closeWishlistBtn) closeWishlistBtn.addEventListener('click', () => { if (wishlistOverlay) wishlistOverlay.classList.remove('active'); document.body.style.overflow = ''; });
     if (wishlistOverlay) wishlistOverlay.addEventListener('click', e => { if (e.target === wishlistOverlay) { wishlistOverlay.classList.remove('active'); document.body.style.overflow = ''; } });
 
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', () => { if (mobileMenuOverlay) mobileMenuOverlay.classList.add('active'); document.body.style.overflow = 'hidden'; });
+    if (closeMobileMenuBtn) closeMobileMenuBtn.addEventListener('click', () => { if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('active'); document.body.style.overflow = ''; });
+    if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', e => { if (e.target === mobileMenuOverlay) { mobileMenuOverlay.classList.remove('active'); document.body.style.overflow = ''; } });
+
     const cartOverlay = document.getElementById('cart-overlay');
     if (cartOverlay) cartOverlay.addEventListener('click', e => { if (e.target === cartOverlay) closeCart(); });
 
@@ -80,7 +87,7 @@ function initSearch() {
             searchResults.innerHTML = '';
             matched.forEach(p => {
                 const item = document.createElement('a');
-                item.href = `product?id=${p.id}`;
+                item.href = `product.html?id=${p.id}`;
                 item.className = 'search-result-item';
                 item.innerHTML = `<img src="${p.image}" alt="${escapeHTML(p.title)}" loading="lazy"><div><div class="search-result-title">${escapeHTML(p.title)}</div><div class="search-result-price">₹${p.price.toFixed(2)}</div></div>`;
                 searchResults.appendChild(item);
@@ -107,7 +114,7 @@ function initCategoryFilter() {
 function initUserStatus() {
     const accountLink = document.getElementById('account-link');
     if (accountLink && typeof auth !== 'undefined') {
-        if (auth.isLoggedIn()) { accountLink.href = 'account'; accountLink.style.color = 'var(--color-primary)'; }
-        else accountLink.href = 'login';
+        if (auth.isLoggedIn()) { accountLink.href = 'account.html'; accountLink.style.color = 'var(--color-primary)'; }
+        else accountLink.href = 'login.html';
     }
 }

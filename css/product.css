@@ -1,4 +1,4 @@
-﻿/* =========================================
+/* =========================================
    Product Details Page
    ========================================= */
 .pdp-section {
@@ -148,5 +148,33 @@
 .pdp-details-list strong {
     width: 120px;
     font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .pdp-section {
+        padding: 6.5rem 5% var(--spacing-lg) !important;
+    }
+    .pdp-title {
+        font-size: 1.75rem !important;
+        line-height: 1.25;
+        margin-bottom: 0.75rem;
+    }
+    .pdp-price {
+        font-size: 1.3rem !important;
+        margin-bottom: 1.5rem;
+    }
+    .pdp-gallery {
+        gap: 0.5rem;
+    }
+    .pdp-thumbnails {
+        gap: 0.5rem;
+    }
+    .pdp-options {
+        gap: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    .pdp-actions {
+        margin-bottom: 2rem;
+    }
 }
 

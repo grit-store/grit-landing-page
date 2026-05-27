@@ -576,6 +576,8 @@
         padding: 2rem;
         transition: left 0.3s ease;
         box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .collection-sidebar.active {

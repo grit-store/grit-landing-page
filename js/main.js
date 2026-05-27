@@ -21,11 +21,10 @@ async function init() {
         initNewsletter();
         initAnalytics();
 
-        const path = window.location.pathname;
-        if (path.includes('collection') || path.includes('men') || path.includes('women') || path.includes('others')) {
+        if (window.location.pathname.includes('collection.html')) {
             loadCollectionPage();
         }
-        if (path.includes('product')) {
+        if (window.location.pathname.includes('product.html')) {
             loadProductDetail();
         }
     } catch (e) {

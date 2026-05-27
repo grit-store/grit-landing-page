@@ -14,7 +14,7 @@ function renderProducts(productList, targetGrid) {
         productCard.className = 'product-card reveal';
         productCard.innerHTML = `
             <div class="product-image-wrapper">
-                <a href="product?id=${encodeURIComponent(product.id)}">
+                <a href="product.html?id=${encodeURIComponent(product.id)}">
                     <img src="${product.image}" alt="${escapeHTML(product.title)}" class="product-image product-image-primary" loading="lazy" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22 viewBox=%220 0 400 500%22%3E%3Crect width=%22400%22 height=%22500%22 fill=%22%23f0f0f0%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22sans-serif%22 font-size=%2220%22 text-anchor=%22middle%22 fill=%22%23999%22%3EImage Placeholder%3C/text%3E%3C/svg%3E'">
                     ${product.images && product.images.length > 1 ? `<img src="${product.images[1].src}" alt="${escapeHTML(product.title)} Alternate" class="product-image product-image-secondary" loading="lazy">` : ''}
                 </a>
@@ -24,7 +24,7 @@ function renderProducts(productList, targetGrid) {
             </div>
             <div class="product-info">
                 <div>
-                    <a href="product?id=${encodeURIComponent(product.id)}">
+                    <a href="product.html?id=${encodeURIComponent(product.id)}">
                         <h3 class="product-title">${escapeHTML(product.title)}</h3>
                     </a>
                     <p class="product-category">${escapeHTML(product.category)}</p>

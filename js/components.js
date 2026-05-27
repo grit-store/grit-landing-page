@@ -5,8 +5,8 @@
  */
 
 function injectComponents() {
-    const isAuthPage = location.pathname.includes('login') || location.pathname.includes('account');
-    const isProductPage = location.pathname.includes('product');
+    const isAuthPage = location.pathname.includes('login.html') || location.pathname.includes('account.html');
+    const isProductPage = location.pathname.includes('product.html');
 
     // Header Injection (Announcement Bar, Backgrounds, Custom Cursor, Navigation)
     const siteHeader = document.getElementById('site-header');
@@ -31,16 +31,23 @@ function injectComponents() {
             <!-- Navigation -->
             <nav class="navbar ${isAuthPage ? 'scrolled' : ''}">
                 <div class="nav-container">
-                    <a href="/" class="logo"><img src="assets/logo.png" alt="GRIT" style="height: 90px; width: auto;"></a>
+                    <!-- Hamburger Menu Button (Mobile Only) -->
+                    <button class="hamburger-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                    </button>
+
+                    <a href="index.html" class="logo"><img src="assets/logo.png" alt="GRIT" class="logo-image"></a>
                     ${isAuthPage ? `
                     <div class="nav-links">
-                        <a href="men">Men</a>
-                        <a href="women">Women</a>
-                        <a href="others">Others</a>
-                        <a href="about">About</a>
+                        <a href="collection.html?category=men">Men</a>
+                        <a href="collection.html?category=women">Women</a>
+                        <a href="collection.html?category=others">Others</a>
+                        <a href="about.html">About</a>
                     </div>
                     <div class="nav-actions">
-                        <a href="/" class="icon-button">
+                        <a href="index.html" class="icon-button">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -50,49 +57,49 @@ function injectComponents() {
                     ` : `
                     <div class="nav-links">
                         <div class="nav-item-dropdown">
-                            <a href="men">Men</a>
+                            <a href="collection.html?category=men">Men</a>
                             <div class="dropdown-content">
-                                <a href="men#section-t-shirts">T-Shirts</a>
-                                <a href="men#section-shirt">Shirt</a>
-                                <a href="men#section-vest">Vest</a>
-                                <a href="men#section-sweatpants">Sweatpants</a>
-                                <a href="men#section-shorts">Shorts</a>
-                                <a href="men#section-jackets">Jackets</a>
-                                <a href="men#section-hoodie">Hoodie</a>
+                                <a href="collection.html?category=men#section-t-shirts">T-Shirts</a>
+                                <a href="collection.html?category=men#section-shirt">Shirt</a>
+                                <a href="collection.html?category=men#section-vest">Vest</a>
+                                <a href="collection.html?category=men#section-sweatpants">Sweatpants</a>
+                                <a href="collection.html?category=men#section-shorts">Shorts</a>
+                                <a href="collection.html?category=men#section-jackets">Jackets</a>
+                                <a href="collection.html?category=men#section-hoodie">Hoodie</a>
                             </div>
                         </div>
                         <div class="nav-item-dropdown">
-                            <a href="women">Women</a>
+                            <a href="collection.html?category=women">Women</a>
                             <div class="dropdown-content columns-2">
-                                <a href="women#section-t-shirt">T-Shirt</a>
-                                <a href="women#section-tank-top">Tank-Top</a>
-                                <a href="women#section-crop-top">Crop-Top</a>
-                                <a href="women#section-tube-top">Tube-Top</a>
-                                <a href="women#section-sports-bra">Sports-Bra</a>
-                                <a href="women#section-crop-tank">Crop-Tank</a>
-                                <a href="women#section-mini-skirt">Mini-Skirt</a>
-                                <a href="women#section-pencil-skirt">Pencil-Skirt</a>
-                                <a href="women#section-legging">Legging</a>
-                                <a href="women#section-shorts">Shorts</a>
-                                <a href="women#section-dress">Dress</a>
-                                <a href="women#section-bomber-jacket">Bomber-Jacket</a>
-                                <a href="women#section-cropped-hoodie">Cropped Hoodie</a>
+                                <a href="collection.html?category=women#section-t-shirt">T-Shirt</a>
+                                <a href="collection.html?category=women#section-tank-top">Tank-Top</a>
+                                <a href="collection.html?category=women#section-crop-top">Crop-Top</a>
+                                <a href="collection.html?category=women#section-tube-top">Tube-Top</a>
+                                <a href="collection.html?category=women#section-sports-bra">Sports-Bra</a>
+                                <a href="collection.html?category=women#section-crop-tank">Crop-Tank</a>
+                                <a href="collection.html?category=women#section-mini-skirt">Mini-Skirt</a>
+                                <a href="collection.html?category=women#section-pencil-skirt">Pencil-Skirt</a>
+                                <a href="collection.html?category=women#section-legging">Legging</a>
+                                <a href="collection.html?category=women#section-shorts">Shorts</a>
+                                <a href="collection.html?category=women#section-dress">Dress</a>
+                                <a href="collection.html?category=women#section-bomber-jacket">Bomber-Jacket</a>
+                                <a href="collection.html?category=women#section-cropped-hoodie">Cropped Hoodie</a>
                             </div>
                         </div>
                         <div class="nav-item-dropdown">
-                            <a href="others">Others</a>
+                            <a href="collection.html?category=others">Others</a>
                             <div class="dropdown-content">
-                                <a href="others#section-shirts">Shirts</a>
-                                <a href="others#section-t-shirts">T-Shirts</a>
-                                <a href="others#section-shorts">Shorts</a>
-                                <a href="others#section-hoodie">Hoodie</a>
-                                <a href="others#section-sweatshirt">Sweatshirt</a>
+                                <a href="collection.html?category=others#section-shirts">Shirts</a>
+                                <a href="collection.html?category=others#section-t-shirts">T-Shirts</a>
+                                <a href="collection.html?category=others#section-shorts">Shorts</a>
+                                <a href="collection.html?category=others#section-hoodie">Hoodie</a>
+                                <a href="collection.html?category=others#section-sweatshirt">Sweatshirt</a>
                             </div>
                         </div>
-                        <a href="about">About</a>
+                        <a href="about.html">About</a>
                     </div>
                     <div class="nav-actions">
-                        <a href="login" id="account-link" class="icon-button" aria-label="Account">
+                        <a href="login.html" id="account-link" class="icon-button" aria-label="Account">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
@@ -202,8 +209,174 @@ function injectComponents() {
                     </svg>
                 </a>
             </div>
+
+            <!-- Mobile Navigation Drawer -->
+            <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+                <div class="mobile-menu-drawer" id="mobile-menu-drawer">
+                    <div class="mobile-menu-header">
+                        <span class="mobile-menu-logo">GRIT</span>
+                        <button class="close-mobile-menu" id="close-mobile-menu" aria-label="Close Menu">&times;</button>
+                    </div>
+                    <div class="mobile-menu-links">
+                        <a href="index.html" class="mobile-nav-link">Home</a>
+                        
+                        <div class="mobile-nav-group">
+                            <span class="mobile-nav-group-title">Collections</span>
+                            <a href="collection.html?category=men" class="mobile-sub-link">Men's Apparel</a>
+                            <a href="collection.html?category=women" class="mobile-sub-link">Women's Apparel</a>
+                            <a href="collection.html?category=others" class="mobile-sub-link">Others &amp; Accessories</a>
+                        </div>
+
+                        <div class="mobile-nav-group">
+                            <span class="mobile-nav-group-title">Company</span>
+                            <a href="about.html" class="mobile-sub-link">About Our Brand</a>
+                            <a href="contact.html" class="mobile-sub-link">Contact &amp; Support</a>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-footer">
+                        <a href="login.html" class="btn btn-primary w-100" style="text-align:center;">My Account</a>
+                    </div>
+                </div>
+            </div>
             
             <style>
+                .logo-image {
+                    height: 80px;
+                    width: auto;
+                    transition: height 0.3s ease;
+                }
+                @media (max-width: 768px) {
+                    .logo-image {
+                        height: 50px;
+                    }
+                }
+
+                /* Hamburger Button (Mobile Only) */
+                .hamburger-menu-btn {
+                    display: none;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 24px;
+                    height: 16px;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0;
+                    z-index: 1001;
+                }
+                .hamburger-bar {
+                    width: 100%;
+                    height: 2px;
+                    background-color: var(--color-text);
+                    transition: all 0.3s ease;
+                }
+                
+                /* Mobile Menu Overlay & Drawer */
+                .mobile-menu-overlay {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: rgba(0, 0, 0, 0.85);
+                    backdrop-filter: blur(8px);
+                    z-index: 2100;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.4s ease, visibility 0.4s;
+                    pointer-events: auto;
+                }
+                .mobile-menu-overlay.active {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .mobile-menu-drawer {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 80%;
+                    max-width: 320px;
+                    height: 100%;
+                    background: #121212;
+                    border-right: 1px solid rgba(196, 159, 112, 0.2);
+                    padding: 2.5rem 1.8rem;
+                    display: flex;
+                    flex-direction: column;
+                    transform: translateX(-100%);
+                    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                    overflow-y: auto;
+                    -webkit-overflow-scrolling: touch;
+                }
+                .mobile-menu-overlay.active .mobile-menu-drawer {
+                    transform: translateX(0);
+                }
+                .mobile-menu-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 3.5rem;
+                }
+                .mobile-menu-logo {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    letter-spacing: 2px;
+                    color: var(--color-text);
+                    font-family: 'Outfit', sans-serif;
+                }
+                .close-mobile-menu {
+                    background: none;
+                    border: none;
+                    color: var(--color-text-light);
+                    font-size: 2.5rem;
+                    cursor: pointer;
+                    padding: 0;
+                    line-height: 1;
+                }
+                .close-mobile-menu:hover {
+                    color: var(--color-primary);
+                }
+                .mobile-menu-links {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2.2rem;
+                }
+                .mobile-nav-link {
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    color: var(--color-text);
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    font-family: 'Outfit', sans-serif;
+                }
+                .mobile-nav-group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.8rem;
+                }
+                .mobile-nav-group-title {
+                    font-size: 0.8rem;
+                    color: var(--color-text-light);
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-bottom: 0.4rem;
+                    font-family: 'Outfit', sans-serif;
+                }
+                .mobile-sub-link {
+                    font-size: 1.05rem;
+                    color: rgba(255, 255, 255, 0.85);
+                    text-decoration: none;
+                    transition: color 0.2s;
+                    font-family: 'Outfit', sans-serif;
+                }
+                .mobile-sub-link:hover {
+                    color: var(--color-primary);
+                }
+                .mobile-menu-footer {
+                    margin-top: auto;
+                }
+
                 .floating-whatsapp-widget {
                     position: fixed;
                     bottom: 2rem;
@@ -263,6 +436,9 @@ function injectComponents() {
                     .whatsapp-tooltip {
                         display: none; /* Hide on mobile to avoid overlap */
                     }
+                    .hamburger-menu-btn {
+                        display: flex;
+                    }
                 }
             </style>
         `;
@@ -289,23 +465,23 @@ function injectComponents() {
                         </div>
                         <div class="footer-links">
                             <h4>Shop</h4>
-                            <a href="men">Men</a>
-                            <a href="women">Women</a>
-                            <a href="others">Others</a>
+                            <a href="collection.html?category=men">Men</a>
+                            <a href="collection.html?category=women">Women</a>
+                            <a href="collection.html?category=others">Others</a>
                         </div>
                         <div class="footer-links">
                             <h4>Support</h4>
-                            <a href="contact#faq">FAQ</a>
-                            <a href="contact">Contact Us</a>
-                            <a href="shipping-policy">Shipping Policy</a>
-                            <a href="refund-policy">Refund &amp; Returns</a>
+                            <a href="contact.html#faq">FAQ</a>
+                            <a href="contact.html">Contact Us</a>
+                            <a href="shipping-policy.html">Shipping Policy</a>
+                            <a href="refund-policy.html">Refund &amp; Returns</a>
                         </div>
                         <div class="footer-links">
                             <h4>Company</h4>
-                            <a href="about">About Us</a>
-                            <a href="privacy">Privacy Policy</a>
-                            <a href="terms">Terms of Service</a>
-                            <a href="login">My Account</a>
+                            <a href="about.html">About Us</a>
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="login.html">My Account</a>
                         </div>
                         <div class="footer-links">
                             <h4>Follow Us</h4>
