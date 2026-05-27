@@ -23,6 +23,7 @@
     width: 100%;
     aspect-ratio: 3/4;
     object-fit: cover;
+    object-position: top center;
     background-color: var(--color-secondary);
 }
 
@@ -36,6 +37,7 @@
     width: 100%;
     aspect-ratio: 3/4;
     object-fit: cover;
+    object-position: top center;
     background-color: var(--color-secondary);
     cursor: pointer;
     opacity: 0.6;

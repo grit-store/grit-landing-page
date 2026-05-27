@@ -1,4 +1,4 @@
-﻿/* =========================================
+/* =========================================
    Products Grid
    ========================================= */
 .products-section {
@@ -32,6 +32,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     transition: transform var(--transition-slow), opacity var(--transition-fast);
     position: absolute;
     top: 0;
