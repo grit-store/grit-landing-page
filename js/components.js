@@ -192,6 +192,79 @@ function injectComponents() {
                 </div>
             </div>
             ` : ''}
+
+            <!-- Floating WhatsApp Support Widget -->
+            <div class="floating-whatsapp-widget" id="whatsapp-widget">
+                <a href="https://wa.me/${typeof WHATSAPP_PHONE !== 'undefined' ? WHATSAPP_PHONE : '919999999999'}?text=Hi%20GRIT!%20I%20have%20a%20question%20about%20your%20products." target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+                    <span class="whatsapp-tooltip">Chat with us</span>
+                    <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.503-5.728-1.46L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 1.977 14.07 1.01 11.993 1.01c-5.451 0-9.877 4.37-9.881 9.8-.001 1.768.479 3.49 1.39 5.031L2.4 20.25l4.247-1.096zM17.47 14.39c-.3-.149-1.772-.874-2.046-.973-.274-.1-.474-.149-.673.15-.2.297-.771.973-.947 1.171-.174.199-.349.224-.648.075-1.127-.566-1.897-.992-2.654-2.287-.2-.345.2-.32.571-1.061.037-.075.019-.14-.009-.199-.028-.059-.272-.654-.372-.896-.098-.238-.199-.206-.273-.21-.07-.003-.15-.003-.23-.003-.08 0-.21.03-.32.15-.11.12-.42.41-.42 1 .001.59.43 1.161.49 1.24.06.079.849 1.298 2.057 1.819.288.124.512.197.688.252.29.091.554.078.763.047.233-.035.772-.315.88-.619.109-.304.109-.564.077-.619-.033-.055-.123-.089-.423-.239z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <style>
+                .floating-whatsapp-widget {
+                    position: fixed;
+                    bottom: 2rem;
+                    right: 2rem;
+                    z-index: 9999;
+                    pointer-events: auto;
+                }
+                .whatsapp-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background: #25d366;
+                    color: #fff;
+                    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+                    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    position: relative;
+                    border: 2px solid transparent;
+                }
+                .whatsapp-btn:hover {
+                    transform: scale(1.1) translateY(-3px);
+                    background: #1ebea5;
+                    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+                }
+                .whatsapp-tooltip {
+                    position: absolute;
+                    right: 75px;
+                    background: rgba(0, 0, 0, 0.9);
+                    border: 1px solid rgba(196, 159, 112, 0.3);
+                    color: #fff;
+                    padding: 0.5rem 1rem;
+                    border-radius: 6px;
+                    font-size: 0.85rem;
+                    font-family: 'Outfit', sans-serif;
+                    white-space: nowrap;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease;
+                    transform: translateX(10px);
+                }
+                .whatsapp-btn:hover .whatsapp-tooltip {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateX(0);
+                }
+                @media (max-width: 768px) {
+                    .floating-whatsapp-widget {
+                        bottom: 1.5rem;
+                        right: 1.5rem;
+                    }
+                    .whatsapp-btn {
+                        width: 50px;
+                        height: 50px;
+                    }
+                    .whatsapp-tooltip {
+                        display: none; /* Hide on mobile to avoid overlap */
+                    }
+                }
+            </style>
         `;
     }
 
@@ -240,7 +313,7 @@ function injectComponents() {
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
                                 Instagram
                             </a>
-                            <a href="https://wa.me/919999999999" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.4rem;">
+                            <a href="https://wa.me/${typeof WHATSAPP_PHONE !== 'undefined' ? WHATSAPP_PHONE : '919999999999'}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.4rem;">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
                                 WhatsApp
                             </a>

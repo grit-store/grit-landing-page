@@ -29,6 +29,9 @@ const firebaseConfig = {
 // Google Analytics ID
 const GA_ID = 'G-484DQLD9NW';
 
+// WhatsApp Support Config (Change to your business number!)
+const WHATSAPP_PHONE = '919999999999';
+
 // Anti-Bot & Anti-Bulk Order Limits
 const MAX_CART_LIMIT_PER_ITEM = 5;
 
