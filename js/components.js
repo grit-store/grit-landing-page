@@ -223,13 +223,15 @@ function injectComponents() {
                         <div class="footer-links">
                             <h4>Support</h4>
                             <a href="contact.html#faq">FAQ</a>
-                            <a href="contact.html#shipping">Shipping &amp; Returns</a>
                             <a href="contact.html">Contact Us</a>
+                            <a href="shipping-policy.html">Shipping Policy</a>
+                            <a href="refund-policy.html">Refund &amp; Returns</a>
                         </div>
                         <div class="footer-links">
                             <h4>Company</h4>
                             <a href="about.html">About Us</a>
-                            <a href="contact.html">Contact</a>
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms of Service</a>
                             <a href="login.html">My Account</a>
                         </div>
                         <div class="footer-links">
