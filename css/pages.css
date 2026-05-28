@@ -541,8 +541,7 @@
 }
 
 .product-grid.horizontal-scroll .product-card {
-    flex: 0 0 calc(33.333% - 1.33rem); /* Show 3 cards on desktop */
-    min-width: 280px; /* Minimum size */
+    flex: 0 0 280px; /* Uniform desktop size matching standard grid */
     scroll-snap-align: start;
 }
 

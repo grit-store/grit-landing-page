@@ -33,7 +33,7 @@ function isProductInSubcategory(p, tab) {
         searchString = searchString.replace(/\bt shirts?\b|\btshirts?\b|\btees?\b|\bsweat shirts?\b|\bsweatshirts?\b/g, '');
     }
     let aliases = [tabName];
-    if (tabName === 't shirts' || tabName === 't shirt') aliases.push('tshirt', 'tee', 'round neck');
+    if (tabName === 't shirts' || tabName === 't shirt') aliases.push('t shirt', 't shirts', 'tshirt', 'tshirts', 'tee', 'round neck');
     if (tabName === 'vest') aliases.push('sleeveless');
     if (tabName === 'tank top') aliases.push('tank');
     if (tabName === 'crop top') aliases.push('croptop');
