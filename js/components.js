@@ -245,9 +245,21 @@ function injectComponents() {
                     width: auto;
                     transition: height 0.3s ease;
                 }
+                .navbar.scrolled .logo-image {
+                    height: 50px;
+                }
+                .navbar.scrolled .nav-container {
+                    padding: 0.5rem 5%;
+                }
                 @media (max-width: 768px) {
                     .logo-image {
                         height: 50px;
+                    }
+                    .navbar.scrolled .logo-image {
+                        height: 40px;
+                    }
+                    .navbar.scrolled .nav-container {
+                        padding: 0.3rem 5%;
                     }
                 }
 

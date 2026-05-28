@@ -11,6 +11,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Force same header/logo sizes as the index page on the login page */
+        .navbar {
+            background: rgba(18, 18, 18, 0.9) !important;
+            backdrop-filter: blur(10px) !important;
+            border-bottom: 1px solid var(--color-accent) !important;
+            top: 35px !important;
+        }
+        .logo-image {
+            height: 80px !important;
+        }
+        .nav-container {
+            padding: 1rem 5% !important;
+        }
+        @media (max-width: 768px) {
+            .logo-image {
+                height: 50px !important;
+            }
+            .nav-container {
+                padding: 1rem 5% !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="site-header"></div>

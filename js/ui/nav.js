@@ -25,9 +25,10 @@ function setupEventListeners() {
 
     const navbar = document.querySelector('.navbar');
     if (navbar) {
+        const isAuthPage = window.location.pathname.includes('login.html') || window.location.pathname.includes('account.html');
         let lastScrollY = window.scrollY;
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+            if (window.scrollY > 50 || isAuthPage) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
             if (window.scrollY > lastScrollY && window.scrollY > 150) navbar.classList.add('hidden'); else navbar.classList.remove('hidden');
             lastScrollY = window.scrollY;
         });
