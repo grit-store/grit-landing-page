@@ -59,20 +59,60 @@ function renderCategorySections(category, categoryProducts) {
     }
     container.innerHTML = '';
     tabs.forEach(tab => {
+        const subFiltered = categoryProducts.filter(p => isProductInSubcategory(p, tab));
+        
+        // Skip rendering sections with no matching products to keep the layout clean
+        if (subFiltered.length === 0) return;
+
         const sectionId = 'section-' + tab.toLowerCase().replace(/\s+/g, '-');
+        const gridId = `product-grid-${tab.toLowerCase().replace(/\s+/g, '-')}`;
+        
         const section = document.createElement('div');
         section.className = 'category-section';
         section.innerHTML = `
             <h2 class="category-section-title" id="${sectionId}">${tab}</h2>
             <section class="products-section">
-                <div class="product-grid" id="product-grid-${tab.toLowerCase().replace(/\s+/g, '-')}"></div>
+                <div class="product-grid" id="${gridId}"></div>
+                ${subFiltered.length > 4 ? `
+                    <div class="view-more-container" style="text-align: center; margin-top: 3rem;">
+                        <button class="btn btn-outline view-more-btn" style="padding: 0.8rem 2.5rem; font-size: 0.9rem;">View More</button>
+                    </div>
+                ` : ''}
             </section>
         `;
         container.appendChild(section);
-        const subFiltered = categoryProducts.filter(p => isProductInSubcategory(p, tab));
+        
         const grid = section.querySelector('.product-grid');
-        if (subFiltered.length > 2) grid.classList.add('horizontal-scroll');
         renderProducts(subFiltered, grid);
+
+        // Hide products past the initial 4 limit
+        const cards = grid.querySelectorAll('.product-card');
+        cards.forEach((card, idx) => {
+            if (idx >= 4) {
+                card.classList.add('hidden-product');
+                card.style.display = 'none';
+            }
+        });
+
+        // Add toggle action to the View More button
+        const viewMoreBtn = section.querySelector('.view-more-btn');
+        if (viewMoreBtn) {
+            viewMoreBtn.addEventListener('click', () => {
+                const isShowingMore = viewMoreBtn.textContent === 'View More';
+                const hiddenCards = grid.querySelectorAll('.hidden-product');
+                
+                hiddenCards.forEach(card => {
+                    card.style.display = isShowingMore ? 'flex' : 'none';
+                });
+                
+                viewMoreBtn.textContent = isShowingMore ? 'Show Less' : 'View More';
+                
+                // Refresh GSAP ScrollTrigger if present
+                if (typeof ScrollTrigger !== 'undefined') {
+                    ScrollTrigger.refresh();
+                }
+            });
+        }
     });
     scrollToHash();
 }
