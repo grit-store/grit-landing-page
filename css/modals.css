@@ -217,3 +217,71 @@
 .search-result-title { font-size: 1rem; font-weight: 500; }
 .search-result-price { font-size: 0.9rem; color: var(--color-text-light); margin-top: 0.25rem; }
 
+/* =========================================
+   Advanced Search Styles
+   ========================================= */
+.search-suggestions-container {
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.suggestions-heading {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.search-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.search-tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(196, 159, 112, 0.2);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    color: var(--color-text);
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.search-tag:hover {
+    background: rgba(196, 159, 112, 0.15);
+    border-color: var(--color-accent);
+}
+
+.search-highlight {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.search-result-item.keyboard-selected {
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 3px solid var(--color-accent);
+    padding-left: calc(1rem - 3px);
+}
+
+.view-all-results-link {
+    display: block;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 0.8rem;
+    border-top: 1px solid rgba(196, 159, 112, 0.1);
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: var(--font-main);
+    transition: color var(--transition-fast);
+}
+
+.view-all-results-link:hover, .view-all-results-link.keyboard-selected {
+    color: var(--color-text);
+    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.03);
+}

@@ -65,6 +65,14 @@ function fuzzyMatch(query, text) {
     return false;
 }
 
+function highlightSearchMatch(text, query) {
+    if (!query) return text;
+    // Escape special regex characters
+    const escapedQuery = query.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    const regex = new RegExp(`(${escapedQuery})`, 'gi');
+    return text.replace(regex, '<strong class="search-highlight">$1</strong>');
+}
+
 function initSearch() {
     const searchToggle = document.getElementById('search-toggle');
     const searchOverlay = document.getElementById('search-overlay');
@@ -73,26 +81,175 @@ function initSearch() {
     const searchResults = document.getElementById('search-results');
     if (!searchToggle || !searchOverlay) return;
 
-    searchToggle.addEventListener('click', () => { searchOverlay.classList.add('active'); if (searchInput) setTimeout(() => searchInput.focus(), 100); });
-    if (closeSearch) closeSearch.addEventListener('click', () => searchOverlay.classList.remove('active'));
-    searchOverlay.addEventListener('click', e => { if (e.target === searchOverlay) searchOverlay.classList.remove('active'); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') searchOverlay.classList.remove('active'); });
+    let selectedIndex = -1;
+    let debounceTimeout = null;
+
+    const trendingSearches = [
+        { text: 'Oversized Tee', type: 'term' },
+        { text: 'Hoodie', type: 'term' },
+        { text: 'Sweatpants', type: 'term' },
+        { text: 'Men', type: 'category' },
+        { text: 'Women', type: 'category' }
+    ];
+
+    function showSuggestions() {
+        if (!searchResults) return;
+        selectedIndex = -1;
+        searchResults.innerHTML = `
+            <div class="search-suggestions-container">
+                <h4 class="suggestions-heading">Trending Searches</h4>
+                <div class="search-tags">
+                    ${trendingSearches.map(t => `<button class="search-tag" data-query="${escapeHTML(t.text)}">${escapeHTML(t.text)}</button>`).join('')}
+                </div>
+            </div>
+        `;
+        // Attach click listeners to tags
+        searchResults.querySelectorAll('.search-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                if (searchInput) {
+                    searchInput.value = tag.dataset.query;
+                    performSearch(tag.dataset.query);
+                    searchInput.focus();
+                }
+            });
+        });
+    }
+
+    function performSearch(query) {
+        if (!searchResults) return;
+        selectedIndex = -1;
+        if (query.length < 2) {
+            showSuggestions();
+            return;
+        }
+
+        const matched = products.filter(p => 
+            fuzzyMatch(query, p.title) || 
+            fuzzyMatch(query, p.category) || 
+            (p.tags && p.tags.some(tag => fuzzyMatch(query, tag)))
+        );
+
+        if (matched.length === 0) {
+            searchResults.innerHTML = '<p class="empty-cart-msg">No products found.</p>';
+            return;
+        }
+
+        searchResults.innerHTML = '';
+        
+        // Render matching products
+        matched.forEach(p => {
+            const item = document.createElement('a');
+            item.href = `product.html?id=${p.id}`;
+            item.className = 'search-result-item';
+            
+            const highlightedTitle = highlightSearchMatch(p.title, query);
+            
+            item.innerHTML = `
+                <img src="${p.image}" alt="${escapeHTML(p.title)}" loading="lazy">
+                <div>
+                    <div class="search-result-title">${highlightedTitle}</div>
+                    <div class="search-result-price">₹${p.price.toFixed(2)}</div>
+                </div>
+            `;
+            searchResults.appendChild(item);
+        });
+
+        // Append the "View All Results" link at the bottom
+        const viewAll = document.createElement('a');
+        viewAll.href = `collection.html?search=${encodeURIComponent(query)}`;
+        viewAll.className = 'view-all-results-link';
+        viewAll.innerHTML = `View all results for "${escapeHTML(query)}" &rarr;`;
+        searchResults.appendChild(viewAll);
+
+        // Micro-animations for results staggering in
+        if (typeof gsap !== 'undefined') {
+            gsap.from(searchResults.querySelectorAll('.search-result-item, .view-all-results-link'), {
+                y: 15,
+                opacity: 0,
+                duration: 0.3,
+                stagger: 0.04,
+                ease: "power2.out"
+            });
+        }
+    }
+
+    function updateActiveSearchItem() {
+        const items = searchResults.querySelectorAll('.search-result-item, .view-all-results-link');
+        items.forEach((item, idx) => {
+            if (idx === selectedIndex) {
+                item.classList.add('keyboard-selected');
+                item.scrollIntoView({ block: 'nearest' });
+            } else {
+                item.classList.remove('keyboard-selected');
+            }
+        });
+    }
+
+    // Toggle overlay visibility
+    searchToggle.addEventListener('click', () => {
+        searchOverlay.classList.add('active');
+        showSuggestions();
+        if (searchInput) {
+            setTimeout(() => {
+                searchInput.value = '';
+                searchInput.focus();
+            }, 100);
+        }
+    });
+
+    if (closeSearch) {
+        closeSearch.addEventListener('click', () => {
+            searchOverlay.classList.remove('active');
+        });
+    }
+
+    searchOverlay.addEventListener('click', e => {
+        if (e.target === searchOverlay) {
+            searchOverlay.classList.remove('active');
+        }
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            searchOverlay.classList.remove('active');
+        }
+    });
 
     if (searchInput) {
+        // Debounce input to prevent UI lag
         searchInput.addEventListener('input', () => {
             const query = searchInput.value.trim();
-            if (!searchResults) return;
-            if (query.length < 2) { searchResults.innerHTML = ''; return; }
-            const matched = products.filter(p => fuzzyMatch(query, p.title) || fuzzyMatch(query, p.category) || (p.tags && p.tags.some(tag => fuzzyMatch(query, tag))));
-            if (matched.length === 0) { searchResults.innerHTML = '<p class="empty-cart-msg">No products found.</p>'; return; }
-            searchResults.innerHTML = '';
-            matched.forEach(p => {
-                const item = document.createElement('a');
-                item.href = `product.html?id=${p.id}`;
-                item.className = 'search-result-item';
-                item.innerHTML = `<img src="${p.image}" alt="${escapeHTML(p.title)}" loading="lazy"><div><div class="search-result-title">${escapeHTML(p.title)}</div><div class="search-result-price">₹${p.price.toFixed(2)}</div></div>`;
-                searchResults.appendChild(item);
-            });
+            clearTimeout(debounceTimeout);
+            debounceTimeout = setTimeout(() => {
+                performSearch(query);
+            }, 150);
+        });
+
+        // Keydown handler for Arrow keys, Enter, and resetting selections
+        searchInput.addEventListener('keydown', e => {
+            const items = searchResults.querySelectorAll('.search-result-item, .view-all-results-link');
+            if (items.length === 0) return;
+
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                selectedIndex = (selectedIndex + 1) % items.length;
+                updateActiveSearchItem();
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                selectedIndex = (selectedIndex - 1 + items.length) % items.length;
+                updateActiveSearchItem();
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                if (selectedIndex > -1 && selectedIndex < items.length) {
+                    items[selectedIndex].click();
+                } else {
+                    // Redirect directly to full search page
+                    const query = searchInput.value.trim();
+                    if (query.length >= 2) {
+                        window.location.href = `collection.html?search=${encodeURIComponent(query)}`;
+                    }
+                }
+            }
         });
     }
 }

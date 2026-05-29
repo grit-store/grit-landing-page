@@ -164,6 +164,22 @@ function initCollectionFilters(category, productsList) {
                 };
                 return getNumericId(b.id) - getNumericId(a.id);
             });
+        } else if (sortValue === 'gender-men') {
+            filtered.sort((a, b) => {
+                const aIsMen = isProductInCategory(a, 'men');
+                const bIsMen = isProductInCategory(b, 'men');
+                if (aIsMen && !bIsMen) return -1;
+                if (!aIsMen && bIsMen) return 1;
+                return 0;
+            });
+        } else if (sortValue === 'gender-women') {
+            filtered.sort((a, b) => {
+                const aIsWomen = isProductInCategory(a, 'women');
+                const bIsWomen = isProductInCategory(b, 'women');
+                if (aIsWomen && !bIsWomen) return -1;
+                if (!aIsWomen && bIsWomen) return 1;
+                return 0;
+            });
         }
         renderCategorySections(category, filtered);
     }
@@ -184,6 +200,32 @@ function initCollectionFilters(category, productsList) {
 
 function loadCollectionPage() {
     const params = new URLSearchParams(window.location.search);
+    const searchQuery = params.get('search');
+    
+    if (searchQuery) {
+        const decodedQuery = decodeURIComponent(searchQuery);
+        document.title = `GRIT | Search: ${decodedQuery}`;
+        const titleEl = document.getElementById('collection-title');
+        const catNameEl = document.getElementById('collection-category-name');
+        const subtitleEl = document.getElementById('collection-subtitle');
+        if (titleEl) titleEl.textContent = "Search Results";
+        if (catNameEl) catNameEl.textContent = "Search";
+        if (subtitleEl) subtitleEl.textContent = `Showing results for "${decodedQuery}"`;
+
+        const matched = products.filter(p => {
+            const hasFuzzy = typeof fuzzyMatch !== 'undefined';
+            const check = (term, text) => hasFuzzy ? fuzzyMatch(term, text) : (text && text.toLowerCase().includes(term.toLowerCase()));
+            return check(decodedQuery, p.title) || 
+                   check(decodedQuery, p.category) || 
+                   (p.tags && p.tags.some(tag => check(decodedQuery, tag)));
+        });
+
+        currentCollectionProducts = matched;
+        initCollectionFilters('all', matched);
+        renderCategorySections('all', matched);
+        return;
+    }
+
     const category = (params.get('category') || 'all').toLowerCase();
     const displayName = category.charAt(0).toUpperCase() + category.slice(1);
     document.title = `GRIT | ${displayName}`;
