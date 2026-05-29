@@ -10,6 +10,11 @@ async function init() {
         await fetchShopifyProducts();
         setupEventListeners();
         updateCartUI();
+        try {
+            await syncCartOnStartup();
+        } catch (syncErr) {
+            console.warn("Startup cart sync failed:", syncErr);
+        }
         updateWishlistUI();
         initGSAPAnimations();
         initCustomCursor();
@@ -37,3 +42,57 @@ async function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+async function syncCartOnStartup() {
+    if (typeof auth === 'undefined' || !auth.isLoggedIn()) return;
+    const user = auth.getUser();
+    if (!user || !user.email) return;
+
+    const firestoreDb = await ensureFirebase();
+    if (!firestoreDb) return;
+
+    try {
+        const cartDocRef = firestoreDb.collection('carts').doc(user.email);
+        const doc = await cartDocRef.get();
+        if (doc.exists) {
+            const cloudCart = doc.data().items || [];
+            
+            // Merge cloudCart with local cart
+            let mergedCart = [...cart];
+            cloudCart.forEach(cloudItem => {
+                const existingIndex = mergedCart.findIndex(
+                    localItem => localItem.shopifyVariantId === cloudItem.shopifyVariantId
+                );
+                if (existingIndex > -1) {
+                    const newQty = Math.min(
+                        mergedCart[existingIndex].quantity + cloudItem.quantity,
+                        MAX_CART_LIMIT_PER_ITEM
+                    );
+                    mergedCart[existingIndex].quantity = newQty;
+                } else {
+                    mergedCart.push(cloudItem);
+                }
+            });
+
+            cart = mergedCart;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartUI();
+
+            // Sync the merged cart back to the cloud
+            await cartDocRef.set({
+                items: cart,
+                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+            });
+        } else {
+            // Upload current local cart to Firestore if items exist
+            if (cart.length > 0) {
+                await cartDocRef.set({
+                    items: cart,
+                    updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+                });
+            }
+        }
+    } catch (e) {
+        console.warn("Error syncing cart on startup:", e);
+    }
+}

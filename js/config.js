@@ -48,5 +48,49 @@ localStorage.setItem('cart', JSON.stringify(cart));
 // Wishlist State
 let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-// Firebase db (initialized in reviews.js)
+// Firebase db (initialized in reviews.js or dynamically)
 let db = null;
+
+function loadScript(url) {
+    return new Promise((resolve, reject) => {
+        const existing = document.querySelector(`script[src="${url}"]`);
+        if (existing) {
+            if (existing.dataset.loaded === 'true') return resolve();
+            existing.addEventListener('load', resolve);
+            existing.addEventListener('error', reject);
+            return;
+        }
+        const script = document.createElement('script');
+        script.src = url;
+        script.async = true;
+        script.dataset.loaded = 'false';
+        script.onload = () => {
+            script.dataset.loaded = 'true';
+            resolve();
+        };
+        script.onerror = () => {
+            reject(new Error(`Failed to load script: ${url}`));
+        };
+        document.head.appendChild(script);
+    });
+}
+
+async function ensureFirebase() {
+    if (typeof firebase !== 'undefined') {
+        if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+        db = firebase.firestore();
+        return db;
+    }
+    try {
+        await loadScript("https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js");
+        await loadScript("https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js");
+        if (typeof firebase !== 'undefined') {
+            if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
+            db = firebase.firestore();
+            return db;
+        }
+    } catch (e) {
+        console.warn("Failed to dynamically load Firebase:", e);
+    }
+    return null;
+}

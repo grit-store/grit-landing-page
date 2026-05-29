@@ -50,7 +50,37 @@ function updateQuantity(productId, change) {
     }
 }
 
-function saveCart() { localStorage.setItem('cart', JSON.stringify(cart)); }
+function saveCart() { 
+    localStorage.setItem('cart', JSON.stringify(cart)); 
+    try {
+        syncCartToFirebase();
+    } catch (err) {
+        console.warn("Real-time cart sync failed:", err);
+    }
+}
+
+async function syncCartToFirebase() {
+    if (typeof auth === 'undefined' || !auth.isLoggedIn()) return;
+    const user = auth.getUser();
+    if (!user || !user.email) return;
+
+    const firestoreDb = await ensureFirebase();
+    if (!firestoreDb) return;
+
+    try {
+        const cartDocRef = firestoreDb.collection('carts').doc(user.email);
+        if (cart.length > 0) {
+            await cartDocRef.set({
+                items: cart,
+                updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+            });
+        } else {
+            await cartDocRef.delete();
+        }
+    } catch (e) {
+        console.warn("Failed to sync cart changes to Firebase:", e);
+    }
+}
 
 function openCart() {
     if (cartOverlay) cartOverlay.classList.add('active');
