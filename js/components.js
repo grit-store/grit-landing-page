@@ -131,10 +131,18 @@ function injectComponents() {
         `;
     }
 
-    // Overlays Injection (Search, Wishlist, Cart Drawers)
+    // Overlays Injection (Search, Wishlist, Cart Drawers, Loader)
     const siteOverlays = document.getElementById('site-overlays');
     if (siteOverlays) {
         siteOverlays.innerHTML = `
+            <!-- Global Page Loader -->
+            <div id="page-loader" class="page-loader">
+                <div class="loader-content">
+                    <img src="assets/logo.png" alt="GRIT Loading" class="loader-logo">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
             <!-- Search Overlay -->
             <div class="search-overlay" id="search-overlay">
                 <div class="search-container">
@@ -199,6 +207,38 @@ function injectComponents() {
                 </div>
             </div>
             ` : ''}
+
+            <!-- Quick Add / Variant Selection Modal -->
+            <div class="modal-overlay" id="quick-add-modal">
+                <div class="modal-content quick-add-content">
+                    <button class="close-modal" id="close-quick-add" aria-label="Close Modal">&times;</button>
+                    <div class="quick-add-grid">
+                        <div class="quick-add-image-sec">
+                            <img src="" alt="Product Image" id="quick-add-img" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22500%22 viewBox=%220 0 400 500%22%3E%3Crect width=%22400%22 height=%22500%22 fill=%22%23f0f0f0%22/%3E%3C/svg%3E'">
+                        </div>
+                        <div class="quick-add-info-sec">
+                            <span class="quick-add-category" id="quick-add-category"></span>
+                            <h2 class="quick-add-title" id="quick-add-title"></h2>
+                            <div class="quick-add-price" id="quick-add-price"></div>
+                            
+                            <div class="quick-add-options" id="quick-add-options-container">
+                                <!-- Dynamic options (Size, Color) will be injected here -->
+                            </div>
+
+                            <div class="quick-add-qty-container">
+                                <h4 class="variant-title">Quantity</h4>
+                                <div class="quantity-selector">
+                                    <button class="quantity-btn" id="quick-add-qty-decrease">-</button>
+                                    <span class="quantity-value" id="quick-add-qty-value">1</span>
+                                    <button class="quantity-btn" id="quick-add-qty-increase">+</button>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary w-100 magnetic" id="quick-add-submit-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Floating WhatsApp Support Widget -->
             <div class="floating-whatsapp-widget" id="whatsapp-widget">

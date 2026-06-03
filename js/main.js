@@ -26,6 +26,9 @@ async function init() {
         initNewsletter();
         initAnalytics();
 
+        hidePageLoader();
+        interceptNavigation();
+
         if (window.location.pathname.includes('collection.html')) {
             loadCollectionPage();
         }
@@ -95,4 +98,42 @@ async function syncCartOnStartup() {
     } catch (e) {
         console.warn("Error syncing cart on startup:", e);
     }
+}
+
+// ============ PAGE LOADER ============
+function hidePageLoader() {
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+        // Slight delay to ensure smooth transition and allow assets to settle
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 300);
+    }
+}
+
+function interceptNavigation() {
+    document.addEventListener('click', function(e) {
+        // Find closest anchor tag
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href');
+        
+        // Ignore links that don't cause full page navigation
+        if (!href || href.startsWith('#') || href.startsWith('javascript:') || href.startsWith('mailto:') || href.startsWith('tel:') || link.target === '_blank' || link.hasAttribute('download')) {
+            return;
+        }
+
+        // Show loader
+        const loader = document.getElementById('page-loader');
+        if (loader) {
+            e.preventDefault();
+            loader.classList.remove('hidden');
+            
+            // Navigate after a short delay to allow transition to start visually
+            setTimeout(() => {
+                window.location.href = link.href;
+            }, 400); // 400ms delay for smooth transition
+        }
+    });
 }

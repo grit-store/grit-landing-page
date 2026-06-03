@@ -5,17 +5,17 @@ const cartItemsContainer = document.getElementById('cart-items');
 const cartTotalPrice = document.getElementById('cart-total-price');
 const cartOverlay = document.getElementById('cart-overlay');
 
-function addToCart(productId, specificVariantId) {
+function addToCart(productId, specificVariantId, quantityToAdd = 1) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
     const targetVariantId = specificVariantId || product.shopifyVariantId;
     const existingItem = cart.find(item => item.shopifyVariantId === targetVariantId);
     if (existingItem) {
-        if (existingItem.quantity + 1 > MAX_CART_LIMIT_PER_ITEM) {
+        if (existingItem.quantity + quantityToAdd > MAX_CART_LIMIT_PER_ITEM) {
             showToastNotification(`For security reasons, you can purchase a maximum of ${MAX_CART_LIMIT_PER_ITEM} units of this item.`, 'error');
             return;
         }
-        existingItem.quantity += 1;
+        existingItem.quantity += quantityToAdd;
     } else {
         const variant = product.variants ? product.variants.find(v => v.id === targetVariantId) : null;
         let cartTitle = product.title, cartPrice = product.price, cartImage = product.image;
@@ -24,10 +24,10 @@ function addToCart(productId, specificVariantId) {
             cartPrice = parseFloat(variant.price.amount);
             if (variant.image) cartImage = variant.image.src;
         }
-        cart.push({ id: productId + '-' + targetVariantId, productId: product.id, title: cartTitle, category: product.category, price: cartPrice, image: cartImage, shopifyVariantId: targetVariantId, quantity: 1 });
+        cart.push({ id: productId + '-' + targetVariantId, productId: product.id, title: cartTitle, category: product.category, price: cartPrice, image: cartImage, shopifyVariantId: targetVariantId, quantity: quantityToAdd });
     }
     if (typeof gtag === 'function') {
-        gtag('event', 'add_to_cart', { currency: 'INR', value: product.price, items: [{ item_id: product.id, item_name: product.title, price: product.price, quantity: 1 }] });
+        gtag('event', 'add_to_cart', { currency: 'INR', value: product.price * quantityToAdd, items: [{ item_id: product.id, item_name: product.title, price: product.price, quantity: quantityToAdd }] });
     }
     saveCart(); updateCartUI(); openCart();
 }
