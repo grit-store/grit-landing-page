@@ -51,6 +51,19 @@ function renderCategorySections(category, categoryProducts) {
     const container = document.getElementById('category-sections-container');
     if (!container) return;
     if (categoryProducts.length === 0 && currentCollectionProducts.length > 0) categoryProducts = currentCollectionProducts;
+    
+    container.innerHTML = '';
+
+    if (categoryProducts.length === 0) {
+        container.innerHTML = `
+            <div class="empty-collection-state" style="text-align: center; padding: 8rem 2rem; min-height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--color-text); letter-spacing: 2px;">NEW DROPS INCOMING</h2>
+                <p style="color: var(--color-text-light); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">We're currently crafting exclusive new designs for this collection. Stay tuned!</p>
+            </div>
+        `;
+        return;
+    }
+
     const tabs = subcategoryMap[category] || [];
     if (tabs.length === 0) {
         container.innerHTML = `<section class="products-section"><div class="product-grid" id="product-grid-all"></div></section>`;
