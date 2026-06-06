@@ -245,7 +245,7 @@ function loadCollectionPage() {
             if (!heroSection.querySelector('.collection-video-bg')) {
                 const videoHTML = `
                     <video autoplay loop muted playsinline class="collection-video-bg" id="anime-hero-video">
-                        <source src="video/anime1.mov" type="video/quicktime">
+                        <source src="video/anime1.mp4" type="video/mp4">
                     </video>
                     <button id="hero-mute-btn" class="hero-mute-btn" aria-label="Toggle Mute">
                         <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon-volume-on" style="display:none;">
