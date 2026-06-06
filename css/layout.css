@@ -1,5 +1,56 @@
 /* =========================================
    Layout Helper Styles
-   Main navigation and site-footer styles are already handled in base.css
-   This file acts as a clean placeholder to prevent layout conflicts.
    ========================================= */
+
+/* =========================================
+   Footer
+   ========================================= */
+.site-footer {
+    background-color: var(--color-bg);
+    border-top: 1px solid var(--color-accent);
+    padding: 4rem 5% 2rem;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.footer-brand p {
+    color: var(--color-text-light);
+    max-width: 300px;
+}
+
+.footer-links h4 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.footer-links a {
+    display: block;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--color-text);
+}
+
+.footer-bottom {
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-accent);
+}
