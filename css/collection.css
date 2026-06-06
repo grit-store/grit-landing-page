@@ -4,11 +4,65 @@
 .collection-hero {
     padding: 10rem 5% 4rem;
     border-bottom: 1px solid rgba(196, 159, 112, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.collection-hero.has-video-bg {
+    padding: 0 5%;
+    min-height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.collection-hero.has-video-bg .collection-hero-content {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.collection-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.hero-mute-btn {
+    position: absolute;
+    bottom: 3rem;
+    left: 5%;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-white);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all var(--transition-fast);
+    backdrop-filter: blur(4px);
+}
+
+.hero-mute-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+    border-color: var(--color-accent);
 }
 
 .collection-hero-content {
     max-width: 1400px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .collection-breadcrumb {

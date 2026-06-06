@@ -3,7 +3,7 @@
 const subcategoryMap = {
     men: ['T-Shirts', 'Shirt', 'Vest', 'Sweatpants', 'Shorts', 'Jackets', 'Hoodie'],
     women: ['T-Shirt', 'Tank-Top', 'Crop-Top', 'Tube-Top', 'Sports-Bra', 'Crop-Tank', 'Mini-Skirt', 'Pencil-Skirt', 'Legging', 'Shorts', 'Dress', 'Bomber-Jacket', 'Cropped Hoodie'],
-    others: ['Shirts', 'T-Shirts', 'Shorts', 'Hoodie', 'Sweatshirt'],
+    anime: ['Shirts', 'T-Shirts', 'Shorts', 'Hoodie', 'Sweatshirt'],
     original: ['Shirts', 'T-Shirts', 'Sweatpants', 'Shorts', 'Jacket', 'Hoodie', 'Sweatshirt'],
 };
 
@@ -11,12 +11,12 @@ function isProductInCategory(p, category) {
     if (!p) return false;
     const cat = category.toLowerCase();
     const searchString = ` ${p.title} ${p.category} ${(p.tags || []).join(' ')} `.toLowerCase();
-    if (cat === 'others') {
+    if (cat === 'anime') {
         const isMen = /\b(men's|mens|men)\b/.test(searchString);
         const isWomen = /\b(women's|womens|women)\b/.test(searchString);
         const isUnisex = /\bunisex\b/.test(searchString);
         if ((!isMen && !isWomen) || isUnisex) return true;
-        return /\bkids?\b|\baccessories\b|\bmugs?\b|\bothers\b/.test(searchString);
+        return /\bkids?\b|\baccessories\b|\bmugs?\b|\banime\b/.test(searchString);
     }
     let regex;
     if (cat === 'men') regex = /\b(men's|mens|men|male|unisex)\b/;
@@ -235,9 +235,67 @@ function loadCollectionPage() {
     if (titleEl) titleEl.textContent = displayName;
     if (catNameEl) catNameEl.textContent = displayName;
     if (subtitleEl) {
-        const subtitles = { men: 'Refined essentials crafted for the modern man.', women: 'Elevated pieces designed for effortless style.', others: 'Unique styles and accessories for every occasion.', original: 'The signature GRIT line — where it all began.' };
+        const subtitles = { men: 'Refined essentials crafted for the modern man.', women: 'Elevated pieces designed for effortless style.', anime: 'Exclusive anime-inspired apparel and designs.', original: 'The signature GRIT line — where it all began.' };
         subtitleEl.textContent = subtitles[category] || 'Explore our curated collection.';
     }
+
+    const heroSection = document.querySelector('.collection-hero');
+    if (heroSection) {
+        if (category === 'anime') {
+            if (!heroSection.querySelector('.collection-video-bg')) {
+                const videoHTML = `
+                    <video autoplay loop muted playsinline class="collection-video-bg" id="anime-hero-video">
+                        <source src="video/anime1.mp4" type="video/mp4">
+                    </video>
+                    <button id="hero-mute-btn" class="hero-mute-btn" aria-label="Toggle Mute">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon-volume-on" style="display:none;">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        </svg>
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon-volume-off">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <line x1="23" y1="9" x2="17" y2="15"></line>
+                            <line x1="17" y1="9" x2="23" y2="15"></line>
+                        </svg>
+                    </button>`;
+                heroSection.insertAdjacentHTML('afterbegin', videoHTML);
+                heroSection.classList.add('has-video-bg');
+
+                const muteBtn = heroSection.querySelector('#hero-mute-btn');
+                const video = heroSection.querySelector('#anime-hero-video');
+                const iconOn = muteBtn.querySelector('.icon-volume-on');
+                const iconOff = muteBtn.querySelector('.icon-volume-off');
+
+                muteBtn.addEventListener('click', () => {
+                    video.muted = !video.muted;
+                    if (video.muted) {
+                        iconOn.style.display = 'none';
+                        iconOff.style.display = 'block';
+                    } else {
+                        iconOn.style.display = 'block';
+                        iconOff.style.display = 'none';
+                    }
+                });
+
+                // Auto mute on scroll down
+                const handleScroll = () => {
+                    if (window.scrollY > 150 && !video.muted) {
+                        video.muted = true;
+                        iconOn.style.display = 'none';
+                        iconOff.style.display = 'block';
+                    }
+                };
+                window.addEventListener('scroll', handleScroll, { passive: true });
+            }
+        } else {
+            const video = heroSection.querySelector('.collection-video-bg');
+            const muteBtn = heroSection.querySelector('.hero-mute-btn');
+            if (video) video.remove();
+            if (muteBtn) muteBtn.remove();
+            heroSection.classList.remove('has-video-bg');
+        }
+    }
+
     if (category === 'all') { renderCategorySections('', products); return; }
 
     let matchedProducts = [];

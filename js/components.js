@@ -15,10 +15,14 @@ function injectComponents() {
             <!-- Announcement Bar -->
             <div class="announcement-bar">
                 <div class="marquee-content">
-                    <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
-                    <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
-                    <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
-                    <span>FREE SHIPPING ON ORDERS OVER ₹5,000 | PREMIUM QUALITY GUARANTEED</span>
+                    <span>COD AVAILABLE</span>
+                    <span>PREMIUM QUALITY GUARANTEED</span>
+                    <span>COD AVAILABLE</span>
+                    <span>PREMIUM QUALITY GUARANTEED</span>
+                    <span>COD AVAILABLE</span>
+                    <span>PREMIUM QUALITY GUARANTEED</span>
+                    <span>COD AVAILABLE</span>
+                    <span>PREMIUM QUALITY GUARANTEED</span>
                 </div>
             </div>
 
@@ -43,7 +47,7 @@ function injectComponents() {
                     <div class="nav-links">
                         <a href="collection.html?category=men">Men</a>
                         <a href="collection.html?category=women">Women</a>
-                        <a href="collection.html?category=others">Others</a>
+                        <a href="collection.html?category=anime">Anime</a>
                         <a href="about.html">About</a>
                     </div>
                     <div class="nav-actions">
@@ -87,13 +91,13 @@ function injectComponents() {
                             </div>
                         </div>
                         <div class="nav-item-dropdown">
-                            <a href="collection.html?category=others">Others</a>
+                            <a href="collection.html?category=anime">Anime</a>
                             <div class="dropdown-content">
-                                <a href="collection.html?category=others#section-shirts">Shirts</a>
-                                <a href="collection.html?category=others#section-t-shirts">T-Shirts</a>
-                                <a href="collection.html?category=others#section-shorts">Shorts</a>
-                                <a href="collection.html?category=others#section-hoodie">Hoodie</a>
-                                <a href="collection.html?category=others#section-sweatshirt">Sweatshirt</a>
+                                <a href="collection.html?category=anime#section-shirts">Shirts</a>
+                                <a href="collection.html?category=anime#section-t-shirts">T-Shirts</a>
+                                <a href="collection.html?category=anime#section-shorts">Shorts</a>
+                                <a href="collection.html?category=anime#section-hoodie">Hoodie</a>
+                                <a href="collection.html?category=anime#section-sweatshirt">Sweatshirt</a>
                             </div>
                         </div>
                         <a href="about.html">About</a>
@@ -264,7 +268,7 @@ function injectComponents() {
                             <span class="mobile-nav-group-title">Collections</span>
                             <a href="collection.html?category=men" class="mobile-sub-link">Men's Apparel</a>
                             <a href="collection.html?category=women" class="mobile-sub-link">Women's Apparel</a>
-                            <a href="collection.html?category=others" class="mobile-sub-link">Others &amp; Accessories</a>
+                            <a href="collection.html?category=anime" class="mobile-sub-link">Anime</a>
                         </div>
 
                         <div class="mobile-nav-group">
@@ -519,7 +523,7 @@ function injectComponents() {
                             <h4>Shop</h4>
                             <a href="collection.html?category=men">Men</a>
                             <a href="collection.html?category=women">Women</a>
-                            <a href="collection.html?category=others">Others</a>
+                            <a href="collection.html?category=anime">Anime</a>
                         </div>
                         <div class="footer-links">
                             <h4>Support</h4>

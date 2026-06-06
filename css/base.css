@@ -244,8 +244,8 @@ h1, h2, h3, h4 {
     display: flex;
     visibility: hidden;
     opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    transform: translateY(15px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
     position: absolute;
     background-color: var(--color-bg);
     min-width: 160px;
@@ -283,6 +283,8 @@ h1, h2, h3, h4 {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease, visibility 0s;
+    transition-delay: 1s;
 }
 
 .nav-actions {
