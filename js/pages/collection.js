@@ -244,7 +244,7 @@ function loadCollectionPage() {
         if (category === 'anime') {
             if (!heroSection.querySelector('.collection-video-bg')) {
                 const videoHTML = `
-                    <video autoplay loop muted playsinline webkit-playsinline="true" disablePictureInPicture class="collection-video-bg" id="anime-hero-video">
+                    <video autoplay loop muted playsinline webkit-playsinline="true" disablePictureInPicture preload="auto" class="collection-video-bg" id="anime-hero-video">
                         <source src="video/anime1.mp4" type="video/mp4">
                     </video>
                     <button id="hero-mute-btn" class="hero-mute-btn" aria-label="Toggle Mute">
