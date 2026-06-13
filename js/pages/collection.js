@@ -318,8 +318,9 @@ function loadCollectionPage() {
             if (muteBtn) muteBtn.remove();
             heroSection.classList.remove('has-video-bg');
 
-            if (category === 'men') {
-                heroSection.style.backgroundImage = "linear-gradient(to bottom, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.75)), url('assets/men hero.jpeg')";
+            if (category === 'men' || category === 'women') {
+                const imagePath = category === 'men' ? 'assets/men hero.jpeg' : 'assets/women hero.jpeg';
+                heroSection.style.backgroundImage = `linear-gradient(to bottom, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.75)), url('${imagePath}')`;
                 heroSection.style.backgroundSize = "cover";
                 heroSection.style.backgroundPosition = "center top";
                 heroSection.style.minHeight = "100vh";
