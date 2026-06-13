@@ -6,7 +6,7 @@ function loadProductDetail() {
     if (!product) { const c = document.getElementById('pdp-container'); if(c) c.innerHTML = '<h2>Product not found.</h2>'; return; }
 
     document.getElementById('pdp-title').textContent = product.title;
-    document.getElementById('pdp-price').textContent = '₹' + product.price.toFixed(2);
+    document.getElementById('pdp-price').innerHTML = `<span style="text-decoration: line-through; color: var(--color-text-light); margin-right: 8px; font-size: 0.8em;">₹${(product.price * 1.2).toFixed(2)}</span><span>₹${product.price.toFixed(2)}</span>`;
     document.getElementById('pdp-category').textContent = product.category;
     document.getElementById('pdp-description').innerHTML = product.description;
 
@@ -55,8 +55,19 @@ function loadProductDetail() {
         if (!product.variants) return;
         const selectedVariant = product.variants.find(v => v.selectedOptions.every(opt => selectedOptions[opt.name] === opt.value));
         if (selectedVariant) {
-            document.getElementById('pdp-price').textContent = '₹' + parseFloat(selectedVariant.price.amount).toFixed(2);
-            if (selectedVariant.image) mainImg.src = selectedVariant.image.src;
+            document.getElementById('pdp-price').innerHTML = `<span style="text-decoration: line-through; color: var(--color-text-light); margin-right: 8px; font-size: 0.8em;">₹${(parseFloat(selectedVariant.price.amount) * 1.2).toFixed(2)}</span><span>₹${parseFloat(selectedVariant.price.amount).toFixed(2)}</span>`;
+            
+            if (selectedVariant.image && selectedVariant.image.src) {
+                const variantImgSrcClean = selectedVariant.image.src.split('?')[0];
+                const isChart = product.images && product.images.some(img => 
+                    img.src.split('?')[0] === variantImgSrcClean && 
+                    img.alt && img.alt.toLowerCase().includes('chart')
+                );
+                if (!isChart) {
+                    mainImg.src = selectedVariant.image.src;
+                }
+            }
+            
             const addBtn = document.getElementById('pdp-add-to-cart');
             const buyBtn = document.getElementById('pdp-buy-now');
             addBtn.dataset.variantId = selectedVariant.id;

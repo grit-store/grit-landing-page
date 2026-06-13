@@ -148,7 +148,7 @@ function initSearch() {
                 <img src="${p.image}" alt="${escapeHTML(p.title)}" loading="lazy">
                 <div>
                     <div class="search-result-title">${highlightedTitle}</div>
-                    <div class="search-result-price">₹${p.price.toFixed(2)}</div>
+                    <div class="search-result-price"><span style="text-decoration: line-through; color: var(--color-text-light); margin-right: 4px; font-size: 0.85em;">₹${(p.price * 1.2).toFixed(2)}</span><span>₹${p.price.toFixed(2)}</span></div>
                 </div>
             `;
             searchResults.appendChild(item);

@@ -1,0 +1,25 @@
+# Secrets
+automation/.env
+.env
+
+# Dependencies
+automation/node_modules/
+node_modules/
+
+# AI/Agent metadata
+.agent/
+ui-ux-pro-max-skill/
+
+# Shopify CLI state
+automation/.shopify/
+
+# Generated mockups (already uploaded to Shopify)
+automation/generated_mockups/
+
+# Internal docs (not part of live website)
+design-system/
+docs/
+
+# System files
+.DS_Store
+Thumbs.db

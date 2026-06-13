@@ -95,9 +95,7 @@ function updateCartUI() {
     const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
     document.querySelectorAll('.cart-count').forEach(el => el.textContent = totalItems);
 
-    const shippingThreshold = 5000;
-    const shippingMsg = document.getElementById('shipping-message');
-    const shippingFill = document.getElementById('shipping-bar-fill');
+
     const container = document.getElementById('cart-items');
     const totalPriceEl = document.getElementById('cart-total-price');
     if (!container) return;
@@ -105,7 +103,7 @@ function updateCartUI() {
     if (cart.length === 0) {
         container.innerHTML = '<p class="empty-cart-msg">Your cart is currently empty.</p>';
         if (totalPriceEl) totalPriceEl.textContent = '₹0.00';
-        if (shippingMsg && shippingFill) { shippingMsg.textContent = `Add ₹${shippingThreshold.toLocaleString('en-IN')} to unlock free shipping.`; shippingFill.style.width = "0%"; }
+
         return;
     }
 
@@ -134,10 +132,7 @@ function updateCartUI() {
     });
 
     if (totalPriceEl) totalPriceEl.textContent = '₹' + total.toFixed(2);
-    if (shippingMsg && shippingFill) {
-        if (total >= shippingThreshold) { shippingMsg.textContent = "You've unlocked free shipping!"; shippingFill.style.width = "100%"; }
-        else { shippingMsg.textContent = `Add ₹${(shippingThreshold - total).toFixed(2)} to unlock free shipping.`; shippingFill.style.width = `${(total / shippingThreshold) * 100}%`; }
-    }
+
 
     container.querySelectorAll('.remove-item').forEach(btn => btn.addEventListener('click', e => removeFromCart(e.target.dataset.id)));
     container.querySelectorAll('.increase-qty').forEach(btn => btn.addEventListener('click', e => updateQuantity(e.target.dataset.id, 1)));

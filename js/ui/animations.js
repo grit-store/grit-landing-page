@@ -72,7 +72,7 @@ function initInteractiveBackground() {
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     let width, height, dots = [];
-    const dotSpacing = 30, dotRadius = 1.5, dotColor = 'rgba(253, 251, 249, 0.15)', repelRadius = 120, repelForce = 2.0, returnForce = 0.05, friction = 0.85;
+    const dotSpacing = 20, dotRadius = 1.2, dotColor = 'rgba(253, 251, 249, 0.12)', repelRadius = 120, repelForce = 2.0, returnForce = 0.05, friction = 0.85;
     let mouse = { x: -1000, y: -1000 };
 
     function resize() {
@@ -88,14 +88,56 @@ function initInteractiveBackground() {
 
     function animate() {
         ctx.clearRect(0, 0, width, height);
+
+        // Batch normal dots to reduce draw calls from 5000+ to 2
+        ctx.beginPath();
+        ctx.fillStyle = dotColor;
+        const nearDots = [];
+
         dots.forEach(dot => {
-            const dx = mouse.x - dot.x, dy = mouse.y - dot.y, dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < repelRadius) { const force = (repelRadius - dist) / repelRadius; dot.vx -= (dx / dist) * force * repelForce; dot.vy -= (dy / dist) * force * repelForce; }
-            dot.vx += (dot.baseX - dot.x) * returnForce; dot.vy += (dot.baseY - dot.y) * returnForce;
-            dot.vx *= friction; dot.vy *= friction; dot.x += dot.vx; dot.y += dot.vy;
-            ctx.fillStyle = dist < repelRadius * 1.5 ? '#a83f3f' : dotColor;
-            ctx.beginPath(); ctx.arc(dot.x, dot.y, dotRadius, 0, Math.PI * 2); ctx.fill();
+            const dx = mouse.x - dot.x;
+            const dy = mouse.y - dot.y;
+            const distSq = dx * dx + dy * dy;
+            const repelRadiusSq = repelRadius * repelRadius;
+            let isNear = false;
+
+            if (distSq < repelRadiusSq) {
+                const dist = Math.sqrt(distSq);
+                isNear = true;
+                if (dist > 0.1) {
+                    const force = (repelRadius - dist) / repelRadius;
+                    dot.vx -= (dx / dist) * force * repelForce;
+                    dot.vy -= (dy / dist) * force * repelForce;
+                }
+            }
+            dot.vx += (dot.baseX - dot.x) * returnForce;
+            dot.vy += (dot.baseY - dot.y) * returnForce;
+            dot.vx *= friction;
+            dot.vy *= friction;
+            dot.x += dot.vx;
+            dot.y += dot.vy;
+
+            if (isNear) {
+                nearDots.push(dot);
+            } else {
+                ctx.moveTo(dot.x + dotRadius, dot.y);
+                ctx.arc(dot.x, dot.y, dotRadius, 0, Math.PI * 2);
+            }
         });
+
+        ctx.fill();
+
+        // Draw active repelled dots (red)
+        if (nearDots.length > 0) {
+            ctx.beginPath();
+            ctx.fillStyle = '#a83f3f';
+            nearDots.forEach(dot => {
+                ctx.moveTo(dot.x + dotRadius, dot.y);
+                ctx.arc(dot.x, dot.y, dotRadius, 0, Math.PI * 2);
+            });
+            ctx.fill();
+        }
+
         requestAnimationFrame(animate);
     }
 

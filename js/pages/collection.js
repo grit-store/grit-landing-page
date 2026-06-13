@@ -12,11 +12,7 @@ function isProductInCategory(p, category) {
     const cat = category.toLowerCase();
     const searchString = ` ${p.title} ${p.category} ${(p.tags || []).join(' ')} `.toLowerCase();
     if (cat === 'anime') {
-        const isMen = /\b(men's|mens|men)\b/.test(searchString);
-        const isWomen = /\b(women's|womens|women)\b/.test(searchString);
-        const isUnisex = /\bunisex\b/.test(searchString);
-        if ((!isMen && !isWomen) || isUnisex) return true;
-        return /\bkids?\b|\baccessories\b|\bmugs?\b|\banime\b/.test(searchString);
+        return p.tags && p.tags.some(tag => tag.toLowerCase() === 'anime');
     }
     let regex;
     if (cat === 'men') regex = /\b(men's|mens|men|male|unisex)\b/;
@@ -260,9 +256,10 @@ function loadCollectionPage() {
         if (category === 'anime') {
             if (!heroSection.querySelector('.collection-video-bg')) {
                 const videoHTML = `
-                    <video autoplay loop muted playsinline webkit-playsinline="true" disablePictureInPicture preload="auto" class="collection-video-bg" id="anime-hero-video">
+                    <video autoplay loop muted playsinline webkit-playsinline="true" disablePictureInPicture preload="metadata" class="collection-video-bg" id="anime-hero-video">
                         <source src="video/anime1.mp4" type="video/mp4">
                     </video>
+                    <div class="collection-video-overlay"></div>
                     <button id="hero-mute-btn" class="hero-mute-btn" aria-label="Toggle Mute">
                         <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon-volume-on" style="display:none;">
                             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
@@ -293,20 +290,27 @@ function loadCollectionPage() {
                     }
                 });
 
-                // Auto mute on scroll down
-                const handleScroll = () => {
-                    if (window.scrollY > 150 && !video.muted) {
-                        video.muted = true;
-                        iconOn.style.display = 'none';
-                        iconOff.style.display = 'block';
-                    }
-                };
-                window.addEventListener('scroll', handleScroll, { passive: true });
+                // Auto pause video when scrolled out of viewport (resource conservation)
+                if (window.IntersectionObserver) {
+                    const videoObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                video.play().catch(() => {});
+                            } else {
+                                video.pause();
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    videoObserver.observe(video);
+                }
             }
         } else {
             const video = heroSection.querySelector('.collection-video-bg');
             const muteBtn = heroSection.querySelector('.hero-mute-btn');
-            if (video) video.remove();
+            if (video) {
+                video.pause();
+                video.remove();
+            }
             if (muteBtn) muteBtn.remove();
             heroSection.classList.remove('has-video-bg');
         }

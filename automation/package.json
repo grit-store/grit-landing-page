@@ -1,0 +1,9 @@
+{
+  "name": "grit-automation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "get-token": "node get-shopify-token.js",
+    "automate": "node automate-mockups.js"
+  }
+}

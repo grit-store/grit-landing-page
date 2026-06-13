@@ -1,17 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* =========================================
    Design Tokens & Variables
    ========================================= */
 :root {
-    --color-bg: #121212;
-    --color-text: #fdfbf9;
-    --color-text-light: #a0938b;
+    --color-bg: #0A0A0A;
+    --color-text: #FAFAF9;
+    --color-text-light: #A0938B;
     --color-primary: #a83f3f;
-    --color-secondary: #1a1a1a;
-    --color-accent: #c49f70;
+    --color-secondary: #161616;
+    --color-accent: #C49F70;
     --color-white: #ffffff;
-    --color-glow: rgba(196, 159, 112, 0.15);
+    --color-glow: rgba(168, 63, 63, 0.15);
     
-    --font-main: 'Outfit', sans-serif;
+    --font-main: 'Jost', sans-serif;
+    --font-heading: 'Bodoni Moda', serif;
     
     --transition-slow: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     --transition-fast: 0.3s ease;
@@ -24,6 +27,20 @@
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
     --spacing-xl: 4rem;
+
+    /* Spacing & Shadows from Pro Max System */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.5);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.6);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.7);
+    --shadow-xl: 0 20px 25px rgba(0,0,0,0.8);
 }
 
 /* =========================================
@@ -87,7 +104,8 @@ a {
 /* =========================================
    Typography
    ========================================= */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .logo, .hero-vertical-text, .pdp-title {
+    font-family: var(--font-heading);
     font-weight: 500;
     line-height: 1.2;
 }
@@ -105,6 +123,16 @@ h1, h2, h3, h4 {
 .section-header p {
     color: var(--color-text-light);
     font-size: 1.1rem;
+}
+
+/* Accessibility Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
 }
 
 /* =========================================
@@ -181,10 +209,12 @@ h1, h2, h3, h4 {
 }
 
 .navbar.scrolled {
-    background: rgba(18, 18, 18, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--color-accent);
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(196, 159, 112, 0.15);
     top: 0; /* Moves to top when scrolled */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
 .navbar.hidden {
@@ -205,6 +235,7 @@ h1, h2, h3, h4 {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 2px;
+    cursor: pointer;
 }
 
 .nav-links {
@@ -218,6 +249,7 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
+    cursor: pointer;
 }
 
 .nav-links a::after {
@@ -247,15 +279,17 @@ h1, h2, h3, h4 {
     transform: translateY(15px);
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
     position: absolute;
-    background-color: var(--color-bg);
+    background-color: rgba(16, 16, 16, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 8px 32px 0px rgba(0,0,0,0.6);
     z-index: 200;
     top: 100%;
     left: -1rem;
     flex-direction: column;
     padding: 0.5rem 0;
-    border: 1px solid var(--color-accent);
+    border: 1px solid rgba(196, 159, 112, 0.15);
     border-radius: var(--border-radius-sm);
 }
 

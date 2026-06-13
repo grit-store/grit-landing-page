@@ -14,10 +14,15 @@
 }
 
 .product-card {
-    group: product;
     position: relative;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    transition: transform var(--transition-fast);
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
 }
 
 .product-image-wrapper {
@@ -26,6 +31,14 @@
     overflow: hidden;
     background-color: var(--color-secondary);
     margin-bottom: 1rem;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid rgba(196, 159, 112, 0.05);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.product-card:hover .product-image-wrapper {
+    border-color: rgba(196, 159, 112, 0.2);
+    box-shadow: var(--shadow-lg);
 }
 
 .product-image {
@@ -50,12 +63,12 @@
 
 .product-card:hover .product-image-secondary {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* Fallback hover for single images */
 .product-card:hover .product-image:not(.product-image-primary) {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .product-actions {
@@ -63,11 +76,11 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 1rem;
+    padding: 1.25rem 1rem;
     transform: translateY(100%);
     opacity: 0;
     transition: all var(--transition-fast);
-    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    background: linear-gradient(to top, rgba(10,10,10,0.8), transparent);
     z-index: 10;
 }
 
@@ -80,12 +93,19 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 0.5rem 0;
 }
 
 .product-title {
-    font-size: 1.1rem;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
     font-weight: 500;
     color: var(--color-text);
+    transition: color var(--transition-fast);
+}
+
+.product-card:hover .product-title {
+    color: var(--color-primary);
 }
 
 .product-category {
@@ -95,7 +115,7 @@
 }
 
 .product-price {
-    font-weight: 700;
+    font-weight: 500;
     color: var(--color-text);
 }
 
@@ -222,4 +242,36 @@
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
+
+/* =========================================
+   Product Card Color Swatches
+   ========================================= */
+.product-card-colors {
+    display: flex;
+    gap: 8px;
+    margin-top: 0.6rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-card-color-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+    position: relative;
+    box-shadow: inset 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.product-card-color-swatch:hover,
+.product-card-color-swatch.hovered {
+    transform: scale(1.25);
+}
+
+/* Active state: ring effect with outer border matching accent color */
+.product-card-color-swatch.active {
+    box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 3.5px var(--color-accent);
+}
+
 

@@ -34,6 +34,17 @@
     pointer-events: none;
 }
 
+.collection-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 0) 65%, #0A0A0A 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
 .hero-mute-btn {
     position: absolute;
     bottom: 3rem;
@@ -379,10 +390,11 @@
 
 .modal-content {
     background-color: var(--color-bg);
-    padding: 3rem 2rem;
+    padding: 2.5rem 2rem;
     width: 90%;
     max-width: 600px;
-    border: 1px solid var(--color-accent);
+    border: 1px solid rgba(196, 159, 112, 0.25);
+    border-radius: var(--border-radius-md);
     position: relative;
     transform: translateY(20px);
     transition: transform 0.3s ease;
@@ -401,6 +413,47 @@
     font-size: 2rem;
     color: var(--color-text-light);
     cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.close-modal:hover {
+    color: var(--color-primary);
+}
+
+/* Specific Size Guide Modal Layout Improvements */
+#size-guide-modal .modal-content {
+    max-width: 480px;
+    padding: 2.5rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+}
+
+#size-guide-modal h2 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#size-guide-image-container {
+    margin-top: 1rem !important;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 60vh;
+}
+
+#size-guide-dynamic-img {
+    max-width: 100%;
+    max-height: 55vh !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Size Table */
