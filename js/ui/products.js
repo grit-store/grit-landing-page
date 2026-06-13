@@ -397,8 +397,31 @@ function openQuickAddModal(productId, preselectedColor) {
         );
         if (selectedVariant) {
             modalPrice.innerHTML = `<span style="text-decoration: line-through; color: var(--color-text-light); margin-right: 8px; font-size: 0.9em;">₹${(parseFloat(selectedVariant.price.amount) * 1.2).toFixed(2)}</span><span>₹${parseFloat(selectedVariant.price.amount).toFixed(2)}</span>`;
+            let variantImg = null;
             if (selectedVariant.image && selectedVariant.image.src) {
-                modalImg.src = selectedVariant.image.src;
+                variantImg = selectedVariant.image.src;
+            } else {
+                const colorKey = Object.keys(selectedOptions).find(k => k.toLowerCase() === 'color' || k.toLowerCase() === 'colour');
+                const selectedColor = colorKey ? selectedOptions[colorKey] : '';
+                if (selectedColor && product.images) {
+                    let match = product.images.find(img => {
+                        const alt = (img.alt || '').toLowerCase().trim();
+                        return alt.includes(selectedColor.toLowerCase()) && alt.endsWith('1') && !alt.includes('chart');
+                    });
+                    if (!match) {
+                        match = product.images.find(img => {
+                            const alt = (img.alt || '').toLowerCase();
+                            return alt.includes(selectedColor.toLowerCase()) && !alt.includes('chart');
+                        });
+                    }
+                    if (match) {
+                        variantImg = match.src;
+                    }
+                }
+            }
+
+            if (variantImg) {
+                modalImg.src = variantImg;
             } else {
                 modalImg.src = product.image;
             }

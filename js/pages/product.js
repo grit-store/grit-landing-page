@@ -54,7 +54,9 @@ function loadProductDetail() {
         visibleImages.forEach(imgObj => {
             const thumb = document.createElement('img');
             thumb.src = imgObj.src;
-            thumb.className = mainImg.src === imgObj.src ? 'pdp-thumbnail active' : 'pdp-thumbnail';
+            const cleanMainSrc = mainImg.src ? mainImg.src.split('?')[0] : '';
+            const cleanThumbSrc = imgObj.src ? imgObj.src.split('?')[0] : '';
+            thumb.className = cleanMainSrc === cleanThumbSrc ? 'pdp-thumbnail active' : 'pdp-thumbnail';
             thumb.addEventListener('click', () => {
                 mainImg.src = imgObj.src;
                 document.querySelectorAll('.pdp-thumbnail').forEach(t => t.classList.remove('active'));
@@ -70,14 +72,37 @@ function loadProductDetail() {
         if (selectedVariant) {
             document.getElementById('pdp-price').innerHTML = `<span style="text-decoration: line-through; color: var(--color-text-light); margin-right: 8px; font-size: 0.8em;">₹${(parseFloat(selectedVariant.price.amount) * 1.2).toFixed(2)}</span><span>₹${parseFloat(selectedVariant.price.amount).toFixed(2)}</span>`;
             
+            let variantImg = null;
             if (selectedVariant.image && selectedVariant.image.src) {
-                const variantImgSrcClean = selectedVariant.image.src.split('?')[0];
+                variantImg = selectedVariant.image.src;
+            } else {
+                const colorKey = Object.keys(selectedOptions).find(k => k.toLowerCase() === 'color' || k.toLowerCase() === 'colour');
+                const selectedColor = colorKey ? selectedOptions[colorKey] : '';
+                if (selectedColor && product.images) {
+                    let match = product.images.find(img => {
+                        const alt = (img.alt || '').toLowerCase().trim();
+                        return alt.includes(selectedColor.toLowerCase()) && alt.endsWith('1') && !alt.includes('chart');
+                    });
+                    if (!match) {
+                        match = product.images.find(img => {
+                            const alt = (img.alt || '').toLowerCase();
+                            return alt.includes(selectedColor.toLowerCase()) && !alt.includes('chart');
+                        });
+                    }
+                    if (match) {
+                        variantImg = match.src;
+                    }
+                }
+            }
+
+            if (variantImg) {
+                const variantImgSrcClean = variantImg.split('?')[0];
                 const isChart = product.images && product.images.some(img => 
                     img.src.split('?')[0] === variantImgSrcClean && 
                     img.alt && img.alt.toLowerCase().includes('chart')
                 );
                 if (!isChart) {
-                    mainImg.src = selectedVariant.image.src;
+                    mainImg.src = variantImg;
                 }
             }
             
