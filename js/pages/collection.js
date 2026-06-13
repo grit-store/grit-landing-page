@@ -319,19 +319,33 @@ function loadCollectionPage() {
             heroSection.classList.remove('has-video-bg');
 
             if (category === 'men') {
-                heroSection.style.backgroundImage = "linear-gradient(to bottom, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.7)), url('assets/men hero.jpeg')";
+                heroSection.style.backgroundImage = "linear-gradient(to bottom, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.75)), url('assets/men hero.jpeg')";
                 heroSection.style.backgroundSize = "cover";
                 heroSection.style.backgroundPosition = "center center";
-                heroSection.style.minHeight = "40vh";
+                heroSection.style.minHeight = "100vh";
                 heroSection.style.display = "flex";
-                heroSection.style.alignItems = "center";
+                heroSection.style.flexDirection = "column";
+                heroSection.style.justifyContent = "center";
+                
+                const contentEl = heroSection.querySelector('.collection-hero-content');
+                if (contentEl) {
+                    contentEl.style.width = "100%";
+                    contentEl.style.marginTop = "4rem";
+                }
             } else {
                 heroSection.style.backgroundImage = "";
                 heroSection.style.backgroundSize = "";
                 heroSection.style.backgroundPosition = "";
                 heroSection.style.minHeight = "";
                 heroSection.style.display = "";
-                heroSection.style.alignItems = "";
+                heroSection.style.flexDirection = "";
+                heroSection.style.justifyContent = "";
+                
+                const contentEl = heroSection.querySelector('.collection-hero-content');
+                if (contentEl) {
+                    contentEl.style.width = "";
+                    contentEl.style.marginTop = "";
+                }
             }
         }
     }
