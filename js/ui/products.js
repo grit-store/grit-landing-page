@@ -398,7 +398,16 @@ function openQuickAddModal(productId, preselectedColor) {
         if (selectedVariant) {
             modalPrice.innerHTML = `<span style="text-decoration: line-through; color: var(--color-text-light); margin-right: 8px; font-size: 0.9em;">₹${(parseFloat(selectedVariant.price.amount) * 1.2).toFixed(2)}</span><span>₹${parseFloat(selectedVariant.price.amount).toFixed(2)}</span>`;
             let variantImg = null;
+            let isChart = false;
             if (selectedVariant.image && selectedVariant.image.src) {
+                const variantImgSrcClean = selectedVariant.image.src.split('?')[0];
+                isChart = (product.images && product.images.some(img => 
+                    img.src.split('?')[0] === variantImgSrcClean && 
+                    img.alt && img.alt.toLowerCase().includes('chart')
+                )) || variantImgSrcClean.toLowerCase().includes('chart') || variantImgSrcClean.toLowerCase().includes('size');
+            }
+
+            if (selectedVariant.image && selectedVariant.image.src && !isChart) {
                 variantImg = selectedVariant.image.src;
             } else {
                 const colorKey = Object.keys(selectedOptions).find(k => k.toLowerCase() === 'color' || k.toLowerCase() === 'colour');

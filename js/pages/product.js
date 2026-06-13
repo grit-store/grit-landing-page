@@ -41,24 +41,51 @@ function loadProductDetail() {
     const optionsContainer = document.getElementById('pdp-options-container');
     const thumbnailsContainer = document.querySelector('.pdp-thumbnails');
 
-    function renderThumbnails() {
-        if (!thumbnailsContainer || !product.images) return;
+    let visibleImages = [];
+    let currentImageIndex = 0;
+
+    function getVisibleImages() {
+        if (!product.images) return [];
         const colorKey = Object.keys(selectedOptions).find(k => k.toLowerCase() === 'color' || k.toLowerCase() === 'colour');
         const selectedColor = colorKey ? selectedOptions[colorKey] : '';
-        thumbnailsContainer.innerHTML = '';
-        let visibleImages = product.images.filter(img => !(img.alt && img.alt.toLowerCase().includes('chart')));
+        let list = product.images.filter(img => !(img.alt && img.alt.toLowerCase().includes('chart')));
         if (selectedColor) {
-            const colorFiltered = visibleImages.filter(img => { const alt = img.alt ? img.alt.toLowerCase() : ''; return alt.includes(selectedColor.toLowerCase()) || alt.includes('all'); });
-            if (colorFiltered.length > 0) visibleImages = colorFiltered;
+            const colorFiltered = list.filter(img => { 
+                const alt = img.alt ? img.alt.toLowerCase() : ''; 
+                return alt.includes(selectedColor.toLowerCase()) || alt.includes('all'); 
+            });
+            if (colorFiltered.length > 0) list = colorFiltered;
         }
-        visibleImages.forEach(imgObj => {
+        return list;
+    }
+
+    function renderThumbnails() {
+        if (!thumbnailsContainer) return;
+        visibleImages = getVisibleImages();
+        thumbnailsContainer.innerHTML = '';
+        
+        const cleanMainSrc = mainImg.src ? mainImg.src.split('?')[0] : '';
+        currentImageIndex = visibleImages.findIndex(imgObj => imgObj.src.split('?')[0] === cleanMainSrc);
+        if (currentImageIndex === -1) currentImageIndex = 0;
+
+        const prevBtn = document.getElementById('pdp-prev-btn');
+        const nextBtn = document.getElementById('pdp-next-btn');
+        if (visibleImages.length > 1) {
+            if (prevBtn) prevBtn.style.display = 'flex';
+            if (nextBtn) nextBtn.style.display = 'flex';
+        } else {
+            if (prevBtn) prevBtn.style.display = 'none';
+            if (nextBtn) nextBtn.style.display = 'none';
+        }
+
+        visibleImages.forEach((imgObj, idx) => {
             const thumb = document.createElement('img');
             thumb.src = imgObj.src;
-            const cleanMainSrc = mainImg.src ? mainImg.src.split('?')[0] : '';
             const cleanThumbSrc = imgObj.src ? imgObj.src.split('?')[0] : '';
             thumb.className = cleanMainSrc === cleanThumbSrc ? 'pdp-thumbnail active' : 'pdp-thumbnail';
             thumb.addEventListener('click', () => {
                 mainImg.src = imgObj.src;
+                currentImageIndex = idx;
                 document.querySelectorAll('.pdp-thumbnail').forEach(t => t.classList.remove('active'));
                 thumb.classList.add('active');
             });
@@ -73,7 +100,16 @@ function loadProductDetail() {
             document.getElementById('pdp-price').innerHTML = `<span style="text-decoration: line-through; color: var(--color-text-light); margin-right: 8px; font-size: 0.8em;">₹${(parseFloat(selectedVariant.price.amount) * 1.2).toFixed(2)}</span><span>₹${parseFloat(selectedVariant.price.amount).toFixed(2)}</span>`;
             
             let variantImg = null;
+            let isChart = false;
             if (selectedVariant.image && selectedVariant.image.src) {
+                const variantImgSrcClean = selectedVariant.image.src.split('?')[0];
+                isChart = (product.images && product.images.some(img => 
+                    img.src.split('?')[0] === variantImgSrcClean && 
+                    img.alt && img.alt.toLowerCase().includes('chart')
+                )) || variantImgSrcClean.toLowerCase().includes('chart') || variantImgSrcClean.toLowerCase().includes('size');
+            }
+
+            if (selectedVariant.image && selectedVariant.image.src && !isChart) {
                 variantImg = selectedVariant.image.src;
             } else {
                 const colorKey = Object.keys(selectedOptions).find(k => k.toLowerCase() === 'color' || k.toLowerCase() === 'colour');
@@ -96,14 +132,7 @@ function loadProductDetail() {
             }
 
             if (variantImg) {
-                const variantImgSrcClean = variantImg.split('?')[0];
-                const isChart = product.images && product.images.some(img => 
-                    img.src.split('?')[0] === variantImgSrcClean && 
-                    img.alt && img.alt.toLowerCase().includes('chart')
-                );
-                if (!isChart) {
-                    mainImg.src = variantImg;
-                }
+                mainImg.src = variantImg;
             }
             
             const addBtn = document.getElementById('pdp-add-to-cart');
@@ -212,6 +241,51 @@ function loadProductDetail() {
         openSizeGuideBtn.addEventListener('click', () => sizeGuideModal.classList.add('active'));
         document.getElementById('close-size-guide').addEventListener('click', () => sizeGuideModal.classList.remove('active'));
         sizeGuideModal.addEventListener('click', e => { if(e.target===sizeGuideModal)sizeGuideModal.classList.remove('active'); });
+    }
+
+    // Arrow Navigation
+    const prevBtn = document.getElementById('pdp-prev-btn');
+    const nextBtn = document.getElementById('pdp-next-btn');
+
+    function navigateImage(direction) {
+        visibleImages = getVisibleImages();
+        if (visibleImages.length <= 1) return;
+        
+        const cleanMainSrc = mainImg.src ? mainImg.src.split('?')[0] : '';
+        currentImageIndex = visibleImages.findIndex(imgObj => imgObj.src.split('?')[0] === cleanMainSrc);
+        if (currentImageIndex === -1) currentImageIndex = 0;
+
+        if (direction === 'next') {
+            currentImageIndex = (currentImageIndex + 1) % visibleImages.length;
+        } else {
+            currentImageIndex = (currentImageIndex - 1 + visibleImages.length) % visibleImages.length;
+        }
+
+        const nextImg = visibleImages[currentImageIndex];
+        if (nextImg) {
+            mainImg.src = nextImg.src;
+            // Update active state on thumbnails
+            document.querySelectorAll('.pdp-thumbnail').forEach((thumb, idx) => {
+                if (idx === currentImageIndex) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+        }
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', e => {
+            e.stopPropagation();
+            navigateImage('prev');
+        });
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', e => {
+            e.stopPropagation();
+            navigateImage('next');
+        });
     }
 
     // Related Products
