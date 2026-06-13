@@ -321,7 +321,7 @@ function loadCollectionPage() {
             if (category === 'men') {
                 heroSection.style.backgroundImage = "linear-gradient(to bottom, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.75)), url('assets/men hero.jpeg')";
                 heroSection.style.backgroundSize = "cover";
-                heroSection.style.backgroundPosition = "center center";
+                heroSection.style.backgroundPosition = "center top";
                 heroSection.style.minHeight = "100vh";
                 heroSection.style.display = "flex";
                 heroSection.style.flexDirection = "column";
