@@ -320,13 +320,14 @@ function loadCollectionPage() {
 
             if (category === 'men' || category === 'women') {
                 const imagePath = category === 'men' ? 'assets/men hero.jpeg' : 'assets/women hero.jpeg';
-                heroSection.style.backgroundImage = `linear-gradient(to bottom, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.75)), url('${imagePath}')`;
+                heroSection.style.backgroundImage = `linear-gradient(to bottom, rgba(10, 10, 10, 0.2) 0%, rgba(10, 10, 10, 0.4) 60%, rgba(10, 10, 10, 1) 100%), url('${imagePath}')`;
                 heroSection.style.backgroundSize = "cover";
                 heroSection.style.backgroundPosition = "center top";
                 heroSection.style.minHeight = "100vh";
                 heroSection.style.display = "flex";
                 heroSection.style.flexDirection = "column";
                 heroSection.style.justifyContent = "center";
+                heroSection.style.borderBottom = "none";
                 
                 const contentEl = heroSection.querySelector('.collection-hero-content');
                 if (contentEl) {
@@ -341,6 +342,7 @@ function loadCollectionPage() {
                 heroSection.style.display = "";
                 heroSection.style.flexDirection = "";
                 heroSection.style.justifyContent = "";
+                heroSection.style.borderBottom = "";
                 
                 const contentEl = heroSection.querySelector('.collection-hero-content');
                 if (contentEl) {
