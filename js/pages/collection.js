@@ -254,6 +254,10 @@ function loadCollectionPage() {
     const heroSection = document.querySelector('.collection-hero');
     if (heroSection) {
         if (category === 'anime') {
+            heroSection.style.backgroundImage = "";
+            heroSection.style.minHeight = "";
+            heroSection.style.display = "";
+            heroSection.style.alignItems = "";
             if (!heroSection.querySelector('.collection-video-bg')) {
                 const videoHTML = `
                     <video autoplay loop muted playsinline webkit-playsinline="true" disablePictureInPicture preload="metadata" class="collection-video-bg" id="anime-hero-video">
@@ -313,6 +317,22 @@ function loadCollectionPage() {
             }
             if (muteBtn) muteBtn.remove();
             heroSection.classList.remove('has-video-bg');
+
+            if (category === 'men') {
+                heroSection.style.backgroundImage = "linear-gradient(to bottom, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.7)), url('assets/men hero.jpeg')";
+                heroSection.style.backgroundSize = "cover";
+                heroSection.style.backgroundPosition = "center center";
+                heroSection.style.minHeight = "40vh";
+                heroSection.style.display = "flex";
+                heroSection.style.alignItems = "center";
+            } else {
+                heroSection.style.backgroundImage = "";
+                heroSection.style.backgroundSize = "";
+                heroSection.style.backgroundPosition = "";
+                heroSection.style.minHeight = "";
+                heroSection.style.display = "";
+                heroSection.style.alignItems = "";
+            }
         }
     }
 
