@@ -23,3 +23,6 @@ docs/
 # System files
 .DS_Store
 Thumbs.db
+
+# Legacy files
+/style.css

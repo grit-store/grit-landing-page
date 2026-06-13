@@ -8,7 +8,20 @@ function loadProductDetail() {
     document.getElementById('pdp-title').textContent = product.title;
     document.getElementById('pdp-price').innerHTML = `<span style="text-decoration: line-through; color: var(--color-text-light); margin-right: 8px; font-size: 0.8em;">₹${(product.price * 1.2).toFixed(2)}</span><span>₹${product.price.toFixed(2)}</span>`;
     document.getElementById('pdp-category').textContent = product.category;
-    document.getElementById('pdp-description').innerHTML = product.description;
+    // Sanitize description HTML to prevent XSS from Shopify descriptionHtml
+    const descriptionEl = document.getElementById('pdp-description');
+    if (descriptionEl) {
+        const tempDoc = new DOMParser().parseFromString(product.description, 'text/html');
+        // Remove scripts, iframes, and event handlers
+        tempDoc.querySelectorAll('script, iframe, object, embed, form').forEach(el => el.remove());
+        tempDoc.querySelectorAll('*').forEach(el => {
+            for (const attr of [...el.attributes]) {
+                if (attr.name.startsWith('on') || attr.name === 'srcdoc') el.removeAttribute(attr.name);
+                if (attr.name === 'href' && attr.value.trim().toLowerCase().startsWith('javascript:')) el.removeAttribute(attr.name);
+            }
+        });
+        descriptionEl.innerHTML = tempDoc.body.innerHTML;
+    }
 
     const mainImg = document.getElementById('pdp-main-img');
     const firstNonChartImg = product.images ? product.images.find(img => !(img.alt && img.alt.toLowerCase().includes('chart'))) : null;
@@ -85,12 +98,12 @@ function loadProductDetail() {
             if (option.name === 'Title' && option.values[0].value === 'Default Title') return;
             if (option.name.toLowerCase() === 'size') {
                 const sizeOrder = { 'xxs':1,'xs':2,'s':3,'m':4,'l':5,'xl':6,'xxl':7,'2xl':7,'xxxl':8,'3xl':8 };
-                option.values.sort((a,b) => { const va=a.value.toLowerCase().trim(),vb=b.value.toLowerCase().trim(); return (sizeOrder[va]||(isNaN(parseInt(va))?99:parseInt(va)))-(sizeOrder[vb]||(isNaN(parseInt(vb))?99:parseInt(vb))); });
+                option.values = [...option.values].sort((a,b) => { const va=a.value.toLowerCase().trim(),vb=b.value.toLowerCase().trim(); return (sizeOrder[va]||(isNaN(parseInt(va))?99:parseInt(va)))-(sizeOrder[vb]||(isNaN(parseInt(vb))?99:parseInt(vb))); });
             }
             selectedOptions[option.name] = option.values[0].value;
             const group = document.createElement('div');
             group.className = 'variant-group';
-            group.innerHTML = `<h4 class="variant-title">${option.name}</h4>`;
+            group.innerHTML = `<h4 class="variant-title">${escapeHTML(option.name)}</h4>`;
             const btnGroup = document.createElement('div');
             btnGroup.className = 'variant-buttons';
             option.values.forEach(val => {

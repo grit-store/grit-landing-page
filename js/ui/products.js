@@ -346,7 +346,7 @@ function openQuickAddModal(productId, preselectedColor) {
             // Sort size option
             if (option.name.toLowerCase() === 'size') {
                 const sizeOrder = { 'xxs':1,'xs':2,'s':3,'m':4,'l':5,'xl':6,'xxl':7,'2xl':7,'xxxl':8,'3xl':8 };
-                option.values.sort((a,b) => { 
+                option.values = [...option.values].sort((a,b) => { 
                     const va=a.value.toLowerCase().trim(), vb=b.value.toLowerCase().trim(); 
                     return (sizeOrder[va]||(isNaN(parseInt(va))?99:parseInt(va)))-(sizeOrder[vb]||(isNaN(parseInt(vb))?99:parseInt(vb))); 
                 });

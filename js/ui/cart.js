@@ -1,10 +1,5 @@
 // ============ CART ============
 
-const cartCountElements = document.querySelectorAll('.cart-count');
-const cartItemsContainer = document.getElementById('cart-items');
-const cartTotalPrice = document.getElementById('cart-total-price');
-const cartOverlay = document.getElementById('cart-overlay');
-
 function addToCart(productId, specificVariantId, quantityToAdd = 1) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
@@ -83,11 +78,13 @@ async function syncCartToFirebase() {
 }
 
 function openCart() {
-    if (cartOverlay) cartOverlay.classList.add('active');
+    const overlay = document.getElementById('cart-overlay');
+    if (overlay) overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 function closeCart() {
-    if (cartOverlay) cartOverlay.classList.remove('active');
+    const overlay = document.getElementById('cart-overlay');
+    if (overlay) overlay.classList.remove('active');
     document.body.style.overflow = '';
 }
 
@@ -153,7 +150,8 @@ async function proceedToShopifyCheckout() {
             const checkoutUrl = await auth.createCheckoutUrl(cart.map(item => ({ variantId: item.shopifyVariantId, quantity: item.quantity })));
             if (auth.isLoggedIn()) {
                 auth.saveOrder({ items: cart.map(item => ({ title: item.title, quantity: item.quantity, price: item.price })), total });
-                setTimeout(() => { cart = []; saveCart(); updateCartUI(); }, 500);
+                // Note: Cart is NOT cleared here — it should only be cleared after confirmed payment
+                // The user can manually clear it, or it will sync on their next visit
             }
             window.location.href = checkoutUrl;
         } else {

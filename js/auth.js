@@ -146,7 +146,11 @@ class AuthService {
     isLoggedIn() {
         if (!this.token) return false;
         if (new Date(this.token.expiresAt) < new Date()) {
-            this.logout();
+            // Token expired — clean up silently without redirecting
+            this.token = null;
+            this.currentUser = null;
+            localStorage.removeItem(AUTH_TOKEN_KEY);
+            localStorage.removeItem(AUTH_USER_KEY);
             return false;
         }
         return true;

@@ -84,6 +84,8 @@
         </div>
     </main>
 
+    <div id="site-overlays"></div>
+
     <div id="site-footer"></div>
 
     <!-- Shopify, GSAP -->
@@ -110,7 +112,7 @@
         const u = auth.getUser();
         if (u) {
             const fullNameEl = document.getElementById('user-name-display-full');
-            if (fullNameEl) fullNameEl.textContent = u.name;
+            if (fullNameEl) fullNameEl.textContent = `${u.firstName || ''} ${u.lastName || ''}`.trim() || u.email;
         }
         
         if (typeof gsap !== 'undefined') {

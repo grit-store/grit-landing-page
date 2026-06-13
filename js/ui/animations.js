@@ -6,23 +6,11 @@ function initCustomCursor() {
     let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
     let cursorX = mouseX, cursorY = mouseY;
     document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
-    document.querySelectorAll('.product-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            card.style.setProperty('--x', `${e.clientX - rect.left}px`);
-            card.style.setProperty('--y', `${e.clientY - rect.top}px`);
-        });
-    });
-    document.querySelectorAll('a, button, input, .product-image-wrapper').forEach(el => {
+    // Note: product-card specific cursor/magnetic listeners are handled in renderProducts()
+    // to avoid duplication. Only attach to static elements here.
+    document.querySelectorAll('a, button, input').forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
-    });
-    document.querySelectorAll('.magnetic').forEach(btn => {
-        btn.addEventListener('mousemove', e => {
-            const rect = btn.getBoundingClientRect();
-            btn.style.transform = `translate(${(e.clientX - rect.left - rect.width / 2) * 0.3}px, ${(e.clientY - rect.top - rect.height / 2) * 0.3}px)`;
-        });
-        btn.addEventListener('mouseleave', () => btn.style.transform = 'translate(0px, 0px)');
     });
     function animateCursor() {
         cursorX += (mouseX - cursorX) * 0.2;
@@ -70,6 +58,11 @@ function initGSAPAnimations() {
 function initInteractiveBackground() {
     const canvas = document.getElementById('interactive-bg');
     if (!canvas) return;
+    // Skip heavy canvas animation on mobile devices to save battery and CPU
+    if (window.innerWidth <= 768) {
+        canvas.style.display = 'none';
+        return;
+    }
     const ctx = canvas.getContext('2d');
     let width, height, dots = [];
     const dotSpacing = 20, dotRadius = 1.2, dotColor = 'rgba(253, 251, 249, 0.12)', repelRadius = 120, repelForce = 2.0, returnForce = 0.05, friction = 0.85;
