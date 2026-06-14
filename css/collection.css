@@ -712,3 +712,36 @@
     }
 }
 
+@media (max-width: 768px) {
+    .collection-hero {
+        padding: 6.5rem 5% 3rem;
+    }
+    .collection-hero.has-video-bg {
+        min-height: 50vh;
+    }
+    .category-section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Sidebar Backdrop for Mobile Filters */
+.sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1999; /* Just below collection-sidebar (2000) */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.sidebar-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+

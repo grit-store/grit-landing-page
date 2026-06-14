@@ -50,34 +50,85 @@ async function fetchShopifyProducts() {
             renderProducts();
             const heroSlideshow = document.querySelector('.hero-image-container.slideshow');
             if (heroSlideshow) {
-                const modelData = [];
-                products.forEach(p => {
-                    (p.images || []).forEach(img => {
-                        if (img.alt && img.alt.toLowerCase().includes('model')) {
-                            modelData.push({ src: img.src, productId: p.id });
-                        }
-                    });
-                });
-                if (modelData.length > 0) {
-                    const limitedModelData = modelData.slice(0, 4);
-                    heroSlideshow.querySelectorAll('.hero-slide').forEach(img => img.remove());
-                    limitedModelData.forEach((item, idx) => {
+                const isMobile = window.innerWidth <= 768;
+                if (isMobile) {
+                    const mobileImages = [
+                        { src: 'assets/women hero mobile.jpeg', category: 'women' },
+                        { src: 'assets/men hero mobile.jpeg', category: 'men' }
+                    ];
+                    heroSlideshow.querySelectorAll('.hero-slide').forEach(el => el.remove());
+                    mobileImages.forEach((item, idx) => {
+                        const linkEl = document.createElement('a');
+                        linkEl.href = `collection.html?category=${item.category}`;
+                        linkEl.className = idx === 0 ? 'hero-slide active' : 'hero-slide';
+                        
                         const imgEl = document.createElement('img');
                         imgEl.src = item.src;
-                        imgEl.className = idx === 0 ? 'hero-slide active' : 'hero-slide';
-                        imgEl.alt = 'GRIT Model';
-                        imgEl.style.cursor = 'pointer';
-                        imgEl.addEventListener('click', () => {
-                            window.location.href = `product.html?id=${encodeURIComponent(item.productId)}`;
-                        });
+                        imgEl.alt = `${item.category.charAt(0).toUpperCase() + item.category.slice(1)} Collection Mobile`;
+                        linkEl.appendChild(imgEl);
+
                         const textOverlay = heroSlideshow.querySelector('.hero-vertical-text');
                         if (textOverlay) {
-                            heroSlideshow.insertBefore(imgEl, textOverlay);
+                            heroSlideshow.insertBefore(linkEl, textOverlay);
                         } else {
-                            heroSlideshow.appendChild(imgEl);
+                            heroSlideshow.appendChild(linkEl);
                         }
                     });
                     initHeroSlideshow();
+                } else {
+                    const modelData = [];
+                    products.forEach(p => {
+                        (p.images || []).forEach(img => {
+                            if (img.alt && img.alt.toLowerCase().includes('model')) {
+                                modelData.push({ src: img.src, productId: p.id });
+                            }
+                        });
+                    });
+                    if (modelData.length > 0) {
+                        const limitedModelData = modelData.slice(0, 4);
+                        heroSlideshow.querySelectorAll('.hero-slide').forEach(el => el.remove());
+                        limitedModelData.forEach((item, idx) => {
+                            const imgEl = document.createElement('img');
+                            imgEl.src = item.src;
+                            imgEl.className = idx === 0 ? 'hero-slide active' : 'hero-slide';
+                            imgEl.alt = 'GRIT Model';
+                            imgEl.style.cursor = 'pointer';
+                            imgEl.addEventListener('click', () => {
+                                window.location.href = `product.html?id=${encodeURIComponent(item.productId)}`;
+                            });
+                            const textOverlay = heroSlideshow.querySelector('.hero-vertical-text');
+                            if (textOverlay) {
+                                heroSlideshow.insertBefore(imgEl, textOverlay);
+                            } else {
+                                heroSlideshow.appendChild(imgEl);
+                            }
+                        });
+                        initHeroSlideshow();
+                    } else {
+                        const desktopImages = [
+                            { src: 'assets/women hero.jpeg', category: 'women' },
+                            { src: 'assets/men hero.jpeg', category: 'men' }
+                        ];
+                        heroSlideshow.querySelectorAll('.hero-slide').forEach(el => el.remove());
+                        desktopImages.forEach((item, idx) => {
+                            const linkEl = document.createElement('a');
+                            linkEl.href = `collection.html?category=${item.category}`;
+                            linkEl.className = idx === 0 ? 'hero-slide active' : 'hero-slide';
+                            
+                            const imgEl = document.createElement('img');
+                            imgEl.src = item.src;
+                            imgEl.alt = `${item.category.charAt(0).toUpperCase() + item.category.slice(1)} Collection`;
+                            linkEl.appendChild(imgEl);
+
+                            const textOverlay = heroSlideshow.querySelector('.hero-vertical-text');
+                            if (textOverlay) {
+                                heroSlideshow.insertBefore(linkEl, textOverlay);
+                            } else {
+                                heroSlideshow.appendChild(linkEl);
+                            }
+                        });
+                        initHeroSlideshow();
+                    }
                 }
             }
         }

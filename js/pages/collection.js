@@ -203,10 +203,31 @@ function initCollectionFilters(category, productsList) {
     const sidebar = document.getElementById('collection-sidebar');
     const closeSidebar = document.getElementById('close-filters');
     if (mobileToggle && sidebar && closeSidebar) {
+        let backdrop = document.querySelector('.sidebar-backdrop');
+        if (!backdrop) {
+            backdrop = document.createElement('div');
+            backdrop.className = 'sidebar-backdrop';
+            document.body.appendChild(backdrop);
+        }
+
         const newMobileToggle = mobileToggle.cloneNode(true);
         mobileToggle.parentNode.replaceChild(newMobileToggle, mobileToggle);
-        newMobileToggle.addEventListener('click', () => { sidebar.classList.add('active'); document.body.style.overflow = 'hidden'; });
-        closeSidebar.addEventListener('click', () => { sidebar.classList.remove('active'); document.body.style.overflow = ''; });
+        
+        const openFilters = () => {
+            sidebar.classList.add('active');
+            backdrop.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeFilters = () => {
+            sidebar.classList.remove('active');
+            backdrop.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        newMobileToggle.addEventListener('click', openFilters);
+        closeSidebar.addEventListener('click', closeFilters);
+        backdrop.addEventListener('click', closeFilters);
     }
 }
 
@@ -319,11 +340,17 @@ function loadCollectionPage() {
             heroSection.classList.remove('has-video-bg');
 
             if (category === 'men' || category === 'women') {
-                const imagePath = category === 'men' ? 'assets/men hero.jpeg' : 'assets/women hero.jpeg';
+                const isMobile = window.innerWidth <= 768;
+                let imagePath;
+                if (isMobile) {
+                    imagePath = category === 'men' ? 'assets/men hero mobile.jpeg' : 'assets/women hero mobile.jpeg';
+                } else {
+                    imagePath = category === 'men' ? 'assets/men hero.jpeg' : 'assets/women hero.jpeg';
+                }
                 heroSection.style.backgroundImage = `linear-gradient(to bottom, rgba(10, 10, 10, 0.2) 0%, rgba(10, 10, 10, 0.4) 60%, rgba(10, 10, 10, 1) 100%), url('${imagePath}')`;
                 heroSection.style.backgroundSize = "cover";
                 heroSection.style.backgroundPosition = "center top";
-                heroSection.style.minHeight = "100vh";
+                heroSection.style.minHeight = isMobile ? "50vh" : "100vh";
                 heroSection.style.display = "flex";
                 heroSection.style.flexDirection = "column";
                 heroSection.style.justifyContent = "center";
