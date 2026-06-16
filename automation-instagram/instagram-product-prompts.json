@@ -1,0 +1,359 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "total_posts": 25,
+    "placeholders": ["[COLOR]", "[PRODUCT_NAME]", "[PRODUCT_DESCRIPTION]"]
+  },
+  "posts": [
+    {
+      "id": 1,
+      "theme": "Rain-Soaked Concrete",
+      "genre": "Urban Night",
+      "slides": [
+        "A premium product photography shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) suspended and floating in mid-air, facing forward, showing the front design. Set against a dark, wet asphalt street at night, illuminated by a single warm street lamp from the top-left casting a soft shadow below. Water droplets are captured frozen in mid-air around the t-shirt. Raw, high-contrast, cinematic atmosphere, 8K resolution. Typographic overlay: \"STILLNESS IN THE DOWNPOUR\" in bold white sans-serif.",
+        "A close-up, high-angle product shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a raw, wet brutalist concrete block. Raindrops are pooling in the fabric folds, highlighting the heavy Terry-knit texture and the relaxed drop shoulder seams. Soft diffused overcast night lighting, 8K resolution. Typographic overlay: \"HEAVYWEIGHT RESILIENCE // 260 GSM\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) suspended and floating in mid-air, rotated to show the back graphic print. The background is a dark urban alley at night with soft rain streaks illuminated by distant purple and blue neon signs, casting colorful reflections across the graphic print on the shirt. Highly detailed print texture, 8K resolution. Typographic overlay: \"DESIGNED FOR THE STREETS\".",
+        "A clean, top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) neatly folded on a dark, wet metal grating with water dripping through the grid lines below. The drop shoulder seams, wide collar, and oversized silhouette are clearly outlined by a sharp overhead tungsten spotlight. Raw, industrial aesthetic, 8K resolution. Typographic overlay: \"UNISEX OVERSIZED FIT // DROP SHOULDER\".",
+        "A macro close-up of the front graphic print and collar stitching on the [COLOR] heavyweight t-shirt ([PRODUCT_NAME]). The detailed loops of the cotton texture are visible, with tiny water droplets resting on the surface of the print. Sharp focus on the texture, dark background completely blurred out, 8K resolution. Typographic overlay: \"TERRY-KNIT PREMIUM HANDFEEL\".",
+        "A flat lay of the [COLOR] oversized t-shirt ([PRODUCT_NAME]) neatly folded on a dark, weathered wood surface. Soft, warm backlight glows from behind the shirt. Minimal and clean styling, with a few scattered water droplets around the edges, 8K resolution. Typographic overlay: \"GRIT // LINK IN BIO TO SHOP\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: standing in the rain, unbothered and resilient. Tone: poetic, calm strength, introspective. Start with a 3-5 word hook about rain/storms. Mention 260 GSM, oversized fit. End with 'link in bio'. Add 5-7 hashtags. Under 8 lines."
+    },
+    {
+      "id": 2,
+      "theme": "Neon Noir Grid",
+      "genre": "Urban Night",
+      "slides": [
+        "A striking product shot of a [COLOR] oversized t-shirt ([PRODUCT_NAME]) suspended in mid-air, showing the front graphic. It is set against a dark reflective acrylic grid background lit by hot pink and neon cyan light bars. The neon colors create vibrant reflections on the fabric. High-tech cyberpunk aesthetic, studio lighting, 8K resolution. Typographic overlay: \"ELECTRIC ENERGY // VIBE CHECK\" in a neon-colored sans-serif.",
+        "A close-up profile shot of the [COLOR] t-shirt ([PRODUCT_NAME]) hanging from a industrial metal hook. Vibrant neon pink light highlights the drop shoulder seam and the thick crewneck collar. Dark, atmospheric background. High contrast, sharp detail, 8K resolution. Typographic overlay: \"PREMIUM STRUCTURE // LOOSE FIT\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, showing the back graphic print. The background is a dark grid of glowing cyan laser lines. Neon purple rim light defines the silhouette of the t-shirt, emphasizing the graphic. Cinematic cyberpunk streetwear photography, 8K resolution. Typographic overlay: \"BUILT FOR THE FUTURE\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a dark, reflective mirror surface. Neon pink and blue light bars are arranged geometrically around the shirt, casting colorful reflections. Clean, futuristic product styling, 8K resolution. Typographic overlay: \"CYBERPUNK LOOKBOOK // NEW DROP\".",
+        "A macro close-up of the front graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]), illuminated by dual-tone neon pink and cyan light. The light highlights the high-density print texture and the heavyweight weave of the fabric. Shallow depth of field, neon bokeh in the background. 8K resolution. Typographic overlay: \"TACTILE GRAPHICS // HIGH QUALITY\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) on a concrete slab, lit by a single neon purple tube from the side. Dark, minimal setting, high-end lookbook style, 8K resolution. Typographic overlay: \"GRIT // SECURE YOURS // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: neon-lit urban grid, electric and futuristic. Tone: bold, confident, modern. Start with a 3-5 word hook about neon lights or cyber vibes. Mention 260 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+    {
+      "id": 3,
+      "theme": "Subway Platform Grate",
+      "genre": "Urban Night",
+      "slides": [
+        "A product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) suspended as if floating in mid-air, front view. It is positioned above a weathered steel subway platform grate with cool white fluorescent light beams shooting upward through the grate slots. Moody urban underground environment, high-contrast chiaroscuro lighting, 8K resolution. Typographic overlay: \"UNDERGROUND AESTHETICS\" in bold stenciled letters.",
+        "A close-up of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a metal subway bench. The cool platform lights highlight the heavy fabric texture and loose drop shoulder fit. Gritty urban atmosphere, 8K resolution. Typographic overlay: \"260 GSM HEAVYWEIGHT COTTON\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, rotated to show the back graphic print. The background features vintage subway tiles and rusted pipes, illuminated by a warm tungsten glow from a distant signal light. Cinematic street Lookbook, 8K resolution. Typographic overlay: \"ORIGINAL GRIT GRAPHICS\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) laid out flat on a yellow safety line at the platform edge. The concrete texture of the platform contrasts with the smooth fabric. Industrial overhead lighting, 8K resolution. Typographic overlay: \"DO NOT CROSS THE LINE\".",
+        "A macro shot focusing on the rib-knit crewneck collar and front chest graphic print of the [COLOR] t-shirt ([PRODUCT_NAME]). The cool fluorescent light catches the textured print. High sharpness and contrast, 8K resolution. Typographic overlay: \"DETAIL-DRIVEN STREETWEAR\".",
+        "A folded [COLOR] t-shirt ([PRODUCT_NAME]) placed on a weathered wooden transit crate on the platform. Moody backlight, dark background, 8K resolution. Typographic overlay: \"GRIT // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: subway platform, industrial transit, underground culture. Tone: raw, gritty, authentic. Start with a 3-5 word hook about transit or waiting. Mention 260 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+    {
+      "id": 4,
+      "theme": "Brutalist Monolith",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A dramatic product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) floating in front of a massive, textured brutalist concrete wall. Sharp, geometric shadow patterns are cast across the concrete from an off-camera sun. Minimal, structural composition, overcast diffused daylight, 8K resolution. Typographic overlay: \"STRUCTURE & SILHOUETTE\" in a clean, high-fashion font.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a concrete block pedestal. The raw texture of the concrete contrasts with the soft Terry-knit fabric. Sharp directional light emphasizes the fabric folds and drop shoulder cut. 8K resolution. Typographic overlay: \"HEAVYWEIGHT TERRY-KNIT\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) suspended in mid-air, rotated to show the back graphic. The background is a stark concrete staircase receding into the sky. Clean architectural lines, minimal aesthetic, 8K resolution. Typographic overlay: \"BACK DESIGN SHOWCASE\".",
+        "A flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a smooth, poured concrete slab, framed by geometric shadows. Minimalist, modern product styling, 8K resolution. Typographic overlay: \"ESSENTIAL STREETWEAR // NEW ERA\".",
+        "A macro shot of the front graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]), with the raw concrete texture visible in the background. The focus is razor sharp on the print detail and stitching. 8K resolution. Typographic overlay: \"UNCOMPROMISING QUALITY\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) sitting on a brutalist concrete ledge with a blue sky background. Minimal, crisp, premium look, 8K resolution. Typographic overlay: \"GRIT // AVAILABLE NOW // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: brutalist concrete architecture, structural minimalism. Tone: bold, structural, understated. Start with a 3-5 word hook about structure or architecture. Mention 260 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags."
+    },
+    {
+      "id": 5,
+      "theme": "Rusted Fire Escape",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A cinematic product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) floating in mid-air on an old industrial metal fire escape. Warm afternoon sunlight shines through the metal stairs, casting graphic linear shadows across the front design of the shirt. Weathered red brick wall in the background, 8K resolution. Typographic overlay: \"URBAN TEXTURES // RED DEFINITION\" in a clean font.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a rusted iron railing of the fire escape. The rust texture contrasts with the clean fabric. Warm golden hour side lighting, 8K resolution. Typographic overlay: \"DURABLE CONSTRUCTION // drop shoulder\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic print. The background is a perspective shot looking down the zigzag pattern of the rusty metal fire escape stairs. Dramatic urban perspective, golden light, 8K resolution. Typographic overlay: \"ELEVATED GRAPHICS\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a rusted steel landing grate. The afternoon sun shines through the grating, creating high-contrast light patterns. Raw, industrial vibe, 8K resolution. Typographic overlay: \"RAW METALS // HEAVY TEXTURES\".",
+        "A macro shot focusing on the sleeve hem and front graphic of the [COLOR] t-shirt ([PRODUCT_NAME]). The rusted railing is softly blurred in the background. Golden hour rim lighting, 8K resolution. Typographic overlay: \"COTTON & IRON // GRIT\".",
+        "A folded [COLOR] t-shirt ([PRODUCT_NAME]) resting on a rusty iron step. High-contrast afternoon light, urban lookbook feel, 8K resolution. Typographic overlay: \"GRIT // LINK IN BIO TO SHOP\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: rusty fire escapes, urban decay meets fashion. Tone: raw, nostalgic, industrial. Start with a 3-5 word hook about urban fire or heights. Mention 260 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags."
+    },
+    {
+      "id": 6,
+      "theme": "Shipping Container Yard",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A bold product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) suspended in mid-air, front view. Set against a corrugated metal wall of a bright orange shipping container. Soft overcast daylight. Raw industrial shipping yard setting, 8K resolution. Typographic overlay: \"INDUSTRIAL STRENGTH\" in heavy block letters.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a stack of industrial wooden pallets. The light highlights the heavy fabric texture and loose fit. 8K resolution. Typographic overlay: \"260 GSM TERRY-KNIT COTTON\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic print. The background features blue and green shipping containers stacked high, creating colorful geometric walls. High contrast, commercial look, 8K resolution. Typographic overlay: \"BACK PRINT DETAIL\".",
+        "A flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on the weathered metal floor of an open shipping container. Dramatic light entering from the container opening. Raw cargo aesthetic, 8K resolution. Typographic overlay: \"CARGO & CLOTHING // NEW DROP\".",
+        "A macro close-up of the front graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]), with the corrugated container texture softly out of focus in the background. High sharpness and fabric detail, 8K resolution. Typographic overlay: \"TACTILE GRAPHIC PRINTING\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) placed on a metal shipping crate. Industrial latch visible in the frame. Clean, high-contrast, 8K resolution. Typographic overlay: \"GRIT // AVAILABLE NOW // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: shipping container yards, cargo logistics, raw strength. Tone: bold, industrial, energetic. Start with a 3-5 word hook about cargo or shipping. Mention 260 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags."
+    },
+    {
+      "id": 7,
+      "theme": "Warehouse Sunbeams",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A cinematic product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) suspended in mid-air, showing the front design. Placed in the center of an empty abandoned warehouse with a massive shaft of dusty sunbeam light cutting diagonally through the dark space and illuminating the t-shirt. Moody, atmospheric, 8K resolution. Typographic overlay: \"OUT OF THE SHADOWS\" in clean white letters.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a rusted metal barrel, caught in the beam of light. Dust particles sparkle in the air around the fabric. Raw texture, warm backlight, 8K resolution. Typographic overlay: \"HEAVY COTTON DETAIL\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, showing the back graphic print. The background is the dark warehouse interior with broken industrial windows letting in beams of light. High contrast, cinematic, 8K resolution. Typographic overlay: \"DRAFTED IN DESIGN // GRIT\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on cracked warehouse concrete floor. A sunbeam cuts across half of the shirt, creating a high-contrast split light effect. Raw and minimal, 8K resolution. Typographic overlay: \"CRACKED CONCRETE // HEAVY FABRICS\".",
+        "A macro shot focusing on the neck ribbing and print details of the [COLOR] t-shirt ([PRODUCT_NAME]). Sunbeam light reveals the cotton fibers. High sharpness, cinematic depth, 8K resolution. Typographic overlay: \"TERRY-KNIT FABRIC STRUCTURE\".",
+        "A folded [COLOR] t-shirt ([PRODUCT_NAME]) resting on a weathered wooden table inside the warehouse, lit by soft light. Minimalist, premium, 8K resolution. Typographic overlay: \"GRIT // LINK IN BIO TO SHOP\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: abandoned warehouse sunbeams, finding light in raw decay. Tone: raw, introspective, artistic. Start with a 3-5 word hook about sunbeams or shadows. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 8,
+      "theme": "Construction Site Scaffolding",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A striking product shot of a [COLOR] oversized t-shirt ([PRODUCT_NAME]) suspended in mid-air, front view. The background is a grid of silver metal construction scaffolding and bright orange safety netting. Raw construction site, morning light, 8K resolution. Typographic overlay: \"UNDER CONSTRUCTION // GRIT\" in bold stencil.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) hanging from a scaffold pipe. The metal clamp and raw steel frame are in focus. Cold morning light, industrial feel, 8K resolution. Typographic overlay: \"REINFORCED COLLAR // OVERSIZED FIT\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic design. Scaffolding grids frame the composition, leading the eye to the back print. High contrast, geometric, 8K resolution. Typographic overlay: \"BUILDING THE FOUNDATION\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on rough concrete blocks. Scaffolding shadows cast geometric lines across the shirt. Raw, architectural styling, 8K resolution. Typographic overlay: \"ARCHITECTURAL LAYOUT // STREETWEAR\".",
+        "A macro close-up of the graphic print and stitching on the [COLOR] t-shirt ([PRODUCT_NAME]), with construction netting blurred in the background. High sharpness and details, 8K resolution. Typographic overlay: \"ENGINEERED SPECIFICATIONS\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) on a concrete block. A coil of orange wire nearby. Raw, clean, 8K resolution. Typographic overlay: \"GRIT // AVAILABLE NOW // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: construction sites, scaffolding, raw building materials. Tone: energetic, structural, raw. Start with a 3-5 word hook about foundations or building. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 9,
+      "theme": "Golden Hour Terrace",
+      "genre": "Golden / Natural Light",
+      "slides": [
+        "A warm product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) floating in mid-air, showing the front design. Set against a warm concrete terrace during golden hour. The setting sun casts long, soft shadows and a warm orange glow across the fabric. Ethereal, premium lookbook vibe, 8K resolution. Typographic overlay: \"WASHED IN GOLD\" in a thin, elegant font.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a warm stone wall. Golden sunlight highlights the fabric texture, making the loops of the cotton glow. Soft, warm atmosphere, 8K resolution. Typographic overlay: \"WARM TEXTURES // 260 GSM\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) suspended in mid-air, back view showing the graphic print. The background is a soft-focus view of a sun-drenched city skyline at sunset. Dreamy, aspirational mood, 8K resolution. Typographic overlay: \"THE SUNSET ARCHIVES\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on warm concrete, with the shadow of a terrace railing casting long geometric lines across it. Minimalist product styling, sunset warmth, 8K resolution. Typographic overlay: \"GEOMETRIC SUNLIGHT // NEW FIT\".",
+        "A macro close-up of the front graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]). The low-angle sunset light grazes the fabric, highlighting every detail of the print and the weave. 8K resolution. Typographic overlay: \"CRAFTED WITH PRECISION\".",
+        "A folded [COLOR] t-shirt ([PRODUCT_NAME]) resting on a terracotta tile surface. Warm sunset glow, minimal and peaceful look, 8K resolution. Typographic overlay: \"GRIT // SECURE YOURS // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: golden hour rooftop terrace, warm rays and long shadows. Tone: warm, reflective, elevated. Start with a 3-5 word hook about golden hour or warm light. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 10,
+      "theme": "Terracotta Sunlight",
+      "genre": "Golden / Natural Light",
+      "slides": [
+        "A beautiful product shot of a [COLOR] oversized t-shirt ([PRODUCT_NAME]) suspended in mid-air, showing the front design. Set against a minimalist terracotta-colored wall in bright, direct sunlight. The shadow of a tropical palm leaf is cast across the wall and the shirt, creating an organic shadow overlay. Warm Mediterranean vibe, 8K resolution. Typographic overlay: \"ORGANIC SHADOWS\" in a clean serif font.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a clay planter. The warm, earthy terracotta tones of the background highlight the color of the shirt. Warm sunlight, soft shadows, 8K resolution. Typographic overlay: \"EARTH TONES // PREMIUM TEXTURE\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic print. The terracotta background wall has clean geometric lines. Minimalist composition, bright sunny lighting, 8K resolution. Typographic overlay: \"CLEAN CUTS // HIGH STRETCH\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a bed of dry terracotta sand. Sun shadow of palm leaves framing the composition. Ethereal, organic product styling, 8K resolution. Typographic overlay: \"TERRACOTTA LOOKBOOK // NEW DROP\".",
+        "A macro shot focusing on the chest print and collar of the [COLOR] t-shirt ([PRODUCT_NAME]), with the warm clay wall out of focus in the background. Bright sun, high contrast, 8K resolution. Typographic overlay: \"STITCHED IN DETAILS\".",
+        "A folded [COLOR] t-shirt ([PRODUCT_NAME]) resting on a terracotta brick. Warm sun, minimal setup, 8K resolution. Typographic overlay: \"GRIT // LINK IN BIO TO SHOP\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: terracotta walls, Mediterranean sunlight, organic palm shadows. Tone: clean, warm, artistic. Start with a 3-5 word hook about warm walls or palm leaves. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 11,
+      "theme": "Desert Sand Dunes",
+      "genre": "Golden / Natural Light",
+      "slides": [
+        "A dramatic product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) suspended in mid-air, front view. Set against vast, rolling desert sand dunes at sunrise. The low sun creates deep, warm shadows along the sand ripples. Aspirational, lone wanderer aesthetic, 8K resolution. Typographic overlay: \"LOST IN THE RIPPLES // GRIT\" in a clean minimalist font.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a dry, weathered desert branch. The rough wood texture contrasts with the soft t-shirt fabric. Bright morning sun, 8K resolution. Typographic overlay: \"260 GSM RESISTANT COTTON\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic print. Background is the endless desert horizon with a soft orange haze. Epic scale, cinematic lighting, 8K resolution. Typographic overlay: \"DESERT DESIGN ARCHIVE\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) laid flat on the sand dunes, with sand ripples framing the edges. Low-angle morning light, high contrast, 8K resolution. Typographic overlay: \"SAND & SEAMS // OUT NOW\".",
+        "A macro shot of the front graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]). The morning light highlights the print detail against the heavyweight fabric. Fine sand grains resting on the print, 8K resolution. Typographic overlay: \"CRAFTED FOR ENDURANCE\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) resting on cracked clay ground. Direct bright sunlight, raw, minimal look, 8K resolution. Typographic overlay: \"GRIT // AVAILABLE NOW // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: desert sand dunes, dry heat, endless horizons. Tone: adventurous, free, resilient. Start with a 3-5 word hook about desert sun or dunes. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 12,
+      "theme": "Minimalist Pedestal",
+      "genre": "Minimal Studio",
+      "slides": [
+        "A clean studio product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) suspended in mid-air, front view. It is positioned directly above a smooth cylindrical sandstone pedestal. Clean, minimalist studio setting with a soft beige background. Soft, diffused lighting, 8K resolution. Typographic overlay: \"MINIMALIST DESIGN // MAXIMAL FIT\" in a thin sans-serif.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped elegantly over the edge of the sandstone pedestal. Soft shadows define the folds of the fabric and highlight the drop shoulder cut. 8K resolution. Typographic overlay: \"TERRY-KNIT COTTON SPECIFICATION\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic print. The sandstone pedestal sits below, framing the composition. Clean, gallery-like aesthetic, 8K resolution. Typographic overlay: \"BACK LOGO DISPLAY\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a matte plaster surface next to the sandstone pedestal. Minimalist product styling, clean shadows, 8K resolution. Typographic overlay: \"STUDIO ESSENTIALS // NEW SEASON\".",
+        "A macro shot focusing on the ribbed collar and front graphic of the [COLOR] t-shirt ([PRODUCT_NAME]). Diffused studio lighting reveals the premium weave. High sharpness, minimal context, 8K resolution. Typographic overlay: \"UNCOMPROMISED WEAVE\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) on a square travertine stone block. Soft beige background, clean studio look, 8K resolution. Typographic overlay: \"GRIT // SHOP ONLINE // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: minimalist studio, sandstone pedestals, clean gallery aesthetic. Tone: minimal, clean, premium. Start with a 3-5 word hook about minimalism or gallery lines. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 13,
+      "theme": "Glassmorphism & Color Panels",
+      "genre": "Minimal Studio",
+      "slides": [
+        "A futuristic studio product shot of a [COLOR] oversized t-shirt ([PRODUCT_NAME]) suspended in mid-air, showing the front design. Placed behind a frosted glass sheet and flanked by semi-transparent colored acrylic panels (amber and smoky gray). Creative light refraction and colored shadows. Studio setting, 8K resolution. Typographic overlay: \"REFRACTED LOGIC // GRIT\" in clean white letters.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a frosted glass block. Light passes through the block, highlighting the drop shoulder seam. Soft diffused lighting, 8K resolution. Typographic overlay: \"SOFT SHEAR // HEAVYWEIGHT 260 GSM\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic print. The colored acrylic panels cast colorful warm shadows across the back graphic. Creative editorial composition, 8K resolution. Typographic overlay: \"THE SPECTRUM SERIES\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a matte gray surface, with sheets of colored glass layered over the edges of the shirt, creating colored filters. Clean, modern product styling, 8K resolution. Typographic overlay: \"GLASS & GRADIENTS // NEW DROP\".",
+        "A macro close-up of the front graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]), viewed through a ribbed glass cylinder. The glass ribbing distorts the design in a graphic way. High sharpness, creative lighting, 8K resolution. Typographic overlay: \"DISTORTED TEXTURES\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) resting on a clear acrylic block. Soft colored shadows on the floor. Minimal, futuristic look, 8K resolution. Typographic overlay: \"GRIT // LINK IN BIO TO SHOP\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: glassmorphism, colored acrylic refraction, studio light experiments. Tone: futuristic, artistic, design-oriented. Start with a 3-5 word hook about light or reflection. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 14,
+      "theme": "Monochrome Grid",
+      "genre": "Minimal Studio",
+      "slides": [
+        "A high-contrast product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) suspended in mid-air, front view. Set against a clean white grid tile floor. Sharp black shadows cast by a harsh overhead light. High-end minimal studio setting, 8K resolution. Typographic overlay: \"MONOCHROME STRUCTURE\" in bold black sans-serif.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a black metal wire grid structure. The linear shadows of the grid overlay the shirt. 8K resolution. Typographic overlay: \"REINFORCED COTTON // LOOSE FIT\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic design. The white grid tile background recedes in perspective, framing the shirt. Clean, graphic composition, 8K resolution. Typographic overlay: \"GEOMETRIC BACK PRINT\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on the white grid tiles. The grid lines align perfectly with the shirt fold. Minimalist product styling, sharp shadows, 8K resolution. Typographic overlay: \"GRID ALIGNMENT // THE DETAILS\".",
+        "A macro shot focusing on the ribbed crewneck collar and graphic of the [COLOR] t-shirt ([PRODUCT_NAME]). High contrast lighting highlights the knit texture. 8K resolution. Typographic overlay: \"COTTON TO GRID TEXTURES\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) placed on a black grid block. Clean white background, stark minimal style, 8K resolution. Typographic overlay: \"GRIT // SHOP NOW // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: monochrome grids, stark shadows, high contrast studio. Tone: minimal, graphic, structured. Start with a 3-5 word hook about grids or geometry. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 15,
+      "theme": "Xerox Scan Distortion",
+      "genre": "Vintage / Analog",
+      "slides": [
+        "A creative product shot of a [COLOR] oversized t-shirt ([PRODUCT_NAME]) presented as a raw xerox scan. The edges of the shirt are distorted by the scanning movement. High-contrast black and white print aesthetic, heavy toner grain, raw copier glow. Creative streetwear graphic art, 8K resolution. Typographic overlay: \"DISTORTED RESOLUTION\" in distressed typewriter font.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) collar and front graphic, with heavy xerox noise, grain, and streaking patterns. High contrast, raw analog texture, 8K resolution. Typographic overlay: \"COTTON & TONER // 260 GSM\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) back graphic, shown as if copied on a vintage xerox machine. The design is slightly warped with toner ink smudges. Grungy analog style, 8K resolution. Typographic overlay: \"THE ANALOG CUTS\".",
+        "A top-down layout of the [COLOR] t-shirt ([PRODUCT_NAME]) flat lay, styled with printed paper scan sheets layered over it. Black and white photocopying grain, high-contrast shadows. Creative lookbook design, 8K resolution. Typographic overlay: \"PRINTED ARCHIVE // VOL 1\".",
+        "A macro close-up of the graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]) with a pixelated xerox pattern overlaid. High contrast, sharp detail, 8K resolution. Typographic overlay: \"NOISE & TEXTURES // GRIT\".",
+        "A folded [COLOR] t-shirt ([PRODUCT_NAME]) sitting on a stack of printed photocopy paper. High contrast light, gritty vintage copier aesthetic, 8K resolution. Typographic overlay: \"GRIT // LINK IN BIO TO SECURE\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: vintage xerox copier scans, ink toner distortion, analog grunge. Tone: raw, artistic, alternative. Start with a 3-5 word hook about toner or scans. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 16,
+      "theme": "Vintage Polaroid Border",
+      "genre": "Vintage / Analog",
+      "slides": [
+        "A nostalgia-driven product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) framed inside a vintage Polaroid instant film border. Direct flash photography, warm retro color saturation, high contrast shadows. The t-shirt is suspended against a raw brick wall, 8K resolution. Typographic overlay: \"FLASHBACKS // GRIT\" in hand-written marker font.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) collar and shoulder, shown in a polaroid frame. The flash creates a strong highlight on the fabric. Polaroid film grain and color fade, 8K resolution. Typographic overlay: \"OVERSIZED SPECS // 260 GSM\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) back graphic, framed as a vintage polaroid print. The background is a soft-focus urban rooftop at dusk. Warm retro tones, flash look, 8K resolution. Typographic overlay: \"DEVELOPED IN GRAIN\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) with several actual Polaroid pictures scattered around it, showing detail close-ups. Nostalgic product layout, warm lighting, 8K resolution. Typographic overlay: \"THE RECORDED DETAIL\".",
+        "A macro shot of the front graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]), with vintage film grain and a warm color cast. The texture of the high-density print is sharp. 8K resolution. Typographic overlay: \"RETROGRADE GRAPHICS\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) inside a polaroid frame, placed on a retro wooden stereo console. Warm vintage look, 8K resolution. Typographic overlay: \"GRIT // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: vintage polaroids, flash photography, warm retro color fade. Tone: nostalgic, cool, laid-back. Start with a 3-5 word hook about memories or instant film. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 17,
+      "theme": "CRT Glitch Screen",
+      "genre": "Vintage / Analog",
+      "slides": [
+        "A creative product shot of a [COLOR] oversized t-shirt ([PRODUCT_NAME]) projected onto a glowing vintage CRT television screen. Vertical scanlines, subtle screen curvature, chromatic aberration, and retro screen glow. Dark room environment, 8K resolution. Typographic overlay: \"ANALOG OVERLOAD\" in a pixelated green font.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) chest graphic print as seen through a retro CRT monitor glass. The phosphor grid texture and scanlines overlay the fabric design. 8K resolution. Typographic overlay: \"SCANLINE DETAIL // 260 GSM\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) back graphic print, displayed on a curved CRT display with RGB color separation and a retro tech glitch. Atmospheric cybernetic theme, 8K resolution. Typographic overlay: \"RGB ARCHIVES // GRIT\".",
+        "A flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a table, with a glowing green oscilloscope screen reflecting light across the fabric. High-tech retro lab aesthetic, 8K resolution. Typographic overlay: \"FREQUENCY CORRELATION\".",
+        "A macro close-up of the cotton texture and stitch lines on the [COLOR] t-shirt ([PRODUCT_NAME]), with green CRT glow reflecting on the threads. Sharp focus, high contrast, 8K resolution. Typographic overlay: \"GLITCHED WEAVE\".",
+        "A folded [COLOR] t-shirt ([PRODUCT_NAME]) on a shelf next to stacked vintage CRT monitors showing static. Dark room, glowing screens, 8K resolution. Typographic overlay: \"GRIT // DISCONNECT // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: CRT screen glow, RGB scanlines, analog computer glitch. Tone: tech-nostalgic, bold, dark. Start with a 3-5 word hook about screens or analog static. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 18,
+      "theme": "Skate Park concrete",
+      "genre": "Active / Streetwear",
+      "slides": [
+        "A dynamic product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) floating in mid-air, front view. Set against the curved concrete bowl of a skate park in bright daylight. Skateboard scuff marks and graffiti tags on the concrete background. Active street lookbook, 8K resolution. Typographic overlay: \"SHAPED BY CONCRETE\" in a bold, graffiti-inspired font.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over the metal coping of a skate ramp. Bright direct sun casts a sharp shadow of the railing across the shirt. 8K resolution. Typographic overlay: \"REINFORCED COPPING // drop shoulder\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, showing the back graphic print. The background is a wide angle shot of the skate bowl lanes, leading the eye to the shirt. Sun flares, active vibe, 8K resolution. Typographic overlay: \"RIDE THE ELEMENTS // GRIT\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on concrete skate ramp tiles. A skateboard is placed next to the shirt. Raw street styling, bright daylight, 8K resolution. Typographic overlay: \"SKATE STYLE // NEW RELEASE\".",
+        "A macro shot focusing on the sleeve stitch and chest graphic of the [COLOR] t-shirt ([PRODUCT_NAME]). High contrast sunlight reveals the durable Terry-knit loops. 8K resolution. Typographic overlay: \"260 GSM COTTON WEAVE\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) placed on a skateboard deck inside the skate bowl. Hard shadows, minimal composition, 8K resolution. Typographic overlay: \"GRIT // SHOP ONLINE // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: concrete skate parks, skateboarding culture, raw sun. Tone: active, energetic, street-ready. Start with a 3-5 word hook about concrete or skate wheels. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 19,
+      "theme": "Chain-Link Fence Shadow",
+      "genre": "Active / Streetwear",
+      "slides": [
+        "A striking product shot of a [COLOR] oversized t-shirt ([PRODUCT_NAME]) suspended in mid-air, showing the front design. Set in front of a wire chain-link fence on an outdoor basketball court. Strong afternoon sun casts a grid of chain-link shadows across the shirt and background concrete. High contrast, 8K resolution. Typographic overlay: \"SHADOW GRIDS\" in clean white sans-serif.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) hanging from a metal chain-link fence hook. Bright sun highlights the drop shoulder seam and heavyweight neck ribbing. 8K resolution. Typographic overlay: \"HEAVY RIBBED COLLAR // LOOSE FIT\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic print. The fence background stretches diagonally, creating depth. Bright outdoor lighting, court lines in the background. 8K resolution. Typographic overlay: \"OUTDOOR RECREATION // VOL 1\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a red outdoor basketball court floor. A basketball sits next to the shirt, with chain-link shadows falling across. 8K resolution. Typographic overlay: \"ON COURT LOOKBOOK // NEW DROP\".",
+        "A macro close-up of the front graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]), with the chain-link grid pattern cast over the design. High sharpness, bright sunlight, 8K resolution. Typographic overlay: \"FABRIC SHADOW PLAYS\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) sitting on a concrete court bleacher. Hard shadows, minimal active aesthetic, 8K resolution. Typographic overlay: \"GRIT // AVAILABLE NOW // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: chain-link fence shadows, outdoor basketball courts, summer street sun. Tone: active, sporty, bold. Start with a 3-5 word hook about court lines or shadows. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 20,
+      "theme": "Torn Poster Wall",
+      "genre": "Active / Streetwear",
+      "slides": [
+        "A vibrant product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) suspended in mid-air, front view. The background is a brick wall layered with torn wheat-pasted street posters, graffiti tags, and spray paint. Raw urban street art aesthetic, overcast daylight, 8K resolution. Typographic overlay: \"STREET CULTURE COLLAGE // GRIT\" in bold stencil.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a stack of old printed posters. The paper layers and texture contrast with the fabric. Gritty side lighting, 8K resolution. Typographic overlay: \"260 GSM HEAVYWEIGHT TEXTURE\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic print. The torn poster wall background features colorful graphic fragments and spray paint splatters. High contrast, artistic, 8K resolution. Typographic overlay: \"THE URBAN CANVASES\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a bed of shredded wheat-paste poster paper. Colorful paper scrap frames the shirt. Creative product layout, 8K resolution. Typographic overlay: \"STREET PRINT SEAMS // NEW FIT\".",
+        "A macro shot of the front graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]), with a stencil graffiti texture softly out of focus in the background. High sharpness and details, 8K resolution. Typographic overlay: \"TACTILE GRAPHIC EMBOSSING\".",
+        "A folded [COLOR] t-shirt ([PRODUCT_NAME]) sitting on a concrete curb in front of the torn poster wall. Raw urban lookbook feel, 8K resolution. Typographic overlay: \"GRIT // LINK IN BIO TO SHOP\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: wheat-pasted poster walls, street art graffiti, urban layers. Tone: artistic, raw, energetic. Start with a 3-5 word hook about street walls or graffiti. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 21,
+      "theme": "Underground Boiler Room",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A moody product shot of a [COLOR] oversized t-shirt ([PRODUCT_NAME]) suspended in mid-air, front view. Set in a dark underground boiler room with exposed copper pipes, pressure gauges, and valves. A single red warning light casts a dramatic red glow across the t-shirt. Industrial, high-contrast atmosphere, 8K resolution. Typographic overlay: \"UNDER PRESSURE // VOL 2\" in a mechanical font.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a large steel pipe. The metal clamp and copper texture are in focus. Red ambient lighting, 8K resolution. Typographic overlay: \"TERRY-KNIT COTTON STRUCTURE\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic. The background features a network of pipes receding into shadows. High contrast, raw industrial look, 8K resolution. Typographic overlay: \"REINFORCED HEAVY COLLAR\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a rusted steel floor plate. Exposed pipes frame the composition. Red and orange industrial light accents. 8K resolution. Typographic overlay: \"BOILER SPECIFICATIONS\".",
+        "A macro close-up of the graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]), with a brass pressure dial blurred in the background. Sharp detail on fabric loops, 8K resolution. Typographic overlay: \"TACTILE QUALITY ENGINE\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) on a steel workbench. A copper wrench rests nearby. Industrial warning light glow, 8K resolution. Typographic overlay: \"GRIT // LINK IN BIO // SECURE YOURS\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: boiler rooms, exposed copper, steam valves, red warning lights. Tone: mechanical, powerful, underground. Start with a 3-5 word hook about boilers or steam. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 22,
+      "theme": "Cyber Matrix Grid",
+      "genre": "Urban Night",
+      "slides": [
+        "A futuristic product shot of a [COLOR] oversized t-shirt ([PRODUCT_NAME]) suspended in mid-air, showing the front design. The background is a dark computer lab with matrix-style green digital rain and glowing laser grids projected across the scene. High-tech cyberpunk vibe, 8K resolution. Typographic overlay: \"DIGITAL INTEGRITY // SYSTEM\" in glowing green terminal font.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) sleeve and shoulder, with a green laser grid line slicing across the fabric, highlighting the double-stitched hem. Dark cyber background, 8K resolution. Typographic overlay: \"OVERSIZED SPECS // drop shoulder\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic print. Glowing green scanlines reflect off the fabric surface, outlining the print. Sci-fi streetwear aesthetic, 8K resolution. Typographic overlay: \"DECODING THE STREETS\".",
+        "A flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a carbon fiber sheet, with glowing green fiber-optic wires arranged around the shirt. Futuristic, minimal tech layout, 8K resolution. Typographic overlay: \"FIBER OPTIC CHASSIS // NEW FIT\".",
+        "A macro shot focusing on the chest graphic print of the [COLOR] t-shirt ([PRODUCT_NAME]), with digital binary code glowing on the print surface. High contrast, pixel-sharp detail, 8K resolution. Typographic overlay: \"TACTILE PRINTING MATRIX\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) on a server rack shelf. Glowing green status lights in the background. Minimal tech look, 8K resolution. Typographic overlay: \"GRIT // ENCRYPTED // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: digital green matrix, laser grids, high-tech server labs. Tone: futuristic, dark, cyber. Start with a 3-5 word hook about code or servers. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 23,
+      "theme": "Prism Refraction",
+      "genre": "Minimal Studio",
+      "slides": [
+        "An artistic product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) floating in a bright white studio. Light passing through glass prisms casts beautiful rainbow-colored light refractions and spectral lines across the front of the t-shirt. Clean, modern design gallery aesthetic, 8K resolution. Typographic overlay: \"SPECTRUM REFLECTION\" in a clean, spaced sans-serif.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) draped over a clear crystal prism. A rainbow light band cuts across the fabric folds, highlighting the cotton texture. 8K resolution. Typographic overlay: \"TERRY-KNIT COTTON // 260 GSM\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic. Rainbow light lines trace the silhouette of the shirt against the clean white studio background. 8K resolution. Typographic overlay: \"DESIGN REVERB // GRIT\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a white surface, with multiple glass prisms scattered around it, casting colorful refractions across the layout. Minimalist lookbook style, 8K resolution. Typographic overlay: \"PRISM ARRAYS // SPRING SEASONS\".",
+        "A macro close-up of the front graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]) with a rainbow light spectrum hitting the print surface. Sharp details, soft pastel studio color vibe. 8K resolution. Typographic overlay: \"SPECTRAL HIGH-DEFINITION\".",
+        "A folded [COLOR] t-shirt ([PRODUCT_NAME]) on a white marble slab. A single prism nearby casts a small rainbow line. Minimal, high-end look, 8K resolution. Typographic overlay: \"GRIT // EXCLUSIVES // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: prism refractions, white studio, rainbow light spectra. Tone: clean, artistic, premium. Start with a 3-5 word hook about prisms or spectrums. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 24,
+      "theme": "Galvanized Metal Sheet",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A powerful product shot of a [COLOR] oversized graphic t-shirt ([PRODUCT_NAME]) suspended in mid-air, front view. The background is a wall of galvanized steel sheet metal with acid-wash crystalline patterns. Cool overcast daylight, high-contrast metallic reflections. Raw industrial lookbook, 8K resolution. Typographic overlay: \"SHIELD & STRUCTURE // VOL 3\" in heavy sans-serif.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) hanging from a heavy-duty steel wire cable. The metallic cable and cable clamp are in focus. Raw industrial textures, 8K resolution. Typographic overlay: \"REINFORCED SEAMS // OVERSIZED CUT\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic print. The galvanized metal background wall creates cold gray highlights. Geometric, industrial, 8K resolution. Typographic overlay: \"INDUSTRIAL DESIGN LAB\".",
+        "A top-down flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a sheets of galvanized metal. Steel bolts are arranged around the shirt. Raw engineering lookbook style, 8K resolution. Typographic overlay: \"ASSEMBLY LINE LOOKBOOK // NEW DROP\".",
+        "A macro close-up of the graphic print and ribbing on the [COLOR] t-shirt ([PRODUCT_NAME]), with a galvanized metal sheet blurred in the background. High sharpness on fabric loops, 8K resolution. Typographic overlay: \"METALLIC RESOLUTION STITCH\".",
+        "A neatly folded [COLOR] t-shirt ([PRODUCT_NAME]) resting on a metal workbench plate. Hard steel reflections, clean look, 8K resolution. Typographic overlay: \"GRIT // ESTABLISHED NOW // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: galvanized steel sheets, acid-washed metal, cold industrial workshops. Tone: raw, bold, structural. Start with a 3-5 word hook about steel or metal. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    },
+    {
+      "id": 25,
+      "theme": "Retro Arcade Screen",
+      "genre": "Vintage / Analog",
+      "slides": [
+        "A nostalgic product shot of a [COLOR] oversized t-shirt ([PRODUCT_NAME]) suspended in a dark retro arcade room. Glow from a classic arcade cabinet screen reflects pixelated pink and green light across the front of the t-shirt. Moody nostalgic atmosphere, 8K resolution. Typographic overlay: \"INSERT COIN // PLAY GRIT\" in a pixelated font.",
+        "A close-up shot of the [COLOR] t-shirt ([PRODUCT_NAME]) chest graphic print, illuminated by the bright glowing grid of retro game graphics. Joystick and arcade buttons are softly out of focus in the frame, 8K resolution. Typographic overlay: \"PIXELATED GLOW // 260 GSM\".",
+        "The [COLOR] oversized t-shirt ([PRODUCT_NAME]) floating in mid-air, back view showing the graphic print. The background is a row of glowing arcade cabinets in a dim room. Nostalgic lookbook feel, 8K resolution. Typographic overlay: \"RETRO GAME ARCHIVES\".",
+        "A flat lay of the [COLOR] t-shirt ([PRODUCT_NAME]) on a retro carpet with colorful geometric arcade patterns, lit by cabinet screen glow. Cool nostalgic styling, 8K resolution. Typographic overlay: \"ARCADE FLOOR CLASSICS\".",
+        "A macro shot of the front graphic print on the [COLOR] t-shirt ([PRODUCT_NAME]), with retro arcade cabinet lights reflecting off the fabric fibers. High sharpness, nostalgic feel, 8K resolution. Typographic overlay: \"RGB TERRY-KNIT DETAILS\".",
+        "A folded [COLOR] t-shirt ([PRODUCT_NAME]) sitting on top of an arcade machine glass panel, lit from below. Colorful screen reflections, 8K resolution. Typographic overlay: \"GRIT // LEVEL UP // LINK IN BIO\"."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: vintage arcade cabinets, glowing pixel screens, neon joystick rooms. Tone: nostalgic, fun, bold. Start with a 3-5 word hook about gaming or insert coins. Mention 260 GSM, oversized fit. End with 'link in bio'."
+    }
+  ]
+}

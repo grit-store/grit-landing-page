@@ -1,9 +1,11 @@
 # Secrets
 automation/.env
+automation-instagram/.env
 .env
 
 # Dependencies
 automation/node_modules/
+automation-instagram/node_modules/
 node_modules/
 
 # AI/Agent metadata

@@ -262,6 +262,11 @@ function injectComponents() {
                             <a href="about.html" class="mobile-sub-link">About Our Brand</a>
                             <a href="contact.html" class="mobile-sub-link">Contact &amp; Support</a>
                         </div>
+
+                        <div class="mobile-nav-group">
+                            <span class="mobile-nav-group-title">My Space</span>
+                            <a href="#" id="mobile-wishlist-toggle" class="mobile-sub-link">My Wishlist</a>
+                        </div>
                     </div>
                     <div class="mobile-menu-footer">
                         <a href="login.html" class="btn btn-primary w-100" style="text-align:center;">My Account</a>

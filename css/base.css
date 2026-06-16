@@ -53,13 +53,17 @@
 }
 
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
     font-family: var(--font-main);
     background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
 }
 
 img {
@@ -341,5 +345,13 @@ textarea:focus-visible {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Mobile Header Layout Adjustments */
+@media (max-width: 768px) {
+    #account-link,
+    #wishlist-toggle {
+        display: none !important;
+    }
 }
 

@@ -1,0 +1,923 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "total_posts": 60,
+    "placeholders": ["[COLOR]", "[PRODUCT_NAME]", "[PRODUCT_DESCRIPTION]"],
+    "genres": [
+      "Urban Night",
+      "Industrial / Raw",
+      "Golden / Natural Light",
+      "Minimal Studio",
+      "Cultural / Street",
+      "Architectural",
+      "Moody / Atmospheric",
+      "Lifestyle / Context"
+    ]
+  },
+  "posts": [
+
+    {
+      "id": 1,
+      "theme": "Dark Alley Night",
+      "genre": "Urban Night",
+      "slides": [
+        "A cinematic wide shot of a person standing alone in a dimly lit narrow urban alley at night, wearing a [COLOR] oversized graphic t-shirt. A single warm tungsten light source from the left casts dramatic long shadows on wet cobblestone ground. Dark brick walls on both sides. Moody, mysterious atmosphere. Shot on 35mm film with natural grain. Premium editorial streetwear photography, 8K resolution.",
+        "A full-body editorial shot of a young person leaning against a dark brick wall in a narrow alley at night, wearing a [COLOR] oversized graphic t-shirt with the front graphic clearly visible. Arms crossed, confident relaxed pose. Warm side lighting from a distant street lamp. Shallow depth of field. Cinematic streetwear lookbook photography, 8K resolution.",
+        "An extreme close-up of the chest area showing the front graphic print on a [COLOR] oversized t-shirt being worn. The heavyweight cotton texture is visible at thread level. A faint warm glow illuminates the print from the side. Dark alley background completely out of focus. Macro product detail photography, 8K resolution.",
+        "A medium shot from behind of a person walking deeper into a dark alley at night, wearing a [COLOR] oversized graphic t-shirt. The back graphic print is sharply in focus. The alley ahead fades into darkness with a faint light at the end. Slight motion blur on the edges. Cinematic atmosphere, film grain, 8K resolution.",
+        "A moody portrait shot from the waist up of a person in a [COLOR] oversized graphic t-shirt, standing under a single dim bulb in an alley. Half their face is illuminated, half in shadow. The t-shirt graphic catches the light. Intense, editorial fashion photography with a dark, brooding mood. 8K resolution.",
+        "A top-down flat lay of a neatly folded [COLOR] oversized graphic t-shirt placed on wet dark cobblestone ground. Faint reflections of warm light on the wet surface around the shirt. Minimal styling, raw and authentic. Premium product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for a streetwear brand called GRIT. The product is '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. The photo theme is a moody dark alley at night. Tone: mysterious, confident, minimal. Include a poetic 3-5 word hook as the first line. Mention the product specs (240 GSM, oversized fit, drop shoulder). End with 'link in bio' and add 5-7 relevant hashtags. No excessive emojis. Keep it under 8 lines before hashtags."
+    },
+
+    {
+      "id": 2,
+      "theme": "Neon City Lights",
+      "genre": "Urban Night",
+      "slides": [
+        "A striking wide shot of a person standing on a busy city street at night, bathed in vibrant neon sign reflections — pink, blue, and purple hues. They are wearing a [COLOR] oversized graphic t-shirt. The neon lights create colorful reflections on the wet asphalt. Crowds blurred in the background. Cyberpunk-inspired streetwear editorial photography, 8K resolution.",
+        "A full-body shot of a person walking confidently through a neon-lit city crosswalk at night, wearing a [COLOR] oversized graphic t-shirt. Neon signs from storefronts cast vivid colored light across the fabric. Mid-stride, natural movement. Motion blur on the background, subject sharp. Cinematic street photography, 8K resolution.",
+        "A close-up of the front graphic on a [COLOR] oversized t-shirt, lit by alternating pink and blue neon light from nearby signs. The colors create a striking contrast on the fabric. The print detail is razor sharp. Shallow depth of field, neon bokeh in the background. Premium detail photography, 8K resolution.",
+        "A portrait shot from the chest up of a person wearing a [COLOR] oversized graphic t-shirt. Vibrant neon reflections paint stripes of color across their face and the shirt. They are looking off-camera with a calm, confident expression. Cinematic shallow depth of field. Neon-noir editorial photography, 8K resolution.",
+        "A shot from behind of a person standing still in the middle of a neon-lit street, wearing a [COLOR] oversized graphic t-shirt with the back print visible. Neon signs stretch into the distance. The scene feels electric and alive. Cyberpunk street editorial, film grain, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a dark reflective surface, with neon pink and blue light strips placed around it creating colorful reflections. Minimal, futuristic product styling. Clean and premium, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: neon-lit city night, electric energy. Tone: bold, futuristic, confident. Start with a punchy 3-5 word hook. Mention 240 GSM, oversized fit, drop shoulder. End with 'link in bio'. Add 5-7 hashtags. No excessive emojis. Under 8 lines before hashtags."
+    },
+
+    {
+      "id": 3,
+      "theme": "Rain-Soaked Streets",
+      "genre": "Urban Night",
+      "slides": [
+        "A cinematic wide shot of a person standing alone on a rain-soaked city street at night, wearing a [COLOR] oversized graphic t-shirt. Heavy rain falling, puddles on the ground reflecting streetlights and distant car headlights. Moody, melancholic atmosphere. The person stands unbothered by the rain. Shot with a telephoto lens compressing the background lights into bokeh. Premium editorial photography, 8K resolution.",
+        "A full-body shot of a person walking through pouring rain on a dark street, wearing a [COLOR] oversized graphic t-shirt. The fabric is slightly damp, clinging naturally. Water droplets visible in the air, caught by the backlight. Mid-stride, natural movement. Dramatic rain photography, 8K resolution.",
+        "An extreme close-up of raindrops landing on the shoulder and chest area of a [COLOR] oversized graphic t-shirt being worn. Individual water droplets visible on the fabric surface. The heavyweight cotton texture shows through the moisture. Macro photography with dramatic backlighting, 8K resolution.",
+        "A medium shot from behind of a person standing in the rain, head slightly tilted up, wearing a [COLOR] oversized graphic t-shirt with the back print visible. Rain streaks are illuminated by a streetlight above. Reflections on the wet ground. Emotional, cinematic editorial photography, 8K resolution.",
+        "A portrait from the waist up of a person in a [COLOR] oversized graphic t-shirt standing in gentle rain. Water drips from their hair. They have a calm, unbothered expression. Soft rain creates a misty atmosphere. Shallow depth of field, warm backlight catching individual raindrops. Moody fashion photography, 8K resolution.",
+        "A top-down flat lay of a [COLOR] oversized graphic t-shirt placed on a dark wet surface with scattered raindrops and small puddles around it. The shirt is dry and crisp, contrasting the wet surroundings. Dramatic overhead lighting. Premium product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: standing in the rain, unbothered and resilient. Tone: poetic, calm strength, introspective. Start with a 3-5 word hook about rain/storms. Mention 240 GSM, oversized fit. End with 'link in bio'. Add 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 4,
+      "theme": "Underground Parking Garage",
+      "genre": "Urban Night",
+      "slides": [
+        "A cinematic wide shot of a person standing in an empty underground concrete parking garage, wearing a [COLOR] oversized graphic t-shirt. Harsh fluorescent tube lighting from the ceiling creates stark shadows. Concrete pillars recede into the distance. Raw, industrial, isolating atmosphere. Streetwear editorial photography, 8K resolution.",
+        "A full-body shot of a person leaning against a concrete pillar in an underground parking structure, wearing a [COLOR] oversized graphic t-shirt with the front design visible. One foot against the pillar, arms relaxed. Cold fluorescent light from above. Gritty, raw fashion photography, 8K resolution.",
+        "A close-up of the front graphic on a [COLOR] oversized t-shirt under harsh fluorescent parking garage lighting. The cold white light makes the colors and details of the print pop against the fabric. Sharp detail, concrete wall blurred behind. Product detail photography, 8K resolution.",
+        "A shot from behind of a person walking through an empty parking garage, wearing a [COLOR] oversized graphic t-shirt. The back print is in focus. Yellow parking lines on the floor lead into the distance. Echo of emptiness. Cinematic atmosphere, 8K resolution.",
+        "A dramatic low-angle shot looking up at a person standing between two concrete pillars in a parking garage, wearing a [COLOR] oversized graphic t-shirt. Fluorescent lights create a halo effect above. Powerful, dominant composition. Editorial fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on raw concrete parking garage floor, next to faded yellow parking line markings. Harsh overhead fluorescent light. Industrial, minimal, raw. Premium product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: empty parking garage, raw concrete, solitude. Tone: raw, unapologetic, industrial. Start with a bold 3-5 word hook. Mention 240 GSM, oversized fit, drop shoulder. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 5,
+      "theme": "Subway Platform",
+      "genre": "Urban Night",
+      "slides": [
+        "A cinematic shot of a person standing at the edge of a dimly lit subway platform, wearing a [COLOR] oversized graphic t-shirt. The yellow safety line is visible at their feet. Tiled walls and old signage in the background. A distant tunnel light glows. Urban isolation, moody editorial photography, 8K resolution.",
+        "A full-body shot of a person sitting on a metal bench on a subway platform, wearing a [COLOR] oversized graphic t-shirt with the front graphic visible. Leaning back casually, legs extended. Harsh overhead platform lights. Nobody else around. Raw candid streetwear photography, 8K resolution.",
+        "A close-up of the graphic print on a [COLOR] oversized t-shirt, lit by the cool white fluorescent lights of a subway station. The tiled wall pattern is softly blurred behind. Fabric texture and print quality in sharp focus. Detail photography, 8K resolution.",
+        "A dramatic shot of a person from behind standing at the platform edge, wearing a [COLOR] oversized graphic t-shirt with the back print visible. The headlight of an approaching train illuminates the tunnel ahead, creating a dramatic backlight. Motion blur on the train light. Cinematic, 8K resolution.",
+        "A medium portrait of a person wearing a [COLOR] oversized graphic t-shirt, leaning against a subway platform pillar. Looking down at the tracks, contemplative expression. Cool fluorescent lighting mixed with warm tungsten accents. Shallow depth of field. Editorial fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on a weathered subway platform bench. Scratched metal surface. A transit map partially visible in the background. Industrial urban context. Premium product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: waiting alone on a subway platform, the calm before movement. Tone: contemplative, urban, understated cool. Start with a 3-5 word hook about journeys or waiting. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 6,
+      "theme": "Night Market Glow",
+      "genre": "Urban Night",
+      "slides": [
+        "A vibrant wide shot of a person walking through a bustling Asian-inspired night market, wearing a [COLOR] oversized graphic t-shirt. Warm string lights and colorful food stall lanterns create a golden glow. Steam rising from food stalls. Crowds softly blurred. The person is in sharp focus. Lively streetwear editorial photography, 8K resolution.",
+        "A medium shot of a person standing at a night market food stall, wearing a [COLOR] oversized graphic t-shirt with the front design visible. Warm incandescent bulbs above. Steam and smoke in the air creating atmosphere. Candid, authentic street photography, 8K resolution.",
+        "A close-up of the graphic print on a [COLOR] oversized t-shirt, illuminated by warm golden light from hanging bulbs at a night market. The warm tones make the fabric glow. Bokeh of colorful market lights behind. Detail photography, 8K resolution.",
+        "A shot from behind of a person walking through narrow market lanes, wearing a [COLOR] oversized graphic t-shirt. Back print visible. String lights create a canopy of warm light overhead. Bustling atmosphere. Street photography, 8K resolution.",
+        "A portrait from the waist up of a person in a [COLOR] oversized graphic t-shirt, holding street food, with warm market lights creating a golden rim light around them. Genuine smile, candid feel. Warm color palette throughout. Lifestyle fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a rustic wooden market table. Warm fairy lights scattered around the edges. A steaming cup nearby. Cozy, warm, inviting. Premium product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: exploring a vibrant night market, warm energy and discovery. Tone: warm, alive, authentic. Start with a 3-5 word hook about nights or exploration. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 7,
+      "theme": "Rooftop City Night",
+      "genre": "Urban Night",
+      "slides": [
+        "A breathtaking wide shot of a person standing at the edge of a building rooftop at night, wearing a [COLOR] oversized graphic t-shirt. The city skyline glitters behind them with thousands of lights. Wind slightly moving their shirt. Shot from behind at a low angle, making them look powerful against the cityscape. Cinematic editorial photography, 8K resolution.",
+        "A full-body shot of a person sitting on the concrete ledge of a rooftop at night, wearing a [COLOR] oversized graphic t-shirt with the front graphic visible. Legs dangling over the edge. City lights bokeh in the background. Relaxed, fearless pose. Urban lifestyle photography, 8K resolution.",
+        "A close-up of the front graphic on a [COLOR] oversized t-shirt, with the blurred city skyline lights creating a colorful bokeh pattern behind. The print is sharp and detailed. Night rooftop lighting, 8K resolution.",
+        "A medium shot from behind of a person standing on a rooftop looking out at the city, wearing a [COLOR] oversized graphic t-shirt. Back print clearly visible. City lights stretch to the horizon. Wind in the air. Contemplative, powerful moment. Cinematic photography, 8K resolution.",
+        "A dramatic low-angle shot of a person on a rooftop with the night sky and city lights behind, wearing a [COLOR] oversized graphic t-shirt. They look down at the camera confidently. The shirt catches city light reflections. Powerful editorial composition, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a concrete rooftop surface, city skyline blurred in the distance. Night atmosphere, ambient city glow providing soft light. Urban premium product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: standing on a rooftop above the city at night, feeling on top of the world. Tone: ambitious, elevated, powerful. Start with a 3-5 word hook about heights or perspective. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 8,
+      "theme": "Street Lamp Solitude",
+      "genre": "Urban Night",
+      "slides": [
+        "A cinematic shot of a person standing directly under a single street lamp on an empty road at night, wearing a [COLOR] oversized graphic t-shirt. The cone of warm light isolates them from the surrounding darkness. Everything outside the light pool is pitch black. Dramatic chiaroscuro lighting. Solitary, powerful. Editorial photography, 8K resolution.",
+        "A full-body shot of a person leaning against the street lamp pole, wearing a [COLOR] oversized graphic t-shirt with the front design visible. Looking down, contemplative pose. The warm light creates a intimate atmosphere. Dark empty street stretches behind. Moody fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt illuminated by warm street lamp light from directly above. Strong top-down lighting creates dramatic shadows in the fabric folds. Print detail is crystal clear. Warm golden tones. Detail photography, 8K resolution.",
+        "A shot from behind of a person walking away from the street lamp into darkness, wearing a [COLOR] oversized graphic t-shirt. Back print fading as they move from light to shadow. Long shadow stretching toward the camera. Cinematic, storytelling image. 8K resolution.",
+        "A portrait of a person from the waist up under the street lamp, wearing a [COLOR] oversized graphic t-shirt. Top-down warm light creates dramatic shadows under the eyes and chin. Strong, intense gaze. The shirt glows in the light. Dramatic portrait photography, 8K resolution.",
+        "A top-down flat lay of a [COLOR] oversized graphic t-shirt placed on dark asphalt road under a street lamp. The cone of light perfectly frames the shirt. Darkness surrounds. Dramatic, minimal product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: standing alone under a street lamp, solitude and self-assurance. Tone: introspective, poetic, quiet confidence. Start with a 3-5 word hook about light or solitude. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 9,
+      "theme": "Abandoned Warehouse",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A wide shot of a person standing in the center of a vast abandoned warehouse with broken windows letting in harsh directional sunlight. They are wearing a [COLOR] oversized graphic t-shirt. Dust particles float in the light beams. Rusted metal structures, cracked concrete floor. Raw industrial beauty. Editorial fashion photography, 8K resolution.",
+        "A full-body shot of a person sitting on a rusted metal barrel in an abandoned warehouse, wearing a [COLOR] oversized graphic t-shirt with the front graphic visible. Harsh shaft of sunlight from a broken window illuminates them. Everything else in shadow. Gritty fashion photography, 8K resolution.",
+        "A close-up of the front graphic on a [COLOR] oversized t-shirt, caught in a beam of dusty sunlight inside an abandoned warehouse. Dust particles sparkle in the light around the fabric. Rich texture detail. Industrial backdrop blurred. Detail photography, 8K resolution.",
+        "A shot from behind of a person walking through the warehouse, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Long shadows on the concrete floor. Shafts of light cutting through the darkness. Cinematic composition, 8K resolution.",
+        "A dramatic shot of a person standing in front of a large broken warehouse window, silhouetted against the light, wearing a [COLOR] oversized graphic t-shirt. The outline of the shirt and graphic is visible. Powerful, artistic composition. 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on weathered wooden planks from the warehouse floor. Rusted nails and dust visible. A shaft of sunlight falls across half the shirt. Raw, authentic product photography, 8K resolution.",
+        "A wide shot from behind of the person walking toward the large open warehouse door, bright daylight flooding in. Wearing a [COLOR] oversized graphic t-shirt. Walking from darkness toward light. Symbolic, cinematic final frame. 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: beauty in abandoned industrial spaces, finding art in decay. Tone: raw, artistic, unconventional. Start with a 3-5 word hook about ruins or rebuilding. Mention 240 GSM, oversized fit, drop shoulder. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 10,
+      "theme": "Construction Site Dawn",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A cinematic wide shot of a person standing on a construction site at dawn, wearing a [COLOR] oversized graphic t-shirt. Steel rebar structures and unfinished concrete frames surround them. The sky is a gradient of deep blue to warm orange at the horizon. Raw, powerful setting. Editorial photography, 8K resolution.",
+        "A full-body shot of a person standing on stacked concrete blocks at a construction site, wearing a [COLOR] oversized graphic t-shirt with the front design visible. Dawn light warming one side. Cranes and scaffolding behind. Confident pose looking into the distance. Fashion photography, 8K resolution.",
+        "A close-up of the graphic print on a [COLOR] oversized t-shirt with warm dawn light hitting the fabric. Concrete dust on the shoulders adds authenticity. Background is blurred construction scaffolding. Texture and print detail sharp. Detail photography, 8K resolution.",
+        "A medium shot from behind of a person surveying the construction site at dawn, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Dawn light creates a warm rim light around their silhouette. Scaffolding frames the composition. Cinematic, 8K resolution.",
+        "A low-angle shot of a person standing with steel rebar visible above them, wearing a [COLOR] oversized graphic t-shirt. Looking up toward the emerging structure. Dawn sky visible through the steel framework. Powerful, aspirational composition. 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on rough raw concrete with rebar shadows falling across it from the dawn sun. Construction site context. Industrial product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: building something from the ground up, dawn at a construction site. Tone: aspirational, hardworking, forward-looking. Start with a 3-5 word hook about building or foundations. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 11,
+      "theme": "Brutalist Concrete",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A striking wide shot of a person standing against a massive brutalist concrete building facade, wearing a [COLOR] oversized graphic t-shirt. Geometric concrete patterns and sharp angular shadows. Overcast sky providing flat, even lighting. The person appears small against the monumental architecture. Architectural fashion photography, 8K resolution.",
+        "A full-body shot of a person leaning against a raw concrete brutalist wall with geometric indentations, wearing a [COLOR] oversized graphic t-shirt with front design visible. Strong angular shadow falling across the scene. Clean, minimal, powerful. Fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with the textured concrete wall directly behind, creating an interesting contrast of smooth fabric against rough stone. Even overcast light. Sharp detail on the print. Architectural detail photography, 8K resolution.",
+        "A shot from behind of a person walking along a long brutalist concrete corridor, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The corridor creates strong leading lines toward a vanishing point. Geometric shadows on the walls. Cinematic composition, 8K resolution.",
+        "A dramatic shot looking up at a person standing on a brutalist concrete balcony or overhang, wearing a [COLOR] oversized graphic t-shirt. Angular concrete forms frame them. Overcast sky above. Monumental, powerful. Architectural editorial photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on smooth poured concrete surface. The minimalism of the concrete matches the premium simplicity of the shirt. Clean shadows. Brutalist product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: brutalist architecture, finding beauty in raw concrete. Tone: minimal, structural, bold. Start with a 3-5 word hook about structure or design. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 12,
+      "theme": "Rusty Fire Escape",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A cinematic shot looking up at a person standing on a rusty metal fire escape on the side of an old brick building, wearing a [COLOR] oversized graphic t-shirt. Late afternoon sun creates warm light through the metal grating. Urban decay meets fashion. Editorial photography, 8K resolution.",
+        "A full-body shot of a person sitting on the metal steps of a fire escape, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Feet on the step below, elbows on knees. Rusty metal railings frame the shot. Warm afternoon light. Candid urban photography, 8K resolution.",
+        "A close-up of the front graphic on a [COLOR] oversized t-shirt with the rusty metal pattern of the fire escape railing blurred behind. Warm golden hour light makes the fabric glow. Print detail in sharp focus. Detail photography, 8K resolution.",
+        "A shot from below looking up through the fire escape grating at a person on a higher level, wearing a [COLOR] oversized graphic t-shirt. The metal grid pattern creates interesting shadow patterns. Unique perspective. Architectural fashion photography, 8K resolution.",
+        "A medium shot of a person descending the fire escape stairs, wearing a [COLOR] oversized graphic t-shirt with the back print visible. Mid-motion, natural movement. The rusty metal zigzag staircase creates strong geometric lines. Cinematic urban photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on a rusty metal fire escape landing, viewed from above through the metal grating. Worn metal texture contrasts with the fresh fabric. Industrial product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: fire escapes and urban textures, the beauty of the overlooked. Tone: gritty, authentic, raw beauty. Start with a 3-5 word hook about escapes or climbing. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 13,
+      "theme": "Loading Dock Industrial",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A wide shot of a person standing on a concrete loading dock platform next to a large metal roll-up door, wearing a [COLOR] oversized graphic t-shirt. Industrial setting with shipping containers and pallets visible. Overcast diffused light. Workwear-meets-streetwear aesthetic. Editorial photography, 8K resolution.",
+        "A full-body shot of a person sitting on the edge of a loading dock, legs hanging over, wearing a [COLOR] oversized graphic t-shirt with the front design visible. Concrete and steel surroundings. Casual, confident pose. Industrial fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with a corrugated metal shipping container wall directly behind. The ridged metal pattern contrasts with the smooth fabric. Sharp detail. Industrial detail photography, 8K resolution.",
+        "A shot from behind of a person walking along a row of shipping containers, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The containers create colored walls on both sides. Strong leading lines. Cinematic industrial photography, 8K resolution.",
+        "A medium shot of a person leaning against a stack of wooden pallets on a loading dock, wearing a [COLOR] oversized graphic t-shirt. Raw, working environment. Natural overcast lighting. Authentic and unstaged feel. Street fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on a weathered wooden pallet on a loading dock. Industrial chain or hook visible at the edge. Raw materials context. Premium product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: loading docks and shipping containers, the backbone of the city. Tone: hardworking, grounded, industrial cool. Start with a 3-5 word hook about work or building. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 14,
+      "theme": "Industrial Stairwell",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A dramatic shot looking down a concrete and metal industrial stairwell with a person ascending the stairs, wearing a [COLOR] oversized graphic t-shirt. Harsh single bulb lighting. Metal railings create geometric patterns. The spiral or zigzag of the stairs creates a mesmerizing pattern. Editorial photography, 8K resolution.",
+        "A full-body shot of a person standing on a landing in an industrial stairwell, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Leaning against the metal railing. Concrete walls, exposed pipes. Single overhead light. Gritty fashion photography, 8K resolution.",
+        "A close-up of the front graphic on a [COLOR] oversized t-shirt in the harsh single-bulb light of an industrial stairwell. Strong shadows and high contrast make the print dramatic. Concrete wall texture behind. Detail photography, 8K resolution.",
+        "A shot looking up the stairwell from below of a person on a higher landing, wearing a [COLOR] oversized graphic t-shirt. The geometric pattern of the stairs spiraling upward creates depth. Person looking down at the camera. Dramatic perspective, 8K resolution.",
+        "A medium shot from behind of a person ascending the industrial stairs, wearing a [COLOR] oversized graphic t-shirt with back print visible. Hand on the metal railing. Harsh shadows from the single light source. Cinematic movement, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on raw concrete stairwell landing floor. Visible floor number stenciled on the wall. Industrial context. Raw product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: ascending industrial stairwells, the grind of going up. Tone: determined, relentless, raw. Start with a 3-5 word hook about climbing or levels. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 15,
+      "theme": "Steel and Pipes",
+      "genre": "Industrial / Raw",
+      "slides": [
+        "A wide shot of a person standing among exposed steel pipes and mechanical infrastructure, wearing a [COLOR] oversized graphic t-shirt. Industrial plant or boiler room setting. Warm tungsten work lights mixed with cool ambient. Steam or vapor in the air. Raw, mechanical beauty. Editorial photography, 8K resolution.",
+        "A full-body shot of a person leaning against a large steel pipe, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Complex pipe network behind them. Warm industrial lighting. Confident, relaxed pose. Industrial fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with steel pipes and valves softly blurred behind. The metallic industrial backdrop contrasts the organic cotton fabric. Warm tungsten light. Detail photography, 8K resolution.",
+        "A shot from behind of a person walking through a corridor of steel pipes, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Pipes run along both walls and ceiling creating a tunnel effect. Dramatic perspective. Cinematic industrial photography, 8K resolution.",
+        "A portrait from the chest up of a person wearing a [COLOR] oversized graphic t-shirt, standing among steel infrastructure. A pressure gauge or valve wheel visible over their shoulder. Warm industrial light. Character and context. Editorial photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a steel grating floor with industrial pipes visible below through the grating. Mechanical context. Raw industrial product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: steel pipes and industrial machinery, the engine behind everything. Tone: mechanical, powerful, purposeful. Start with a 3-5 word hook about engines or pressure. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 16,
+      "theme": "Golden Hour Rooftop",
+      "genre": "Golden / Natural Light",
+      "slides": [
+        "A breathtaking wide shot of a person standing on a building rooftop during golden hour, wearing a [COLOR] oversized graphic t-shirt. Warm golden sunlight flooding the scene from behind, creating a glowing rim light around the person. City skyline in warm haze. Everything bathed in golden warmth. Editorial fashion photography, 8K resolution.",
+        "A full-body shot of a person sitting on the rooftop edge during golden hour, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Golden light making the fabric glow warm. Relaxed pose, legs over the edge. Warm city backdrop. Lifestyle photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt bathed in warm golden hour sunlight. The light brings out the fabric texture and makes the colors feel alive. Warm bokeh of the sunset sky behind. Golden detail photography, 8K resolution.",
+        "A silhouette shot from behind of a person on the rooftop with arms slightly out, wearing a [COLOR] oversized graphic t-shirt. The setting sun directly behind creates a perfect golden silhouette. Dramatic, iconic moment. Cinematic photography, 8K resolution.",
+        "A portrait from the waist up of a person wearing a [COLOR] oversized graphic t-shirt during golden hour. Warm light hitting their face and the shirt from the side. Eyes closed, peaceful expression. Golden hour glow everywhere. Warm editorial photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a warm concrete rooftop surface during golden hour. Long golden shadows. The warm light makes the fabric look premium and inviting. Golden hour product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: golden hour on a rooftop, warmth and elevation. Tone: warm, reflective, aspirational. Start with a 3-5 word hook about golden light or sunsets. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 17,
+      "theme": "Desert Highway",
+      "genre": "Golden / Natural Light",
+      "slides": [
+        "A vast wide shot of a person standing alone on a straight desert highway stretching to the horizon, wearing a [COLOR] oversized graphic t-shirt. Dramatic desert landscape with sand dunes or rocky terrain. Hot sun creating heat haze on the road. Solitary, epic scale. Cinematic photography, 8K resolution.",
+        "A full-body shot of a person walking down the center line of a desert highway, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Mid-stride, determined walk. Desert stretches endlessly. Warm harsh sunlight. Road trip editorial photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt in bright desert sunlight. The intense light makes every thread and print detail hyper-visible. Heat haze and sandy desert blurred behind. Desert detail photography, 8K resolution.",
+        "A shot from behind of a person walking away down the desert highway, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The road narrows to a point at the vanishing horizon. Cinematic, lone wanderer composition. 8K resolution.",
+        "A medium shot of a person crouching on the desert highway, wearing a [COLOR] oversized graphic t-shirt. Touching the hot asphalt with one hand. Desert landscape surrounding them. Intense sunlight. Raw, adventurous fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on cracked desert ground or sandy terrain. Intense overhead sunlight creating sharp shadows. Desert texture as backdrop. Adventurous product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: a solitary walk on a desert highway, forging your own path. Tone: adventurous, free, independent. Start with a 3-5 word hook about roads or journeys. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 18,
+      "theme": "Beach at Dusk",
+      "genre": "Golden / Natural Light",
+      "slides": [
+        "A cinematic wide shot of a person standing at the water's edge on a beach at dusk, wearing a [COLOR] oversized graphic t-shirt. The sky is a gradient of deep purple to warm orange reflecting on the wet sand. Gentle waves at their feet. Peaceful, expansive. Dusk editorial photography, 8K resolution.",
+        "A full-body shot of a person walking along the shoreline at dusk, wearing a [COLOR] oversized graphic t-shirt with front design visible. Barefoot, wet sand, small waves. The dying light creates warm tones on the fabric. Candid movement. Beach fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt in the soft warm light of dusk. The ocean horizon line softly blurred behind at eye level. Peaceful, warm color palette. Fabric and print detail sharp. Dusk detail photography, 8K resolution.",
+        "A shot from behind of a person standing looking at the ocean at dusk, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The vast ocean and painted sky stretching before them. Contemplative, beautiful moment. Cinematic photography, 8K resolution.",
+        "A portrait of a person from the waist up, wearing a [COLOR] oversized graphic t-shirt, with the dusk sky as background. Wind blowing the oversized shirt slightly. Warm rim light from the setting sun. Peaceful expression. Editorial photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on smooth wet sand at the water's edge during dusk. The retreating wave has left a glossy wet surface reflecting the sky colors. Ethereal product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: standing at the ocean's edge at dusk, finding peace. Tone: calm, reflective, poetic. Start with a 3-5 word hook about the sea or dusk. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 19,
+      "theme": "Mountain Edge",
+      "genre": "Golden / Natural Light",
+      "slides": [
+        "A dramatic wide shot of a person standing on the edge of a mountain cliff or rocky outcrop, wearing a [COLOR] oversized graphic t-shirt. Vast valley or mountain range stretching below and behind. Dramatic natural light with clouds. Wind blowing the oversized shirt. Epic, powerful scale. Adventure editorial photography, 8K resolution.",
+        "A full-body shot of a person sitting on a rocky mountain ledge, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Legs over the edge, looking out at the mountain vista. Natural daylight. Fearless, contemplative pose. Mountain fashion photography, 8K resolution.",
+        "A close-up of the front graphic on a [COLOR] oversized t-shirt with the dramatic mountain landscape as a distant, blurred backdrop. Natural daylight brings out the fabric texture. The contrast of manmade design against raw nature. Detail photography, 8K resolution.",
+        "A shot from behind of a person standing at the mountain edge, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Arms slightly out. Valley below, sky above. A moment of triumph or freedom. Cinematic photography, 8K resolution.",
+        "A medium shot of a person crouching on mountain rocks, wearing a [COLOR] oversized graphic t-shirt. Looking into the distance. Raw stone textures around them. Natural overcast light. Adventurous editorial photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on flat mountain rock surface. Lichen and stone texture visible. Mountain vista blurred in the distance. Nature meets premium product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: standing on a mountain edge, conquering heights. Tone: powerful, free, unstoppable. Start with a 3-5 word hook about peaks or heights. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 20,
+      "theme": "Open Field Sunset",
+      "genre": "Golden / Natural Light",
+      "slides": [
+        "A vast cinematic wide shot of a person standing alone in the middle of an open golden grass field at sunset, wearing a [COLOR] oversized graphic t-shirt. Tall grass swaying around them. The sky is on fire with orange and pink hues. The person is a striking figure against the endless landscape. Epic editorial photography, 8K resolution.",
+        "A full-body shot of a person walking through tall golden grass at sunset, wearing a [COLOR] oversized graphic t-shirt with front design visible. Hands brushing against the grass tips. Warm backlighting creating a golden halo. Natural, free movement. Lifestyle photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with golden grass and warm sunset light blurred behind. The warm tones wrap around the fabric. Print detail sharp. Soft, dreamy atmosphere. Detail photography, 8K resolution.",
+        "A shot from behind of a person walking through the field toward the setting sun, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Golden grass parting around them. A path through nature. Cinematic, storytelling photography, 8K resolution.",
+        "A portrait from the waist up of a person in a [COLOR] oversized graphic t-shirt standing in the field. Sunset backlighting creating rim light. Eyes closed, face turned toward the sun. Pure peace and freedom. Golden hour portrait photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on flattened golden grass. Wildflowers and grass stems around the edges. Warm sunset light. Natural, organic product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: an open field at sunset, freedom and space. Tone: free, warm, expansive. Start with a 3-5 word hook about fields or freedom. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 21,
+      "theme": "Forest Clearing",
+      "genre": "Golden / Natural Light",
+      "slides": [
+        "A mystical wide shot of a person standing in a forest clearing, wearing a [COLOR] oversized graphic t-shirt. Shafts of sunlight pierce through the canopy creating god rays. Lush green foliage surrounds the clearing. Misty, ethereal atmosphere. The person stands in a pool of natural light. Fantasy-meets-streetwear editorial photography, 8K resolution.",
+        "A full-body shot of a person leaning against a large tree trunk in a forest, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Dappled sunlight through leaves. Mossy ground. Natural, grounded pose. Forest fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with dappled forest light creating patterns on the fabric. Leaves and bokeh green background. The organic setting contrasts with the graphic design. Natural detail photography, 8K resolution.",
+        "A shot from behind of a person walking along a forest path, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The path winds through tall trees with light filtering through. Sense of journey and exploration. Cinematic photography, 8K resolution.",
+        "A medium shot of a person crouching among ferns and forest floor plants, wearing a [COLOR] oversized graphic t-shirt. Looking up at the canopy. Natural light filtering through. Connection with nature. Editorial photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on a bed of moss and fallen leaves in the forest. Small ferns and wildflowers at the edges. Natural dappled light. Organic product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: a forest clearing, nature and solitude. Tone: grounded, natural, meditative. Start with a 3-5 word hook about roots or nature. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 22,
+      "theme": "Lakeside Dawn",
+      "genre": "Golden / Natural Light",
+      "slides": [
+        "A serene wide shot of a person standing at the edge of a still lake at dawn, wearing a [COLOR] oversized graphic t-shirt. The lake is perfectly mirror-still reflecting the pastel dawn sky. Mist hovering over the water surface. Breathtaking natural beauty. Dawn editorial photography, 8K resolution.",
+        "A full-body shot of a person sitting on a wooden dock extending into the lake at dawn, wearing a [COLOR] oversized graphic t-shirt with front design visible. Feet near the water. Mist and pastel sky. Tranquil pose. Lakeside fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt in the soft pastel light of dawn. The still lake and misty sky softly blurred behind. Delicate, peaceful color palette. Print detail sharp. Dawn detail photography, 8K resolution.",
+        "A shot from behind of a person standing at the lake edge looking at the reflection of the sky in the water, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Perfect mirror reflection. Symmetric, meditative composition, 8K resolution.",
+        "A portrait of a person from the waist up wearing a [COLOR] oversized graphic t-shirt at the lakeside at dawn. Soft, warm first light on their face. Mist around. Calm, peaceful expression. Dawn portrait photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on a weathered wooden dock plank. Still lake water visible at the edges. Dawn light creating soft warm tones. Peaceful product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: dawn at a still lake, reflection and calm. Tone: peaceful, reflective, serene. Start with a 3-5 word hook about stillness or reflection. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 23,
+      "theme": "Dark Studio Minimal",
+      "genre": "Minimal Studio",
+      "slides": [
+        "A high-end studio shot of a person standing in a completely dark space with a single focused spotlight from above, wearing a [COLOR] oversized graphic t-shirt. The spotlight creates a perfect pool of light around them. Everything else is pitch black. Ultra-clean, premium. High-fashion studio photography, 8K resolution.",
+        "A full-body studio shot of a person in a [COLOR] oversized graphic t-shirt with front graphic visible, standing in a minimalist dark studio. Single key light from the left creating dramatic shadows. Clean, no distractions. Premium fashion photography, 8K resolution.",
+        "An extreme close-up of the front graphic on a [COLOR] oversized t-shirt in controlled studio lighting. Perfect even illumination on the print. Every detail of the design and fabric texture visible. Pure black background. Studio product detail photography, 8K resolution.",
+        "A full-body shot from behind of a person in a dark studio, wearing a [COLOR] oversized graphic t-shirt. Single rim light from behind outlines the silhouette and illuminates the back print. Dramatic, high-contrast. Studio fashion photography, 8K resolution.",
+        "A waist-up portrait of a person wearing a [COLOR] oversized graphic t-shirt in a dark studio. Split lighting — half the face and shirt lit, half in shadow. Strong, editorial mood. High-fashion portrait photography, 8K resolution.",
+        "A premium top-down flat lay of a [COLOR] oversized graphic t-shirt neatly arranged on a matte black surface. Perfect studio lighting with no harsh reflections. Ultra-clean, minimalist. Premium product photography, 8K resolution.",
+        "A creative shot of a [COLOR] oversized graphic t-shirt suspended in mid-air in a dark studio, as if floating. Slight natural fabric wrinkles. Single light source creating dramatic shadow beneath. Artistic product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: dark minimal studio, the product speaks for itself. Tone: clean, premium, confident. Start with a 3-5 word hook about silence or focus. Mention 240 GSM, oversized fit, drop shoulder. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 24,
+      "theme": "Single Spotlight Drama",
+      "genre": "Minimal Studio",
+      "slides": [
+        "A dramatic studio shot of a person stepping into a single harsh spotlight beam from darkness, wearing a [COLOR] oversized graphic t-shirt. Only the parts of their body in the light cone are visible. The rest melts into complete darkness. Theatrical, high-fashion. Studio photography, 8K resolution.",
+        "A full-body shot of a person standing directly in a tight spotlight, wearing a [COLOR] oversized graphic t-shirt with front design visible. Arms at sides. The circle of light is precise. Harsh shadows on the floor. Clean studio photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt caught in the spotlight beam. The focused light makes the colors and details incredibly vivid against the surrounding darkness. Studio detail photography, 8K resolution.",
+        "A shot from behind of a person in the spotlight, wearing a [COLOR] oversized graphic t-shirt. Back print illuminated. Long sharp shadow extending behind them on the dark studio floor. Dramatic composition. Studio photography, 8K resolution.",
+        "A dramatic portrait of a person's face and upper body half-emerging from darkness into the spotlight, wearing a [COLOR] oversized graphic t-shirt. Only one eye and half the graphic visible. Mystery and intrigue. High-fashion portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a dark studio floor with a single tight spotlight illuminating just the shirt. A perfect circle of light. Everything outside the circle is darkness. Dramatic product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: stepping into the spotlight, center stage. Tone: dramatic, commanding, main character energy. Start with a 3-5 word hook about spotlight or attention. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 25,
+      "theme": "Smoke and Shadows",
+      "genre": "Minimal Studio",
+      "slides": [
+        "A dramatic studio shot of a person standing in a dark space with theatrical smoke or fog swirling around them, wearing a [COLOR] oversized graphic t-shirt. A single backlight makes the smoke glow. The person emerges from the haze. Mysterious, atmospheric. Fashion photography, 8K resolution.",
+        "A full-body shot of a person in a [COLOR] oversized graphic t-shirt with front design visible, walking through dense low-lying studio fog. Side lighting cuts through the smoke creating visible light rays. Ethereal, otherworldly. Studio photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with wisps of smoke curling around the fabric. Dramatic backlight illuminating the smoke. The print is sharp through the haze. Atmospheric detail photography, 8K resolution.",
+        "A shot from behind of a person standing in smoke, wearing a [COLOR] oversized graphic t-shirt. Back print partially obscured by flowing smoke. Dramatic backlighting creating a silhouette effect. Mysterious, artistic. Studio photography, 8K resolution.",
+        "A portrait from the chest up of a person wearing a [COLOR] oversized graphic t-shirt, smoke swirling around their face and shoulders. Moody side lighting. Only parts of the face and graphic visible through the smoke. Dark, intense. Fashion portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a dark surface with wisps of smoke drifting across the frame. Dramatic side lighting makes the smoke glow. Atmospheric product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: emerging from smoke, mystery and power. Tone: mysterious, atmospheric, enigmatic. Start with a 3-5 word hook about smoke or emergence. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 26,
+      "theme": "Mirror Reflection",
+      "genre": "Minimal Studio",
+      "slides": [
+        "A creative studio shot of a person standing in front of a large mirror in a dark space, wearing a [COLOR] oversized graphic t-shirt. Both the person and their reflection visible, creating a symmetrical composition. Single dramatic light source. The reflection shows the back print while the person faces the camera with the front print. Artistic fashion photography, 8K resolution.",
+        "A full-body shot through the mirror of a person adjusting their [COLOR] oversized graphic t-shirt. Candid self-aware moment. Dark studio, single light source. The mirror frame visible. Intimate, authentic. Reflective fashion photography, 8K resolution.",
+        "A close-up of the front graphic on a [COLOR] oversized t-shirt, with the mirror reflection showing the same graphic at a different angle behind. Double exposure effect. Studio lighting. Creative detail photography, 8K resolution.",
+        "A creative angle: camera positioned low, shooting upward at the person in a [COLOR] oversized graphic t-shirt, with their reflection on a mirrored floor. Creating a vertical symmetry. Dark studio. Artistic composition. Fashion photography, 8K resolution.",
+        "A fragmented view of a person wearing a [COLOR] oversized graphic t-shirt reflected in multiple mirror shards or panels arranged in a dark studio. Each fragment shows a different angle of the shirt and design. Avant-garde fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on a mirror surface in a dark studio, perfectly reflecting the shirt and creating a double image. Symmetrical, clean, premium. Mirror product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: mirrors and reflections, seeing yourself clearly. Tone: introspective, artistic, self-aware. Start with a 3-5 word hook about reflection or duality. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 27,
+      "theme": "White Void Contrast",
+      "genre": "Minimal Studio",
+      "slides": [
+        "A striking studio shot of a person standing in an infinite white void background, wearing a [COLOR] oversized graphic t-shirt. The dark shirt creates maximum contrast against the pure white. No shadows, no distractions. The person and shirt are the entire universe of the image. Ultra-minimalist high-fashion photography, 8K resolution.",
+        "A full-body shot of a person mid-stride in a white void, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Dynamic movement frozen in clean space. The fabric flows naturally. Minimalist fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt against the pure white background. Maximum contrast makes every detail of the print pop. No distractions. Pure focus on design. Ultra-clean detail photography, 8K resolution.",
+        "A shot from behind of a person standing in the white void, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The oversized silhouette creates a striking shape against the white. Minimalist composition, 8K resolution.",
+        "A creative shot of a person crouching or in an artistic pose in the white void, wearing a [COLOR] oversized graphic t-shirt. The oversized fabric creates interesting draping shapes. Shadow is the only ground reference. Artistic fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on pure white background. No surface texture visible. The shirt floats in white space. Only the shirt exists. Ultra-minimal product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: pure white void, nothing but the product. Tone: minimal, direct, let the design speak. Start with a 3-5 word hook about simplicity or focus. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 28,
+      "theme": "Floating Fabric",
+      "genre": "Minimal Studio",
+      "slides": [
+        "A creative studio shot of a [COLOR] oversized graphic t-shirt suspended and floating in mid-air in a dark studio, as if worn by an invisible person. Natural fabric wrinkles and form. Single dramatic light source from the left. Soft shadow beneath on the dark floor. Artistic, surreal product photography, 8K resolution.",
+        "A different angle of the same [COLOR] oversized graphic t-shirt floating in the dark studio, this time showing the back graphic. The shirt gently rotated to reveal the back print. Same lighting, same surreal floating effect. Artistic product photography, 8K resolution.",
+        "A close-up of the front graphic area of the floating [COLOR] oversized t-shirt in the dark studio. The fabric wrinkles naturally as if being worn. Light catches the texture. Surreal detail photography, 8K resolution.",
+        "A wide shot showing the full floating [COLOR] oversized graphic t-shirt from a distance in the vast dark studio. The single shirt floating in emptiness. Minimalist, impactful. Scale creates drama. Artistic product photography, 8K resolution.",
+        "A creative shot from below looking up at the floating [COLOR] oversized graphic t-shirt. The fabric form visible from underneath. Dark studio ceiling above. Unique perspective. Artistic photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt neatly laid out on a dark charcoal textured surface. After the floating shots, this grounds the product. Clean, premium. Product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: the shirt floating in space, design that defies gravity. Tone: surreal, creative, design-focused. Start with a 3-5 word hook about floating or weightlessness. Mention 240 GSM, oversized fit, drop shoulder. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 29,
+      "theme": "Graffiti Mural Wall",
+      "genre": "Cultural / Street",
+      "slides": [
+        "A vibrant wide shot of a person standing in front of a massive colorful graffiti mural wall, wearing a [COLOR] oversized graphic t-shirt. The street art creates a bold, artistic backdrop. The person's streetwear complements the urban art scene. Bright daylight. Street culture editorial photography, 8K resolution.",
+        "A full-body shot of a person leaning against the graffiti wall, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Hands in pockets, confident stance. The colors of the graffiti contrast or complement the shirt color. Urban fashion photography, 8K resolution.",
+        "A close-up of the front graphic on a [COLOR] oversized t-shirt with the graffiti mural visible as a colorful blur behind. The printed graphic on the shirt contrasts with the spray-painted art on the wall. Street art meets wearable art. Detail photography, 8K resolution.",
+        "A shot from behind of a person admiring the graffiti mural, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Their graphic tee and the wall art exist in the same visual language. Street culture moment. Photography, 8K resolution.",
+        "A medium shot of a person sitting on the ground against the graffiti wall, wearing a [COLOR] oversized graphic t-shirt. Casual, relaxed street pose. Skateboard or backpack nearby. Authentic urban scene. Street fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on the concrete sidewalk in front of the graffiti wall. The wall art frames the shot from behind. Urban context. Street product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: graffiti murals and street art, art that lives on walls and on you. Tone: creative, rebellious, artistic. Start with a 3-5 word hook about art or walls. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 30,
+      "theme": "Skate Park Session",
+      "genre": "Cultural / Street",
+      "slides": [
+        "A dynamic wide shot of a person standing at the top of a concrete skate park bowl, wearing a [COLOR] oversized graphic t-shirt. Empty skate park, smooth concrete curves. Late afternoon sun creating long shadows on the concrete. Skate culture meets streetwear. Editorial photography, 8K resolution.",
+        "A full-body shot of a person sitting on the edge of a halfpipe or ramp, wearing a [COLOR] oversized graphic t-shirt with front design visible. Feet on the ramp, relaxed skater pose. Skateboard beside them. Authentic skate park setting. Fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with the smooth curved concrete of the skate park blurred behind. Warm afternoon light. The streetwear culture context frames the product. Detail photography, 8K resolution.",
+        "A shot from behind of a person walking across the skate park, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Skateboard in hand. Long afternoon shadows trailing behind. Cinematic skate culture photography, 8K resolution.",
+        "A low-angle shot from inside the skate park bowl looking up at a person standing on the rim, wearing a [COLOR] oversized graphic t-shirt. They look down into the bowl. Dramatic perspective with the sky behind them. Powerful composition. 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on smooth concrete skate park surface, with a skateboard deck placed next to it. Skate culture context. Urban product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: empty skate park, culture and concrete. Tone: rebellious, youthful, authentic. Start with a 3-5 word hook about skating or concrete. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 31,
+      "theme": "Basketball Court Night",
+      "genre": "Cultural / Street",
+      "slides": [
+        "A cinematic wide shot of a person standing at center court on an outdoor basketball court at night, wearing a [COLOR] oversized graphic t-shirt. Floodlights illuminate the court from above, creating sharp shadows. Chain-link fence around the perimeter. Urban sports atmosphere. Streetwear editorial photography, 8K resolution.",
+        "A full-body shot of a person leaning against the basketball hoop post, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Looking up at the hoop. Night floodlights above. Gritty outdoor court surface. Urban fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt under the harsh overhead floodlights of the basketball court. The bright light makes the colors vivid. Court lines visible on the ground behind. Detail photography, 8K resolution.",
+        "A shot from behind of a person walking across the court toward the basket, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Court markings and floodlight shadows on the asphalt. Cinematic sports atmosphere, 8K resolution.",
+        "A low-angle shot of a person standing on the court, wearing a [COLOR] oversized graphic t-shirt. Shot from ground level near the court surface. The person towers above. Floodlights creating a halo. Powerful composition. 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on the asphalt basketball court surface, positioned on the center circle or free throw line. Court markings visible. Basketball nearby. Sports culture product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: an empty basketball court at night, where legends practice alone. Tone: competitive, driven, hustle culture. Start with a 3-5 word hook about the game or practice. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 32,
+      "theme": "Record Store Vinyl",
+      "genre": "Cultural / Street",
+      "slides": [
+        "A warm wide shot of a person browsing vinyl records in a cozy independent record store, wearing a [COLOR] oversized graphic t-shirt. Walls lined with album covers. Warm tungsten lighting. Vintage music culture atmosphere. The person flips through records. Lifestyle editorial photography, 8K resolution.",
+        "A medium shot of a person holding up a vinyl record, examining it, wearing a [COLOR] oversized graphic t-shirt with front design visible. Shelves of records behind. Warm, intimate lighting. Music lover aesthetic. Fashion photography, 8K resolution.",
+        "A close-up of the front graphic on a [COLOR] oversized t-shirt with vinyl record spines blurred behind. The album art on the shelves creates a colorful backdrop. Warm tones. Cultural detail photography, 8K resolution.",
+        "A shot from behind of a person reaching for a record on a high shelf, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The stretch reveals the oversized drape of the fabric. Authentic moment. Lifestyle photography, 8K resolution.",
+        "A portrait from the waist up of a person wearing a [COLOR] oversized graphic t-shirt, holding a vinyl record near their chest. Looking at the camera with genuine interest. Record store ambiance. Warm editorial portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt with a vinyl record placed on top of it, on a wooden surface. Record player or headphones nearby. Music and fashion intersection. Lifestyle product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: digging through vinyl at a record store, music and fashion culture. Tone: cultured, analog, authentic taste. Start with a 3-5 word hook about music or records. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 33,
+      "theme": "Street Art Corridor",
+      "genre": "Cultural / Street",
+      "slides": [
+        "A striking wide shot of a person walking through a narrow corridor or alley where both walls are completely covered in street art, stickers, and paste-ups, wearing a [COLOR] oversized graphic t-shirt. A tunnel of color and creativity. Daylight filtering in from the end. Street culture immersion. Editorial photography, 8K resolution.",
+        "A full-body shot of a person standing in the middle of the street art corridor, wearing a [COLOR] oversized graphic t-shirt with front design visible. Both decorated walls visible on either side. The person is the focal point among the visual noise. Fashion photography, 8K resolution.",
+        "A close-up of the front graphic on a [COLOR] oversized t-shirt with the chaotic colorful street art blurred behind. The designed graphic on the shirt brings order to the visual chaos behind. Contrast of curated vs wild art. Detail photography, 8K resolution.",
+        "A shot from behind of a person walking through the corridor, wearing a [COLOR] oversized graphic t-shirt. Back print visible against the street art walls. The corridor leads somewhere bright. Journey through art. Photography, 8K resolution.",
+        "A medium shot of a person touching one of the street art pieces on the wall, wearing a [COLOR] oversized graphic t-shirt. Connecting with the art. Authentic, curious moment. Cultural photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on the ground of the street art corridor. The colorful walls frame the shot. Urban art context. Street product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: walking through a corridor of street art, surrounded by creativity. Tone: creative, immersed, culturally rich. Start with a 3-5 word hook about art or expression. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 34,
+      "theme": "Vintage Arcade",
+      "genre": "Cultural / Street",
+      "slides": [
+        "A nostalgic wide shot of a person standing among rows of vintage arcade machines in a retro arcade, wearing a [COLOR] oversized graphic t-shirt. Colorful game screens glowing in the dim room. Neon signage. Retro-meets-streetwear atmosphere. Lifestyle editorial photography, 8K resolution.",
+        "A medium shot of a person playing an arcade game, wearing a [COLOR] oversized graphic t-shirt with front design visible. The screen glow illuminates their face and the graphic. Engaged, in the zone. Candid arcade moment. Fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt lit by the colorful glow of arcade screens. The pixelated game graphics bokeh behind contrast with the modern print. Retro meets contemporary. Detail photography, 8K resolution.",
+        "A shot from behind of a person walking between arcade machines, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Rows of glowing screens on both sides. Gaming corridor. Atmospheric photography, 8K resolution.",
+        "A portrait from the waist up of a person wearing a [COLOR] oversized graphic t-shirt, leaning against an arcade machine. Multi-colored screen glow on their face. Relaxed, cool expression. Retro fashion portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a dark surface with vintage arcade tokens or game cartridges placed around it. Retro gaming aesthetic. Nostalgic product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: vintage arcades, nostalgia and neon glow. Tone: nostalgic, playful, retro-cool. Start with a 3-5 word hook about games or levels. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 35,
+      "theme": "Boxing Gym",
+      "genre": "Cultural / Street",
+      "slides": [
+        "A raw wide shot of a person standing in a gritty old-school boxing gym, wearing a [COLOR] oversized graphic t-shirt. Heavy bags hanging from the ceiling. Worn wooden floor. Harsh overhead lighting. Sweat and determination in the air. Combat sports meets streetwear. Editorial photography, 8K resolution.",
+        "A full-body shot of a person leaning against a heavy punching bag, wearing a [COLOR] oversized graphic t-shirt with front design visible. Arms crossed, intense gaze. Taped hands visible. The gym is empty. Raw fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt in the harsh gym lighting. Sweat glistening on the fabric adds authenticity. Boxing ring ropes blurred behind. The print is vivid. Athletic detail photography, 8K resolution.",
+        "A shot from behind of a person walking toward the boxing ring, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Ring ropes and corner pads ahead. Walking to the fight. Cinematic sports photography, 8K resolution.",
+        "A portrait from the waist up of a person in a [COLOR] oversized graphic t-shirt, hands wrapped in boxing tape, standing in front of the gym mirror. Focused expression. Raw, authentic fighter aesthetic. Editorial portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on the worn wooden gym floor. Boxing gloves and hand wraps placed beside it. Athletic context. Raw product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: an old-school boxing gym, discipline and fight. Tone: tough, disciplined, fighter mentality. Start with a 3-5 word hook about fighting or rounds. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 36,
+      "theme": "Glass Tower Reflections",
+      "genre": "Architectural",
+      "slides": [
+        "A striking wide shot of a person standing at the base of a modern glass skyscraper, wearing a [COLOR] oversized graphic t-shirt. The glass facade reflects the sky and city. Clean architectural lines create geometric patterns. The person is dwarfed by the structure. Modern architectural photography, 8K resolution.",
+        "A full-body shot of a person reflected in the glass wall of a modern building, wearing a [COLOR] oversized graphic t-shirt with front design visible. Both the real person and their reflection visible. Urban geometry. Fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with the geometric glass and steel grid of the building reflected as bokeh behind. Modern, clean, premium context. Architectural detail photography, 8K resolution.",
+        "A creative angle looking up at the glass building with the person's reflection stretching upward, wearing a [COLOR] oversized graphic t-shirt. Vertigo-inducing perspective. Sky reflected in the glass. Bold composition, 8K resolution.",
+        "A medium shot of a person walking along the glass facade, wearing a [COLOR] oversized graphic t-shirt. Their reflection walks with them in the glass. Clean lines, modern architecture. Urban fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a polished stone surface outside a glass building. The building reflected in the stone's polish. Modern, premium context. Architectural product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: glass towers and modern architecture, clean lines and ambition. Tone: modern, sharp, ambitious. Start with a 3-5 word hook about glass or clarity. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 37,
+      "theme": "Spiral Staircase",
+      "genre": "Architectural",
+      "slides": [
+        "A dramatic overhead shot looking down a spiral staircase with a person standing at the bottom center, wearing a [COLOR] oversized graphic t-shirt. The spiral creates a mesmerizing geometric pattern. Dramatic lighting from above. The person looks up at the camera. Architectural fashion photography, 8K resolution.",
+        "A full-body shot of a person ascending a grand spiral staircase, wearing a [COLOR] oversized graphic t-shirt with front design visible. Hand on the curved railing. The staircase curves elegantly. Warm architectural lighting. Fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with the curved banister and spiral staircase blurred behind. The organic curves of the architecture contrast the graphic design. Elegant detail photography, 8K resolution.",
+        "A shot from below looking up the spiral staircase at a person on a higher level, wearing a [COLOR] oversized graphic t-shirt. The spiral unfurls above. Dramatic perspective. Architectural photography, 8K resolution.",
+        "A medium shot of a person leaning on the curved railing of the spiral staircase, wearing a [COLOR] oversized graphic t-shirt. Looking down the stairwell. The curved geometry frames them. Elegant editorial photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a marble staircase step. The curved edge of the spiral visible. Elegant architectural context. Premium product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: spiral staircases, ascending toward something greater. Tone: elegant, upward, intentional. Start with a 3-5 word hook about ascent or spirals. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 38,
+      "theme": "Grand Library",
+      "genre": "Architectural",
+      "slides": [
+        "A breathtaking wide shot of a person standing in a grand old library with towering bookshelves, wearing a [COLOR] oversized graphic t-shirt. Warm wood tones, brass fixtures, and thousands of leather-bound books. Warm reading lamp light. Intellectual streetwear juxtaposition. Architectural editorial photography, 8K resolution.",
+        "A full-body shot of a person reaching for a book on a high shelf using a library ladder, wearing a [COLOR] oversized graphic t-shirt with front design visible. The stretch shows the oversized drape. Warm library ambiance. Fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with the spines of old books blurred behind. The streetwear graphic against the backdrop of classic knowledge. Warm, intellectual atmosphere. Detail photography, 8K resolution.",
+        "A shot from behind of a person walking through a long aisle of bookshelves, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Books stretching to the ceiling on both sides. The corridor of knowledge. Cinematic photography, 8K resolution.",
+        "A portrait of a person wearing a [COLOR] oversized graphic t-shirt, sitting in a vintage leather armchair in the library, reading. Warm lamp light. Relaxed, intelligent aesthetic. Intellectual lifestyle fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a dark wooden library reading table. An open book and reading glasses placed beside it. Warm lamp light. Scholarly product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: a grand library, where knowledge meets style. Tone: intellectual, refined, unexpected depth. Start with a 3-5 word hook about books or knowledge. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 39,
+      "theme": "Modern Art Museum",
+      "genre": "Architectural",
+      "slides": [
+        "A clean wide shot of a person standing in a bright modern art museum gallery, wearing a [COLOR] oversized graphic t-shirt. White walls, a large abstract painting or sculpture nearby. The person becomes part of the exhibition. Even gallery lighting. Art and fashion crossover. Editorial photography, 8K resolution.",
+        "A full-body shot of a person contemplating an art piece on the wall, wearing a [COLOR] oversized graphic t-shirt with front design visible. The graphic on the shirt mirrors the artistic context. Clean gallery setting. Fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with a modern artwork blurred on the white gallery wall behind. The t-shirt graphic as wearable art. Museum lighting. Detail photography, 8K resolution.",
+        "A shot from behind of a person walking through the gallery, wearing a [COLOR] oversized graphic t-shirt. Back print visible. White walls and artworks on both sides. The person as a moving artwork. Gallery photography, 8K resolution.",
+        "A medium shot of a person sitting on a gallery bench, wearing a [COLOR] oversized graphic t-shirt. Looking at an artwork across the room. Contemplative, cultured moment. Museum fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on the clean white museum floor. Positioned as if it's an exhibit. Minimal, conceptual, artistic. Gallery product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: a modern art museum, clothing as wearable art. Tone: artistic, curated, gallery-worthy. Start with a 3-5 word hook about art or galleries. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 40,
+      "theme": "Tunnel / Underpass",
+      "genre": "Architectural",
+      "slides": [
+        "A dramatic wide shot of a person standing in the middle of a long concrete tunnel or underpass, wearing a [COLOR] oversized graphic t-shirt. Light visible at the far end. The tunnel walls curve overhead. Echoing, isolating atmosphere. Fluorescent strip lights above. Architectural editorial photography, 8K resolution.",
+        "A full-body shot of a person leaning against the curved tunnel wall, wearing a [COLOR] oversized graphic t-shirt with front design visible. The tunnel stretches behind them. Cool fluorescent light mixed with daylight from the entrance. Urban fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt in the mixed lighting of the tunnel. The fluorescent light creates a unique color cast. Tunnel wall texture behind. Atmospheric detail photography, 8K resolution.",
+        "A dramatic shot from behind of a person walking toward the light at the end of the tunnel, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Classic metaphorical composition. The light grows stronger. Cinematic photography, 8K resolution.",
+        "A wide-angle shot from inside the tunnel looking back at the entrance where a person stands silhouetted, wearing a [COLOR] oversized graphic t-shirt. The outline of the oversized shirt visible. Dramatic backlight. Architectural photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on the tunnel floor. The curved concrete walls visible on both sides. Fluorescent light above. Tunnel context product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: walking through tunnels, light at the other end. Tone: perseverant, deep, transitional. Start with a 3-5 word hook about tunnels or emergence. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 41,
+      "theme": "Stone Fort / Monument",
+      "genre": "Architectural",
+      "slides": [
+        "A majestic wide shot of a person standing on the ramparts of an ancient stone fort or monument, wearing a [COLOR] oversized graphic t-shirt. Old weathered stone walls and archways. Panoramic view of the landscape beyond. History meets modern streetwear. Architectural editorial photography, 8K resolution.",
+        "A full-body shot of a person standing in a stone archway of the fort, wearing a [COLOR] oversized graphic t-shirt with front design visible. The arch frames them perfectly. Weathered stone texture. Natural light filtering through. Fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with ancient stone wall texture directly behind. Modern design against centuries-old architecture. The contrast tells a story. Historical detail photography, 8K resolution.",
+        "A shot from behind of a person walking along the fort wall, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The wall stretches into the distance. Landscape visible below. Cinematic heritage photography, 8K resolution.",
+        "A medium shot of a person sitting on ancient stone steps of the monument, wearing a [COLOR] oversized graphic t-shirt. Thoughtful pose. Worn stone, historical setting. Time-bridging fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on ancient stone surface of the fort. Weathered stone cracks and lichen visible. History as backdrop. Heritage product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: ancient forts and monuments, modern design on timeless ground. Tone: timeless, rooted, historically aware. Start with a 3-5 word hook about legacy or history. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 42,
+      "theme": "Cathedral Interior",
+      "genre": "Architectural",
+      "slides": [
+        "A grand wide shot of a person standing in the nave of a cathedral or large ornate building, wearing a [COLOR] oversized graphic t-shirt. Tall arched ceilings, stained glass windows casting colored light. Awe-inspiring scale. The person is small against the grandeur. Sacred architecture editorial photography, 8K resolution.",
+        "A full-body shot of a person standing in a pool of colored light from a stained glass window, wearing a [COLOR] oversized graphic t-shirt with front design visible. The colored light patterns fall across the fabric. Ethereal, spiritual moment. Fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with colored light from stained glass falling across it, creating a rainbow effect on the fabric. The graphic glows with sacred light. Extraordinary detail photography, 8K resolution.",
+        "A shot from behind of a person walking down the central aisle of the cathedral, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Arched columns receding into the distance. Dramatic perspective. Cinematic photography, 8K resolution.",
+        "A portrait of a person looking up at the ceiling, wearing a [COLOR] oversized graphic t-shirt. The grand ceiling architecture reflected in their upward gaze. Awe and reverence. Architectural portrait photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a stone cathedral floor. Colored light from stained glass falling across the fabric. Sacred beauty. Ethereal product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: inside a cathedral, sacred space and modern expression. Tone: reverent, awe-struck, grand. Start with a 3-5 word hook about cathedrals or light. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 43,
+      "theme": "Fog and Mist",
+      "genre": "Moody / Atmospheric",
+      "slides": [
+        "A hauntingly beautiful wide shot of a person standing in dense fog on an empty road, wearing a [COLOR] oversized graphic t-shirt. Visibility is low — the world fades into white mist beyond a few meters. The person is the only solid form. Eerie, beautiful isolation. Atmospheric editorial photography, 8K resolution.",
+        "A full-body shot of a person walking toward the camera through thick fog, wearing a [COLOR] oversized graphic t-shirt with front design visible. They emerge from the mist like an apparition. Soft, diffused light everywhere. Atmospheric fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with dense fog as the background. The soft diffused light creates even, shadowless illumination on the print. Ethereal atmosphere. Misty detail photography, 8K resolution.",
+        "A shot from behind of a person disappearing into fog, wearing a [COLOR] oversized graphic t-shirt. Back print partially obscured by mist. They are becoming part of the fog. Haunting, beautiful. Atmospheric photography, 8K resolution.",
+        "A portrait from the waist up of a person in a [COLOR] oversized graphic t-shirt standing in fog. Moisture visible on the fabric. Soft, even light. Calm, enigmatic expression. Foggy portrait photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on dewy grass in thick morning fog. Moisture droplets on the fabric. The world around is a white void. Ethereal product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: walking through fog, clarity in uncertainty. Tone: ethereal, mysterious, searching. Start with a 3-5 word hook about fog or clarity. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 44,
+      "theme": "Monsoon Rain",
+      "genre": "Moody / Atmospheric",
+      "slides": [
+        "A dramatic wide shot of a person standing on a flooded Indian city street during monsoon, wearing a [COLOR] oversized graphic t-shirt. Torrential rain pouring down. Water ankle-deep. The person stands defiantly in the downpour. Dramatic monsoon lighting. Raw, powerful weather photography, 8K resolution.",
+        "A full-body shot of a person walking through monsoon rain on a flooded street, wearing a [COLOR] oversized graphic t-shirt with front design visible. The fabric is soaked and clinging. Rain streaks visible. Splashing through puddles. Dramatic monsoon fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt completely soaked by rain. Water droplets streaming down the fabric. The print visible through the wet fabric. Raw, authentic monsoon detail photography, 8K resolution.",
+        "A shot from behind of a person standing in the monsoon rain with arms slightly out, embracing the downpour, wearing a [COLOR] oversized graphic t-shirt. Back print visible through the wet fabric. Curtain of rain. Dramatic, liberating moment. Photography, 8K resolution.",
+        "A portrait from the waist up of a person in a soaked [COLOR] oversized graphic t-shirt during monsoon. Rain streaming down their face. Eyes closed, serene expression despite the storm. Water glistening everywhere. Monsoon portrait photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a water-covered surface during rain. Raindrops hitting the surface create circular ripples around the shirt. Dynamic, living surface. Monsoon product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: standing in the monsoon rain, unshaken by the storm. Tone: resilient, defiant, elemental. Start with a 3-5 word hook about storms or monsoon. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 45,
+      "theme": "Overcast Grey",
+      "genre": "Moody / Atmospheric",
+      "slides": [
+        "A melancholic wide shot of a person standing on an empty grey beach under a completely overcast sky, wearing a [COLOR] oversized graphic t-shirt. The sky and sea blend into a single grey tone. Flat, even light. The person is the only color in the frame. Moody minimalist photography, 8K resolution.",
+        "A full-body shot of a person walking along the grey waterline, wearing a [COLOR] oversized graphic t-shirt with front design visible. Overcast sky, grey sand, grey water. The shirt provides the only visual anchor. Somber, beautiful. Overcast fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt under flat overcast lighting. The even light reveals every detail without harsh shadows. Grey sky background. Pure, neutral detail photography, 8K resolution.",
+        "A shot from behind of a person standing facing the grey horizon where sky meets sea, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Everything is grey except the person. Contemplative, vast. Moody photography, 8K resolution.",
+        "A portrait of a person wearing a [COLOR] oversized graphic t-shirt under overcast skies. Soft, flat light on their face. Pensive expression. The grey world emphasizes the person and the product. Overcast portrait photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on grey wet sand. Overcast sky reflecting off the wet surface. Monochromatic except for the shirt. Minimalist product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: an overcast grey day, finding beauty in the muted. Tone: introspective, raw, honest. Start with a 3-5 word hook about grey days or stillness. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 46,
+      "theme": "Candlelight / Low Light",
+      "genre": "Moody / Atmospheric",
+      "slides": [
+        "A warm, intimate wide shot of a person sitting in a dark room lit only by candles, wearing a [COLOR] oversized graphic t-shirt. Multiple candles scattered around create warm flickering light. Deep shadows everywhere. Intimate, ritualistic atmosphere. Low-light editorial photography, 8K resolution.",
+        "A medium shot of a person standing near a table with candles, wearing a [COLOR] oversized graphic t-shirt with front design visible. The candlelight illuminates only parts of the graphic, creating mystery. Warm golden glow. Intimate fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt lit by warm candlelight. The flickering light creates a living, breathing illumination on the print. Parts of the design emerge from shadow. Candlelit detail photography, 8K resolution.",
+        "A shot from behind of a person walking through a candlelit space, wearing a [COLOR] oversized graphic t-shirt. Back print partially visible in the warm glow. Candles line the path. Atmospheric, ceremonial. Photography, 8K resolution.",
+        "A portrait from the chest up of a person wearing a [COLOR] oversized graphic t-shirt, face illuminated by a single candle held at chest level. The warm glow lights the face and graphic from below. Intimate, dramatic. Candlelit portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a dark wooden surface surrounded by lit candles. The warm light pools around the shirt. Intimate, warm product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: candlelit room, warmth in darkness. Tone: intimate, warm, ritualistic. Start with a 3-5 word hook about flames or warmth. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 47,
+      "theme": "Blue Hour",
+      "genre": "Moody / Atmospheric",
+      "slides": [
+        "A breathtaking wide shot of a person standing on an urban rooftop during blue hour — that brief moment after sunset when the sky turns deep cobalt blue. Wearing a [COLOR] oversized graphic t-shirt. City lights beginning to turn on below. The entire scene is bathed in deep blue tones. Cinematic blue hour photography, 8K resolution.",
+        "A full-body shot of a person standing near a rooftop railing during blue hour, wearing a [COLOR] oversized graphic t-shirt with front design visible. The deep blue sky behind. City emerging in lights below. Cool, calm atmosphere. Blue hour fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt during blue hour. The natural deep blue light creates a unique cool tone on the fabric. Sky gradient behind. Ethereal detail photography, 8K resolution.",
+        "A shot from behind of a person looking at the city transitioning from day to night during blue hour, wearing a [COLOR] oversized graphic t-shirt. Back print visible against the cobalt sky. Transitional, poetic moment. Cinematic photography, 8K resolution.",
+        "A portrait from the waist up of a person wearing a [COLOR] oversized graphic t-shirt during blue hour. The cool blue light bathes their face. The twilight creates a unique, fleeting atmosphere. Blue hour portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a rooftop surface during blue hour. The deep blue sky reflected in any glass or metal surface nearby. Twilight product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: the blue hour, that fleeting moment between day and night. Tone: transitional, poetic, liminal. Start with a 3-5 word hook about twilight or the in-between. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 48,
+      "theme": "Dusty Sunbeams",
+      "genre": "Moody / Atmospheric",
+      "slides": [
+        "A dramatic shot of a person standing in a dark room with a single shaft of dusty sunlight coming through a window, wearing a [COLOR] oversized graphic t-shirt. Millions of dust particles float in the beam. The person stands partially in the light, partially in shadow. Atmospheric, painterly. Editorial photography, 8K resolution.",
+        "A full-body shot of a person stepping into the dusty sunbeam, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. The light cuts across them diagonally. Dust dancing in the light. Warm and dramatic. Fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt caught in the dusty sunbeam. The warm shaft of light illuminates the print while dust particles float around it. Magical, ethereal detail photography, 8K resolution.",
+        "A shot from behind of a person standing in the dusty light, wearing a [COLOR] oversized graphic t-shirt. Back print illuminated by the warm beam. Their silhouette outlined by floating particles. Atmospheric photography, 8K resolution.",
+        "A portrait of a person wearing a [COLOR] oversized graphic t-shirt, half their face caught in the dusty sunbeam, half in shadow. Particles floating around like tiny stars. Warm, intimate, almost sacred moment. Portrait photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a dark wooden floor with a diagonal shaft of dusty sunlight falling across half of it. Dust particles visible in the beam. Dramatic natural product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: dusty sunbeams in a dark room, catching the light. Tone: warm, meditative, finding beauty in small moments. Start with a 3-5 word hook about light or dust. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 49,
+      "theme": "Snow Silence",
+      "genre": "Moody / Atmospheric",
+      "slides": [
+        "A serene wide shot of a person standing in a snowy landscape — fresh white snow covering everything — wearing a [COLOR] oversized graphic t-shirt. Snowflakes gently falling. Complete silence and stillness. The person's dark shirt contrasts starkly with the white world. Winter editorial photography, 8K resolution.",
+        "A full-body shot of a person walking through fresh snow, leaving footprints, wearing a [COLOR] oversized graphic t-shirt with front design visible. Snow on their shoulders. Breath visible in the cold. Crisp winter light. Winter fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with snowflakes landing on the fabric. Individual snowflakes visible. The cold-weather context makes the heavyweight cotton relevant. Winter detail photography, 8K resolution.",
+        "A shot from behind of a person standing in a snowy field looking at snow-covered trees, wearing a [COLOR] oversized graphic t-shirt. Back print visible against the white landscape. Footprints in the snow behind. Silent, vast. Photography, 8K resolution.",
+        "A portrait from the waist up of a person in a [COLOR] oversized graphic t-shirt in the snow. Snow in their hair. Breath visible. Red cheeks from the cold. The warmth of the heavyweight fabric implied. Winter portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt placed on fresh untouched snow. The fabric's color creates maximum contrast with the white. Snowflakes landing on the shirt. Winter product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: fresh snow, silence and contrast. Tone: still, pure, contrasting. Start with a 3-5 word hook about snow or silence. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 50,
+      "theme": "Haze and Heat",
+      "genre": "Moody / Atmospheric",
+      "slides": [
+        "A hazy wide shot of a person standing on a sun-scorched empty road, wearing a [COLOR] oversized graphic t-shirt. Heat waves distort the air, creating a shimmering, dreamy quality. Harsh midday sun. Desolate, hot atmosphere. Summer heat editorial photography, 8K resolution.",
+        "A full-body shot of a person standing in the heat haze, wearing a [COLOR] oversized graphic t-shirt with front design visible. Squinting slightly from the bright sun. The air shimmers around them. Hot, intense. Summer fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt in harsh overhead midday sun. Strong contrast, vivid colors. A bead of sweat on the fabric. Heat radiating. Summer detail photography, 8K resolution.",
+        "A shot from behind of a person walking into the heat haze, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The road ahead shimmers and melts. Mirages in the distance. Cinematic heat photography, 8K resolution.",
+        "A portrait from the waist up of a person in a [COLOR] oversized graphic t-shirt under harsh midday sun. Strong shadows under the eyes and chin. Sweat glistening. Intense, unbothered expression. Summer portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on cracked dry earth or hot asphalt. The surface radiates heat. Harsh midday shadows. Intense summer product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: scorching heat and haze, thriving in intensity. Tone: intense, unbothered, resilient in heat. Start with a 3-5 word hook about heat or sun. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 51,
+      "theme": "Vintage Motorcycle",
+      "genre": "Lifestyle / Context",
+      "slides": [
+        "A cinematic wide shot of a person sitting on a vintage motorcycle parked on an empty road, wearing a [COLOR] oversized graphic t-shirt. The motorcycle is classic — chrome details, leather seat. Warm afternoon light. Rebel, free-spirited energy. Motorcycle editorial photography, 8K resolution.",
+        "A medium shot of a person straddling the vintage motorcycle, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Hands on handlebars. Looking into the distance. Chrome reflections. Rebel fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with the chrome and leather details of the motorcycle blurred behind. The combination of streetwear and motorcycle culture. Detail photography, 8K resolution.",
+        "A shot from behind of a person on the motorcycle, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The open road stretching ahead. Freedom and movement. Cinematic photography, 8K resolution.",
+        "A low-angle shot of the person and motorcycle, wearing a [COLOR] oversized graphic t-shirt. Shot from near the front wheel looking up. Chrome details gleaming. Powerful, dominant composition. Motorcycle fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt draped over the seat of the vintage motorcycle. Chrome tank and handlebars visible. Leather and cotton. Rebel product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: vintage motorcycles and the open road. Tone: rebellious, free, classic cool. Start with a 3-5 word hook about riding or freedom. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 52,
+      "theme": "Café Window Seat",
+      "genre": "Lifestyle / Context",
+      "slides": [
+        "A warm wide shot of a person sitting by a large window in a moody, dimly lit café, wearing a [COLOR] oversized graphic t-shirt. Soft natural light streaming through the window illuminating them. Coffee cup on the table. Rain or city life visible outside. Intimate, atmospheric. Café editorial photography, 8K resolution.",
+        "A medium shot of a person sipping coffee at the window seat, wearing a [COLOR] oversized graphic t-shirt with front design visible. Warm interior light. Steam rising from the cup. Relaxed, genuine moment. Café fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt in the soft window light of the café. The natural light beautifully illuminates the print. Coffee cup blurred in the foreground. Warm detail photography, 8K resolution.",
+        "A shot from behind of a person looking out the café window at the city, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The world outside is slightly blurred through the glass. Contemplative moment. Photography, 8K resolution.",
+        "A portrait from the waist up of a person wearing a [COLOR] oversized graphic t-shirt at the café table. Warm window light on their face. Coffee in hand. Looking at the camera with a relaxed, confident expression. Lifestyle portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a dark wooden café table. A latte with art, a book, and sunglasses placed beside it. Warm café ambiance. Lifestyle product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: a quiet café corner, slow mornings and good style. Tone: calm, warm, effortlessly cool. Start with a 3-5 word hook about mornings or coffee. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 53,
+      "theme": "Hotel Corridor",
+      "genre": "Lifestyle / Context",
+      "slides": [
+        "A striking wide shot of a person standing in a long, elegant hotel corridor, wearing a [COLOR] oversized graphic t-shirt. Patterned carpet, warm wall sconces, repeating door frames creating strong perspective. The streetwear clashes beautifully with the formal setting. Hotel editorial photography, 8K resolution.",
+        "A full-body shot of a person walking down the hotel corridor, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Mid-stride, confident walk. Warm hotel lighting. The casual streetwear in a luxury setting. Fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt in the warm golden light of the hotel corridor. Rich carpet and wall textures blurred behind. Luxury meets street. Detail photography, 8K resolution.",
+        "A shot from behind of a person at the end of the hotel corridor, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The corridor doors recede behind them. Walking with purpose. Cinematic perspective, 8K resolution.",
+        "A medium shot of a person leaning against a hotel room doorframe, wearing a [COLOR] oversized graphic t-shirt. Room number visible above. Warm, intimate lighting. Casual luxury aesthetic. Hotel fashion photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on crisp white hotel bed sheets. Luxury contrast. Warm bedside lamp light. Premium lifestyle product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: luxury hotel corridors, streetwear in unexpected places. Tone: luxurious, contradictory, elevated. Start with a 3-5 word hook about rooms or corridors. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 54,
+      "theme": "Laundromat Neon",
+      "genre": "Lifestyle / Context",
+      "slides": [
+        "A cinematic wide shot of a person sitting on a washing machine in a retro laundromat at night, wearing a [COLOR] oversized graphic t-shirt. Rows of front-loading machines. Harsh fluorescent and blue neon lighting. Empty, cinematic. The spin cycles creating ambient sound. Retro editorial photography, 8K resolution.",
+        "A full-body shot of a person leaning against a dryer, wearing a [COLOR] oversized graphic t-shirt with front design visible. Neon light reflecting on the machine surfaces. Late night laundromat vibes. Candid fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt lit by the blue neon of the laundromat. The washing machine porthole glowing behind. Unique color palette. Laundromat detail photography, 8K resolution.",
+        "A creative shot of a person seen through the circular glass door of a washing machine, wearing a [COLOR] oversized graphic t-shirt. The circular frame creates a unique portrait. Fish-eye distortion effect. Creative fashion photography, 8K resolution.",
+        "A medium shot of a person reading or on their phone on the laundromat bench, wearing a [COLOR] oversized graphic t-shirt. Waiting. The machines hum around them. Late night solitude. Lifestyle photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on the folding counter of a laundromat. Clean, fresh from the dryer. Neon light casting blue tones. Laundromat product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: late night at the laundromat, neon and solitude. Tone: cinematic, late-night, indie film aesthetic. Start with a 3-5 word hook about cycles or late nights. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 55,
+      "theme": "Bookstore Shelves",
+      "genre": "Lifestyle / Context",
+      "slides": [
+        "A warm wide shot of a person standing between tall bookshelves in an independent bookstore, wearing a [COLOR] oversized graphic t-shirt. Books stacked floor to ceiling. Warm ambient lighting. The intersection of intellectual culture and streetwear. Bookstore editorial photography, 8K resolution.",
+        "A medium shot of a person pulling a book from a shelf, wearing a [COLOR] oversized graphic t-shirt with front graphic visible. Surrounded by book spines. Warm, cozy atmosphere. Authentic curiosity. Bookstore fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with colorful book spines blurred behind. The organized chaos of books provides a rich textured backdrop. Warm light. Cultural detail photography, 8K resolution.",
+        "A shot from behind of a person browsing a bookshelf, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Head tilted reading titles. Natural, unposed moment. Lifestyle photography, 8K resolution.",
+        "A portrait of a person wearing a [COLOR] oversized graphic t-shirt, sitting cross-legged on the bookstore floor with an open book. Surrounded by stacks. Lost in reading. Warm, intimate. Lifestyle portrait photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a wooden bookstore table with stacked books arranged around it. Warm reading lamp nearby. Intellectual product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: independent bookstores, culture and curiosity. Tone: intellectual, warm, quietly cultured. Start with a 3-5 word hook about reading or stories. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 56,
+      "theme": "Campfire Night",
+      "genre": "Lifestyle / Context",
+      "slides": [
+        "A warm wide shot of a person sitting by a campfire at night in the wilderness, wearing a [COLOR] oversized graphic t-shirt. The fire illuminates them with warm orange flickering light. Stars visible in the sky above. Trees silhouetted. Outdoor adventure vibes. Campfire editorial photography, 8K resolution.",
+        "A medium shot of a person warming their hands by the campfire, wearing a [COLOR] oversized graphic t-shirt with front design visible. Flames reflecting in their eyes. Warm glow on the fabric. Intimate outdoor moment. Campfire fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt illuminated by warm flickering campfire light. The dancing flames create living, moving light on the fabric. Smoke wisps visible. Campfire detail photography, 8K resolution.",
+        "A shot from behind of a person sitting by the campfire looking up at the stars, wearing a [COLOR] oversized graphic t-shirt. Back print visible in the firelight. Starry sky above. Contemplative, beautiful. Night photography, 8K resolution.",
+        "A portrait from the waist up of a person wearing a [COLOR] oversized graphic t-shirt by the campfire. Warm orange light on one side, cool starlit darkness on the other. Split lighting. Outdoor adventure portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on the ground near the campfire. Warm glow from the fire reaching the fabric. A mug and a blanket nearby. Outdoor lifestyle product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: sitting by a campfire under the stars, disconnecting. Tone: warm, grounding, adventurous. Start with a 3-5 word hook about fire or stars. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 57,
+      "theme": "Train Journey",
+      "genre": "Lifestyle / Context",
+      "slides": [
+        "A cinematic wide shot of a person sitting by the window of a moving train, wearing a [COLOR] oversized graphic t-shirt. Landscape blurring past the window. Soft natural light streaming in. The romance of travel. Train editorial photography, 8K resolution.",
+        "A medium shot of a person leaning their head against the train window, wearing a [COLOR] oversized graphic t-shirt with front design visible. Watching the world go by. Reflective, peaceful moment. Train fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with the blurred landscape rushing past the train window behind. Motion blur creates a dreamy backdrop. Travel detail photography, 8K resolution.",
+        "A shot from behind of a person standing at the open train door, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Wind blowing the oversized fabric. The countryside rushing past. Freedom and movement. Cinematic photography, 8K resolution.",
+        "A portrait of a person wearing a [COLOR] oversized graphic t-shirt on the train, looking out the window. The landscape reflected in the glass overlaying their face. Double exposure effect. Thoughtful travel portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a train seat. Window with blurred landscape visible behind. A backpack and headphones beside it. Travel lifestyle product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: a train journey through the countryside, moving forward. Tone: wanderlust, reflective, forward-moving. Start with a 3-5 word hook about journeys or trains. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 58,
+      "theme": "Rooftop Garden",
+      "genre": "Lifestyle / Context",
+      "slides": [
+        "A lush wide shot of a person standing in a rooftop garden in the city, wearing a [COLOR] oversized graphic t-shirt. Green plants, hanging vines, and potted trees around. City skyline visible beyond the garden. An urban oasis. Soft natural light. Rooftop garden editorial photography, 8K resolution.",
+        "A full-body shot of a person sitting on a wooden bench in the rooftop garden, wearing a [COLOR] oversized graphic t-shirt with front design visible. Surrounded by greenery. City in the background. Peaceful urban nature. Fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with lush green leaves and plants blurred behind. The organic greens contrast the graphic design. Natural light through foliage. Garden detail photography, 8K resolution.",
+        "A shot from behind of a person walking along the rooftop garden path, wearing a [COLOR] oversized graphic t-shirt. Back print visible. Plants on both sides, city skyline ahead. Paradise in the city. Photography, 8K resolution.",
+        "A portrait of a person wearing a [COLOR] oversized graphic t-shirt among rooftop garden flowers and plants. Dappled sunlight through leaves. Natural, alive, connected to nature in the city. Garden portrait photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a wooden garden table. Fresh herbs, plants, and a watering can arranged around. Urban nature product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: a rooftop garden, nature thriving in the concrete jungle. Tone: fresh, green, urban oasis. Start with a 3-5 word hook about growth or gardens. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 59,
+      "theme": "Street Food Stall",
+      "genre": "Lifestyle / Context",
+      "slides": [
+        "A vibrant wide shot of a person standing at an Indian street food stall at evening time, wearing a [COLOR] oversized graphic t-shirt. Steam rising from the cooking surface. Warm bulb lighting. Colorful signage. The chaos and beauty of Indian street food culture. Street editorial photography, 8K resolution.",
+        "A medium shot of a person eating street food, wearing a [COLOR] oversized graphic t-shirt with front design visible. Standing at the counter. Genuine enjoyment. Warm stall lighting. Authentic moment. Street fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt lit by the warm glow of the food stall bulbs. Steam and smoke drifting across the frame. Vibrant, alive atmosphere. Street food detail photography, 8K resolution.",
+        "A shot from behind of a person watching the cook prepare food at the stall, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The sizzle and steam of the cooking. Authentic Indian street scene. Photography, 8K resolution.",
+        "A portrait from the waist up of a person wearing a [COLOR] oversized graphic t-shirt at the street food stall. Warm bulb light. Genuine smile. Steam rising behind. Real, unfiltered. Street portrait photography, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on a stainless steel street food counter. The stall setup visible behind. Chaotic, vibrant, authentic. Street food product photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: Indian street food stalls, culture on every corner. Tone: authentic, rooted, real India. Start with a 3-5 word hook about flavor or streets. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    },
+
+    {
+      "id": 60,
+      "theme": "Balcony City View",
+      "genre": "Lifestyle / Context",
+      "slides": [
+        "A cinematic wide shot of a person standing on a high-rise apartment balcony overlooking the city, wearing a [COLOR] oversized graphic t-shirt. Leaning on the railing. City stretching to the horizon. Soft evening or early morning light. Personal, elevated perspective. Balcony editorial photography, 8K resolution.",
+        "A medium shot of a person sitting on a balcony chair, wearing a [COLOR] oversized graphic t-shirt with front design visible. Feet up on the railing. Coffee in hand. City blurred behind. Relaxed morning moment. Lifestyle fashion photography, 8K resolution.",
+        "A close-up of the graphic on a [COLOR] oversized t-shirt with the out-of-focus city skyline stretching behind. The elevated perspective adds aspiration. Soft ambient light. Balcony detail photography, 8K resolution.",
+        "A shot from behind of a person leaning on the balcony railing looking at the city, wearing a [COLOR] oversized graphic t-shirt. Back print visible. The vast urban landscape before them. Contemplative, powerful. Cinematic photography, 8K resolution.",
+        "A portrait from the waist up of a person on the balcony, wearing a [COLOR] oversized graphic t-shirt. Morning or evening light on their face. City behind. Hair moved by high-rise wind. Elevated lifestyle portrait, 8K resolution.",
+        "A flat lay of a [COLOR] oversized graphic t-shirt on the balcony floor or table. The city skyline visible over the railing behind. Morning light. Elevated lifestyle product photography, 8K resolution.",
+        "A final wide shot of the person walking back inside from the balcony, wearing a [COLOR] oversized graphic t-shirt. The glass door reflects the city view. The interior is dark and minimal. Transitional moment. Cinematic photography, 8K resolution."
+      ],
+      "caption_prompt": "Write a short, premium Instagram caption for GRIT streetwear. Product: '[PRODUCT_NAME]' — [PRODUCT_DESCRIPTION]. Theme: a balcony above the city, personal elevation. Tone: elevated, personal, above the noise. Start with a 3-5 word hook about views or perspective. Mention 240 GSM, oversized fit. End with 'link in bio'. 5-7 hashtags. Under 8 lines."
+    }
+
+  ]
+}
