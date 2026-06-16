@@ -30,7 +30,6 @@ function setupEventListeners() {
 
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const closeMobileMenuBtn = document.getElementById('close-mobile-menu');
-    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
     if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', () => { if (mobileMenuOverlay) mobileMenuOverlay.classList.add('active'); document.body.style.overflow = 'hidden'; });
     if (closeMobileMenuBtn) closeMobileMenuBtn.addEventListener('click', () => { if (mobileMenuOverlay) mobileMenuOverlay.classList.remove('active'); document.body.style.overflow = ''; });
     if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', e => { if (e.target === mobileMenuOverlay) { mobileMenuOverlay.classList.remove('active'); document.body.style.overflow = ''; } });

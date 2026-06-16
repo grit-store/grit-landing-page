@@ -41,6 +41,7 @@ async function init() {
         errorDiv.style.cssText = 'background:red;color:white;padding:10px;z-index:9999;position:fixed;top:0;left:0;width:100%;font-family:sans-serif;font-weight:bold;';
         errorDiv.textContent = `Initialization Error: ${e.message}`;
         document.body.prepend(errorDiv);
+        hidePageLoader();
     }
 }
 
