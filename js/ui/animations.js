@@ -140,3 +140,86 @@ function initInteractiveBackground() {
     window.addEventListener('mouseout', () => { mouse.x = -1000; mouse.y = -1000; });
     resize(); animate();
 }
+
+// ============ SMOOTH SCROLLING (LENIS) ============
+let lenisInstance = null;
+
+function initSmoothScroll() {
+    // If Lenis is already defined, setup directly
+    if (typeof Lenis !== 'undefined') {
+        setupLenis();
+        return;
+    }
+
+    // Otherwise, load from jsDelivr CDN dynamically
+    const script = document.createElement('script');
+    script.src = "https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js";
+    script.crossOrigin = "anonymous";
+    script.onload = () => {
+        setupLenis();
+    };
+    script.onerror = () => {
+        console.warn("Lenis smooth scroll failed to load from CDN. Using standard fallback smooth scroll.");
+    };
+    document.head.appendChild(script);
+}
+
+function setupLenis() {
+    if (typeof Lenis === 'undefined') return;
+
+    // Initialize Lenis
+    lenisInstance = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // easeOutExpo
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        smoothTouch: false,
+        infinite: false,
+    });
+
+    // Update ScrollTrigger on scroll
+    if (typeof ScrollTrigger !== 'undefined' && typeof gsap !== 'undefined') {
+        lenisInstance.on('scroll', ScrollTrigger.update);
+        
+        gsap.ticker.add((time) => {
+            lenisInstance.raf(time * 1000);
+        });
+        
+        gsap.ticker.lagSmoothing(0);
+    } else {
+        // Fallback animation frame loop
+        function raf(time) {
+            lenisInstance.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+    }
+
+    // Attach smooth scroll to all anchor links
+    document.addEventListener('click', function(e) {
+        const anchor = e.target.closest('a[href^="#"]');
+        if (!anchor) return;
+        
+        const targetId = anchor.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+            e.preventDefault();
+            lenisInstance.scrollTo(targetEl, {
+                offset: -80, // Offset to avoid overlapping navbar
+                duration: 1.4,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+            });
+        }
+    });
+}
+
+// Auto-initialize on load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSmoothScroll);
+} else {
+    initSmoothScroll();
+}
+

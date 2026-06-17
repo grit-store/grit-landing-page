@@ -17,6 +17,8 @@ automation/.shopify/
 
 # Generated mockups (already uploaded to Shopify)
 automation/generated_mockups/
+automation/zenitsu_raw_images/
+automation/zenitsu_generated_mockups/
 
 # Internal docs (not part of live website)
 design-system/
