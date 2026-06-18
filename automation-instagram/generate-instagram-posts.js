@@ -190,12 +190,53 @@ async function getBestMockupImagePath(color, slidePrompt, product) {
 
 // ── Theme Suggestion logic ───────────────────────────────
 async function suggestThemes(product, themes) {
-    console.log('🤖 Suggesting themes from offline database...');
-    // Suggest the first 5 themes as suggestions for the UI selection
-    return themes.slice(0, 5).map(t => ({
+    console.log('🤖 Analyzing product details and matching themes...');
+    
+    const title = (product.title || '').toLowerCase();
+    const tags = Array.isArray(product.tags) ? product.tags.map(t => t.toLowerCase()) : [];
+    const bodyHtml = (product.body_html || '').toLowerCase();
+    const searchString = ` ${title} ${tags.join(' ')} ${bodyHtml} `;
+
+    let preferredGenres = [];
+    let reasonTemplate = '';
+
+    // 1. Anime / Pop-Culture Graphic Tees (Zenitsu, Rick's Lineup, etc.)
+    if (searchString.includes('anime') || searchString.includes('zenitsu') || searchString.includes('rick') || searchString.includes('lineup')) {
+        preferredGenres = ['Urban Night', 'Cultural / Street', 'Moody / Atmospheric'];
+        reasonTemplate = 'Matches the high-energy cyber, neon, or street culture aesthetic of your graphic print product.';
+    } 
+    // 2. Activewear / Crop Tops / Sporty fits (Crop Tank, etc.)
+    else if (searchString.includes('crop') || searchString.includes('tank') || searchString.includes('active') || searchString.includes('sports')) {
+        preferredGenres = ['Active / Streetwear', 'Minimal Studio', 'Golden / Natural Light'];
+        reasonTemplate = 'Complements the activewear, sporty, or minimal styling of your crop/tank top.';
+    } 
+    // 3. Minimal / Luxury / Premium Essentials (The Luxury of Disconnect, etc.)
+    else if (searchString.includes('disconnect') || searchString.includes('luxury') || searchString.includes('minimal')) {
+        preferredGenres = ['Minimal Studio', 'Golden / Natural Light', 'Moody / Atmospheric', 'Architectural'];
+        reasonTemplate = 'Aligns with the premium, clean, or minimal aesthetic of this product line.';
+    } 
+    // 4. Default Streetwear Fallback
+    else {
+        preferredGenres = ['Lifestyle / Context', 'Golden / Natural Light', 'Urban Night'];
+        reasonTemplate = 'Selected as a versatile premium streetwear lookbook aesthetic.';
+    }
+
+    // Filter themes that belong to the preferred genres
+    let matchedThemes = themes.filter(t => preferredGenres.includes(t.genre));
+
+    // If we have fewer than 5 matched themes, fill the rest with other available themes to ensure 5 slots
+    if (matchedThemes.length < 5) {
+        const remaining = themes.filter(t => !matchedThemes.some(mt => mt.id === t.id));
+        matchedThemes = matchedThemes.concat(remaining);
+    }
+
+    // Take the top 5 suggested themes
+    const finalSuggestions = matchedThemes.slice(0, 5);
+
+    return finalSuggestions.map(t => ({
         id: t.id,
         theme: t.theme,
-        reason: `Streetwear aesthetic theme from the ${t.genre} category.`
+        reason: `${reasonTemplate} (Genre: ${t.genre})`
     }));
 }
 
