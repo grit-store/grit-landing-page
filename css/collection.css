@@ -272,7 +272,7 @@
     aspect-ratio: 3/4;
     overflow: hidden;
     position: relative;
-    cursor: zoom-in;
+    cursor: pointer;
     background-color: var(--color-secondary);
 }
 
@@ -283,10 +283,6 @@
     object-position: top center;
     transition: transform 0.2s ease-out;
     transform-origin: center center;
-}
-
-.pdp-main-image-container:hover img {
-    transform: scale(2); /* Zoom level */
 }
 
 /* Size Guide Link */

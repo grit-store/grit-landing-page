@@ -265,7 +265,10 @@ async function main() {
     console.log(`   Found ${products.length} products on Shopify.\n`);
 
     // 2. Process all products
-    const toProcess = products;
+    const toProcess = products.filter(p => {
+        const productDir = path.join(INSTAGRAM_DIR, p.handle);
+        return !fs.existsSync(productDir) && p.handle !== 'the-luxury-of-disconnect';
+    });
 
     console.log(`🎯 ${toProcess.length} product(s) need Instagram posts:\n`);
     toProcess.forEach((p, idx) => console.log(`   [${idx + 1}] ${p.title} (${p.handle})`));

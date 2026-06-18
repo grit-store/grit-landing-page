@@ -202,7 +202,7 @@ function loadProductDetail() {
     if (fullscreenOverlay && mainImg) {
         let currentZoom = 1, isDragging = false, startX, startY, translateX = 0, translateY = 0;
         const updateTransform = () => fullscreenImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentZoom})`;
-        mainImg.style.cursor = 'zoom-in';
+        mainImg.style.cursor = 'pointer';
         mainImg.addEventListener('click', () => { fullscreenImg.src = mainImg.src; fullscreenOverlay.classList.add('active'); currentZoom=1;translateX=0;translateY=0;updateTransform();document.body.style.overflow='hidden'; });
         document.getElementById('close-fullscreen').addEventListener('click', e => { e.stopPropagation(); fullscreenOverlay.classList.remove('active'); document.body.style.overflow=''; });
         document.getElementById('zoom-in').addEventListener('click', e => { e.stopPropagation(); currentZoom=Math.min(5,currentZoom+0.5);updateTransform(); });
@@ -213,12 +213,12 @@ function loadProductDetail() {
         window.addEventListener('mouseup', () => isDragging=false);
     }
 
-    // Hover Zoom
-    const mainImageContainer = document.getElementById('pdp-main-image-container');
-    if (mainImageContainer && mainImg) {
-        mainImageContainer.addEventListener('mousemove', e => { const r=mainImageContainer.getBoundingClientRect();mainImg.style.transformOrigin=`${((e.clientX-r.left)/r.width)*100}% ${((e.clientY-r.top)/r.height)*100}%`; });
-        mainImageContainer.addEventListener('mouseleave', () => mainImg.style.transformOrigin='center center');
-    }
+    // Hover Zoom (Disabled)
+    // const mainImageContainer = document.getElementById('pdp-main-image-container');
+    // if (mainImageContainer && mainImg) {
+    //     mainImageContainer.addEventListener('mousemove', e => { const r=mainImageContainer.getBoundingClientRect();mainImg.style.transformOrigin=`${((e.clientX-r.left)/r.width)*100}% ${((e.clientY-r.top)/r.height)*100}%`; });
+    //     mainImageContainer.addEventListener('mouseleave', () => mainImg.style.transformOrigin='center center');
+    // }
 
     // Accordions
     document.querySelectorAll('.accordion-header').forEach(header => {

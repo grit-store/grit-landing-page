@@ -294,12 +294,8 @@ function renderProducts(productList, targetGrid) {
         });
     }
 
-    if (typeof gsap !== 'undefined') {
-        gsap.to('.product-card', {
-            y: 0, opacity: 1, duration: 0.5, stagger: 0.05, ease: "power2.out",
-            onComplete: () => document.querySelectorAll('.product-card').forEach(el => el.classList.remove('reveal'))
-        });
-        if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+    if (typeof ScrollTrigger !== 'undefined') {
+        ScrollTrigger.refresh();
     }
 }
 

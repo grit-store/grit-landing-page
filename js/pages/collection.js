@@ -126,6 +126,9 @@ function renderCategorySections(category, categoryProducts) {
             });
         }
     });
+    if (typeof initGSAPAnimations === 'function') {
+        initGSAPAnimations();
+    }
     scrollToHash();
 }
 

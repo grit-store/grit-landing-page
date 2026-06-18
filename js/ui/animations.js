@@ -35,7 +35,18 @@ function initHeroSlideshow() {
 }
 
 function initGSAPAnimations() {
-    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+        // Fallback: immediately reveal all reveal elements if GSAP is not loaded
+        document.querySelectorAll('.reveal').forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+        });
+        return;
+    }
+
+    // Kill any existing ScrollTriggers to prevent duplicate/conflicting animations
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
     gsap.registerPlugin(ScrollTrigger);
 
     const heroImageContainer = document.querySelector('.hero-image-container');
@@ -45,10 +56,13 @@ function initGSAPAnimations() {
         gsap.to(heroContent, { yPercent: -40, opacity: 0, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
     }
 
-    const productGrid = document.querySelector('.product-grid');
-    if (productGrid) {
-        gsap.to(gsap.utils.toArray('.product-card'), { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: "power3.out", scrollTrigger: { trigger: productGrid, start: "top 80%", toggleActions: "play reverse play reverse" } });
-    }
+    // Loop through each product grid and animate only its respective children
+    gsap.utils.toArray('.product-grid').forEach(grid => {
+        const cards = gsap.utils.toArray(grid.querySelectorAll('.product-card'));
+        if (cards.length > 0) {
+            gsap.to(cards, { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: "power3.out", scrollTrigger: { trigger: grid, start: "top 80%", toggleActions: "play reverse play reverse" } });
+        }
+    });
 
     gsap.utils.toArray('.reveal:not(.product-card)').forEach(reveal => {
         gsap.to(reveal, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: reveal, start: "top 85%", toggleActions: "play reverse play reverse" } });
