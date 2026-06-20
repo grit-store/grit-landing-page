@@ -4,14 +4,15 @@
    The browser loads them all via @import.
    ============================================ */
 
-@import url('base.css');
-@import url('layout.css');
-@import url('nav.css');
-@import url('home.css');
-@import url('auth.css');
-@import url('cart.css');
-@import url('product.css');
-@import url('animations.css');
-@import url('modals.css');
-@import url('collection.css');
-@import url('pages.css');
+@import url('base.css?v=1.1');
+@import url('layout.css?v=1.1');
+@import url('nav.css?v=1.1');
+@import url('home.css?v=1.1');
+@import url('auth.css?v=1.1');
+@import url('cart.css?v=1.1');
+@import url('product.css?v=1.1');
+@import url('animations.css?v=1.1');
+@import url('modals.css?v=1.1');
+@import url('collection.css?v=1.1');
+@import url('pages.css?v=1.1');
+

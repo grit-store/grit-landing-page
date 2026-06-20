@@ -741,3 +741,10 @@
     visibility: visible;
 }
 
+/* Remove double padding from products-section nested in collection page */
+.collection-main .products-section {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
