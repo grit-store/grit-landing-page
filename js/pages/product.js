@@ -109,11 +109,20 @@ function loadProductDetail() {
                 )) || variantImgSrcClean.toLowerCase().includes('chart') || variantImgSrcClean.toLowerCase().includes('size');
             }
 
+            const colorKey = Object.keys(selectedOptions).find(k => k.toLowerCase() === 'color' || k.toLowerCase() === 'colour');
+            const selectedColor = colorKey ? selectedOptions[colorKey] : '';
+
+            let useVariantImage = false;
             if (selectedVariant.image && selectedVariant.image.src && !isChart) {
+                const imgAlt = (selectedVariant.image.altText || selectedVariant.image.alt || '').toLowerCase();
+                if (!selectedColor || imgAlt.includes(selectedColor.toLowerCase()) || imgAlt === '') {
+                    useVariantImage = true;
+                }
+            }
+
+            if (useVariantImage) {
                 variantImg = selectedVariant.image.src;
             } else {
-                const colorKey = Object.keys(selectedOptions).find(k => k.toLowerCase() === 'color' || k.toLowerCase() === 'colour');
-                const selectedColor = colorKey ? selectedOptions[colorKey] : '';
                 if (selectedColor && product.images) {
                     let match = product.images.find(img => {
                         const alt = (img.alt || '').toLowerCase().trim();
@@ -150,17 +159,19 @@ function loadProductDetail() {
         optionsContainer.innerHTML = '';
         product.options.forEach(option => {
             if (option.name === 'Title' && option.values[0].value === 'Default Title') return;
+            
+            let sortedValues = [...option.values];
             if (option.name.toLowerCase() === 'size') {
                 const sizeOrder = { 'xxs':1,'xs':2,'s':3,'m':4,'l':5,'xl':6,'xxl':7,'2xl':7,'xxxl':8,'3xl':8 };
-                option.values = [...option.values].sort((a,b) => { const va=a.value.toLowerCase().trim(),vb=b.value.toLowerCase().trim(); return (sizeOrder[va]||(isNaN(parseInt(va))?99:parseInt(va)))-(sizeOrder[vb]||(isNaN(parseInt(vb))?99:parseInt(vb))); });
+                sortedValues.sort((a,b) => { const va=a.value.toLowerCase().trim(),vb=b.value.toLowerCase().trim(); return (sizeOrder[va]||(isNaN(parseInt(va))?99:parseInt(va)))-(sizeOrder[vb]||(isNaN(parseInt(vb))?99:parseInt(vb))); });
             }
-            selectedOptions[option.name] = option.values[0].value;
+            selectedOptions[option.name] = sortedValues[0].value;
             const group = document.createElement('div');
             group.className = 'variant-group';
             group.innerHTML = `<h4 class="variant-title">${escapeHTML(option.name)}</h4>`;
             const btnGroup = document.createElement('div');
             btnGroup.className = 'variant-buttons';
-            option.values.forEach(val => {
+            sortedValues.forEach(val => {
                 const btn = document.createElement('button');
                 btn.className = `variant-btn ${selectedOptions[option.name] === val.value ? 'active' : ''}`;
                 btn.textContent = val.value;

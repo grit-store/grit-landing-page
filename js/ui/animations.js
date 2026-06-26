@@ -1,5 +1,21 @@
 // ============ ANIMATIONS ============
 
+function initMagneticButtons(container = document) {
+    container.querySelectorAll('.magnetic').forEach(btn => {
+        if (btn.dataset.magneticInit) return;
+        btn.dataset.magneticInit = 'true';
+        btn.addEventListener('mousemove', e => {
+            const rect = btn.getBoundingClientRect();
+            const x = (e.clientX - rect.left - rect.width / 2) * 0.3;
+            const y = (e.clientY - rect.top - rect.height / 2) * 0.3;
+            btn.style.transform = `translate(${x}px, ${y}px)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0px, 0px)';
+        });
+    });
+}
+
 function initCustomCursor() {
     const cursor = document.getElementById('custom-cursor');
     if (!cursor) return;
@@ -12,6 +28,7 @@ function initCustomCursor() {
         el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
     });
+    initMagneticButtons();
     function animateCursor() {
         cursorX += (mouseX - cursorX) * 0.2;
         cursorY += (mouseY - cursorY) * 0.2;
@@ -67,6 +84,65 @@ function initGSAPAnimations() {
     gsap.utils.toArray('.reveal:not(.product-card)').forEach(reveal => {
         gsap.to(reveal, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", scrollTrigger: { trigger: reveal, start: "top 85%", toggleActions: "play reverse play reverse" } });
     });
+
+    // About page specific animations
+    if (window.location.pathname.includes('about')) {
+        const sections = [
+            '.about-hero-content',
+            '.about-story',
+            '.about-stats-bar',
+            '.about-values .section-header',
+            '.values-grid',
+            '.about-cta'
+        ];
+        sections.forEach(sel => {
+            const el = document.querySelector(sel);
+            if (!el) return;
+            gsap.set(el, { clearProps: "y,opacity" });
+            gsap.fromTo(el, 
+                { y: 40, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.9,
+                    ease: 'power2.out',
+                    scrollTrigger: { trigger: el, start: 'top 95%', toggleActions: 'play none none none' }
+                }
+            );
+        });
+
+        const stats = document.querySelectorAll('.about-stat');
+        if (stats.length > 0) {
+            gsap.set(stats, { clearProps: "y,opacity" });
+            gsap.fromTo(stats,
+                { y: 30, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.7,
+                    stagger: 0.15,
+                    ease: 'power2.out',
+                    scrollTrigger: { trigger: '.about-stats-bar', start: 'top 85%' }
+                }
+            );
+        }
+
+        const valueCards = document.querySelectorAll('.value-card');
+        if (valueCards.length > 0) {
+            gsap.set(valueCards, { clearProps: "y,opacity" });
+            gsap.fromTo(valueCards,
+                { y: 30, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.7,
+                    stagger: 0.15,
+                    ease: 'power2.out',
+                    scrollTrigger: { trigger: '.values-grid', start: 'top 85%' }
+                }
+            );
+        }
+    }
 }
 
 function initInteractiveBackground() {

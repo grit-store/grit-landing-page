@@ -285,13 +285,9 @@ function renderProducts(productList, targetGrid) {
             el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
             el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
         });
-        grid.querySelectorAll('.magnetic').forEach(btn => {
-            btn.addEventListener('mousemove', e => {
-                const rect = btn.getBoundingClientRect();
-                btn.style.transform = `translate(${(e.clientX - rect.left - rect.width / 2) * 0.3}px, ${(e.clientY - rect.top - rect.height / 2) * 0.3}px)`;
-            });
-            btn.addEventListener('mouseleave', () => btn.style.transform = 'translate(0px, 0px)');
-        });
+        if (typeof initMagneticButtons === 'function') {
+            initMagneticButtons(grid);
+        }
     }
 
     if (typeof ScrollTrigger !== 'undefined') {
@@ -339,10 +335,11 @@ function openQuickAddModal(productId, preselectedColor) {
         product.options.forEach(option => {
             if (option.name === 'Title' && option.values[0].value === 'Default Title') return;
             
+            let sortedValues = [...option.values];
             // Sort size option
             if (option.name.toLowerCase() === 'size') {
                 const sizeOrder = { 'xxs':1,'xs':2,'s':3,'m':4,'l':5,'xl':6,'xxl':7,'2xl':7,'xxxl':8,'3xl':8 };
-                option.values = [...option.values].sort((a,b) => { 
+                sortedValues.sort((a,b) => { 
                     const va=a.value.toLowerCase().trim(), vb=b.value.toLowerCase().trim(); 
                     return (sizeOrder[va]||(isNaN(parseInt(va))?99:parseInt(va)))-(sizeOrder[vb]||(isNaN(parseInt(vb))?99:parseInt(vb))); 
                 });
@@ -350,15 +347,15 @@ function openQuickAddModal(productId, preselectedColor) {
 
             // Pre-select first option value or the pre-selected color
             if ((option.name.toLowerCase() === 'color' || option.name.toLowerCase() === 'colour') && preselectedColor) {
-                const hasColor = option.values.some(val => val.value.toLowerCase() === preselectedColor.toLowerCase());
+                const hasColor = sortedValues.some(val => val.value.toLowerCase() === preselectedColor.toLowerCase());
                 if (hasColor) {
-                    const matchVal = option.values.find(val => val.value.toLowerCase() === preselectedColor.toLowerCase());
+                    const matchVal = sortedValues.find(val => val.value.toLowerCase() === preselectedColor.toLowerCase());
                     selectedOptions[option.name] = matchVal.value;
                 } else {
-                    selectedOptions[option.name] = option.values[0].value;
+                    selectedOptions[option.name] = sortedValues[0].value;
                 }
             } else {
-                selectedOptions[option.name] = option.values[0].value;
+                selectedOptions[option.name] = sortedValues[0].value;
             }
 
 
@@ -369,7 +366,7 @@ function openQuickAddModal(productId, preselectedColor) {
             const btnGroup = document.createElement('div');
             btnGroup.className = 'variant-buttons';
             
-            option.values.forEach(val => {
+            sortedValues.forEach(val => {
                 const btn = document.createElement('button');
                 btn.className = `variant-btn ${selectedOptions[option.name] === val.value ? 'active' : ''}`;
                 btn.textContent = val.value;
@@ -403,11 +400,20 @@ function openQuickAddModal(productId, preselectedColor) {
                 )) || variantImgSrcClean.toLowerCase().includes('chart') || variantImgSrcClean.toLowerCase().includes('size');
             }
 
+            const colorKey = Object.keys(selectedOptions).find(k => k.toLowerCase() === 'color' || k.toLowerCase() === 'colour');
+            const selectedColor = colorKey ? selectedOptions[colorKey] : '';
+
+            let useVariantImage = false;
             if (selectedVariant.image && selectedVariant.image.src && !isChart) {
+                const imgAlt = (selectedVariant.image.altText || selectedVariant.image.alt || '').toLowerCase();
+                if (!selectedColor || imgAlt.includes(selectedColor.toLowerCase()) || imgAlt === '') {
+                    useVariantImage = true;
+                }
+            }
+
+            if (useVariantImage) {
                 variantImg = selectedVariant.image.src;
             } else {
-                const colorKey = Object.keys(selectedOptions).find(k => k.toLowerCase() === 'color' || k.toLowerCase() === 'colour');
-                const selectedColor = colorKey ? selectedOptions[colorKey] : '';
                 if (selectedColor && product.images) {
                     let match = product.images.find(img => {
                         const alt = (img.alt || '').toLowerCase().trim();
@@ -498,6 +504,10 @@ function openQuickAddModal(productId, preselectedColor) {
             el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
             el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
         });
+    }
+
+    if (typeof initMagneticButtons === 'function') {
+        initMagneticButtons(modal);
     }
 }
 

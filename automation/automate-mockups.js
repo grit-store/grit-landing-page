@@ -1,13 +1,16 @@
 /**
  * automate-mockups.js
  * 
- * Local Mockup Uploader Pipeline (Google AI Studio Bypassed):
+ * Local Mockup Uploader Pipeline:
  * 1. Fetches products from Shopify Admin API.
- * 2. Scans the local "local_mockups" directory for subfolders matching product titles (e.g. "crop-tank", "ricks-lineup-tee").
- * 3. Reads generated mockup images (e.g. "black-1.png" -> Alt: "Black 1").
- * 4. Uploads them to the corresponding Shopify product(s).
+ * 2. Scans the local "local_mockups" directory for subfolders matching product titles.
+ * 3. Validates mockup images (checks file sizes, completeness).
+ * 4. Reads generated mockup images (e.g. "black-1.png" -> Alt: "Black 1").
+ * 5. Uploads them to the corresponding Shopify product(s).
  * 
- * Usage: node automate-mockups.js
+ * Usage:
+ *   node automate-mockups.js              # Upload all pending mockups
+ *   node automate-mockups.js --dry-run    # Preview what would be uploaded (no actual uploads)
  */
 
 const https = require('https');
@@ -127,9 +130,79 @@ function parseFilenameToAlt(filename) {
         .join(' ');
 }
 
+// ── Pre-upload validation ────────────────────────────────
+const MIN_VALID_SIZE = 50 * 1024; // 50KB — files smaller than this are likely raw copies, not generated mockups
+
+function validateMockups(folderPath, folder) {
+    const imageFiles = fs.readdirSync(folderPath).filter(f => {
+        const ext = path.extname(f).toLowerCase();
+        return ext === '.png' || ext === '.jpg' || ext === '.jpeg';
+    });
+
+    if (imageFiles.length === 0) {
+        return { valid: false, files: [], warnings: [`No images found in "${folder}"`], errors: [] };
+    }
+
+    const warnings = [];
+    const errors = [];
+    const validFiles = [];
+    const tinyFiles = [];
+
+    for (const file of imageFiles) {
+        const filePath = path.join(folderPath, file);
+        const stats = fs.statSync(filePath);
+        const sizeKB = (stats.size / 1024).toFixed(1);
+
+        if (stats.size < MIN_VALID_SIZE) {
+            tinyFiles.push({ file, size: stats.size, sizeKB });
+            warnings.push(`"${file}" is only ${sizeKB}KB — likely a raw Shopify image copy, NOT a generated mockup`);
+        } else {
+            validFiles.push({ file, size: stats.size, sizeKB });
+        }
+    }
+
+    // Check completeness: expect files named like color-1.png through color-5.png
+    const colorGroups = {};
+    for (const file of imageFiles) {
+        const ext = path.extname(file);
+        const baseName = path.basename(file, ext);
+        const parts = baseName.split('-');
+        const lastPart = parts[parts.length - 1];
+        if (/^\d+$/.test(lastPart)) {
+            const colorKey = parts.slice(0, -1).join('-');
+            if (!colorGroups[colorKey]) colorGroups[colorKey] = [];
+            colorGroups[colorKey].push(parseInt(lastPart));
+        }
+    }
+
+    for (const [color, ids] of Object.entries(colorGroups)) {
+        const expected = [1, 2, 3, 4, 5];
+        const missing = expected.filter(id => !ids.includes(id));
+        if (missing.length > 0) {
+            warnings.push(`Color "${color}" is missing mockup IDs: ${missing.join(', ')} (expected 1-5)`);
+        }
+    }
+
+    return {
+        valid: errors.length === 0,
+        files: imageFiles,
+        validFiles,
+        tinyFiles,
+        colorGroups,
+        warnings,
+        errors
+    };
+}
+
 // ── Main pipeline ────────────────────────────────────────
 async function main() {
+    const args = process.argv.slice(2);
+    const isDryRun = args.includes('--dry-run');
+
     console.log('🚀 GRIT Local Mockups Upload Pipeline');
+    if (isDryRun) {
+        console.log('   🔍 DRY RUN MODE — no uploads will be performed');
+    }
     console.log('=====================================\n');
 
     // 1. Fetch all products from Shopify
@@ -154,6 +227,10 @@ async function main() {
         return;
     }
 
+    let totalUploaded = 0;
+    let totalSkipped = 0;
+    let totalWarnings = 0;
+
     // 3. Process each subfolder
     for (const folder of subfolders) {
         const folderPath = path.join(mockupsParentDir, folder);
@@ -162,7 +239,8 @@ async function main() {
         // Find matching products on Shopify
         const matchedProducts = products.filter(p => {
             const sanitizedTitle = sanitizeFolderName(p.title);
-            return sanitizedTitle.includes(folder) || folder.includes(sanitizedTitle);
+            // Also match by product handle directly
+            return sanitizedTitle.includes(folder) || folder.includes(sanitizedTitle) || p.handle === folder;
         });
 
         if (matchedProducts.length === 0) {
@@ -172,46 +250,83 @@ async function main() {
 
         console.log(`   Matches ${matchedProducts.length} product(s) on Shopify: ${matchedProducts.map(p => p.title).join(', ')}`);
 
-        // Scan images inside the folder
-        const imageFiles = fs.readdirSync(folderPath).filter(f => {
-            const ext = path.extname(f).toLowerCase();
-            return ext === '.png' || ext === '.jpg' || ext === '.jpeg';
-        });
+        // ── VALIDATION STEP ──────────────────────────────
+        const validation = validateMockups(folderPath, folder);
+        
+        if (validation.warnings.length > 0) {
+            console.log('\n   ⚠️  Validation Warnings:');
+            validation.warnings.forEach(w => console.log(`      - ${w}`));
+            totalWarnings += validation.warnings.length;
+        }
 
-        if (imageFiles.length === 0) {
+        if (validation.tinyFiles.length > 0) {
+            console.log(`\n   🚫 ${validation.tinyFiles.length} file(s) are too small (<50KB) and will be SKIPPED:`);
+            validation.tinyFiles.forEach(f => console.log(`      - ${f.file} (${f.sizeKB}KB)`));
+        }
+
+        if (validation.files.length === 0) {
             console.log(`   ⚠️  No images (.png, .jpg) found in "${folder}".`);
             continue;
         }
 
-        console.log(`   Found ${imageFiles.length} image(s) to upload.`);
+        // Show summary
+        console.log(`\n   📊 Summary: ${validation.validFiles.length} valid + ${validation.tinyFiles.length} skipped = ${validation.files.length} total`);
+        for (const [color, ids] of Object.entries(validation.colorGroups)) {
+            console.log(`      ${color}: mockups ${ids.sort().join(', ')}`);
+        }
 
-        // Upload to all matching products
-        for (const file of imageFiles) {
-            const filePath = path.join(folderPath, file);
+        if (isDryRun) {
+            console.log('\n   🔍 [DRY RUN] Would upload the following:');
+            for (const fileInfo of validation.validFiles) {
+                const altText = parseFilenameToAlt(fileInfo.file);
+                for (const product of matchedProducts) {
+                    const alreadyExists = (product.images || []).some(img => img.alt && img.alt.trim().toLowerCase() === altText.toLowerCase());
+                    if (alreadyExists) {
+                        console.log(`      ⏩ "${altText}" → already on "${product.title}"`);
+                        totalSkipped++;
+                    } else {
+                        console.log(`      📤 "${altText}" (${fileInfo.sizeKB}KB) → "${product.title}"`);
+                    }
+                }
+            }
+            continue;
+        }
+
+        // ── UPLOAD (only valid files) ────────────────────
+        for (const fileInfo of validation.validFiles) {
+            const filePath = path.join(folderPath, fileInfo.file);
             const fileBuffer = fs.readFileSync(filePath);
             const base64Image = fileBuffer.toString('base64');
-            const altText = parseFilenameToAlt(file);
+            const altText = parseFilenameToAlt(fileInfo.file);
 
             for (const product of matchedProducts) {
                 // Check if this product already has this alt text to avoid duplicates
                 const alreadyExists = (product.images || []).some(img => img.alt && img.alt.trim().toLowerCase() === altText.toLowerCase());
                 if (alreadyExists) {
                     console.log(`   ⏩ Image "${altText}" already exists on "${product.title}". Skipping.`);
+                    totalSkipped++;
                     continue;
                 }
 
                 try {
-                    await uploadImageToShopify(product.id, base64Image, altText, file);
+                    await uploadImageToShopify(product.id, base64Image, altText, fileInfo.file);
+                    totalUploaded++;
                     await sleep(2000); // 2 seconds delay for Shopify rate limits
                 } catch (err) {
-                    console.error(`   ❌ Failed to upload ${file} to "${product.title}": ${err.message}`);
+                    console.error(`   ❌ Failed to upload ${fileInfo.file} to "${product.title}": ${err.message}`);
                     await sleep(3000);
                 }
             }
         }
     }
 
-    console.log('\n🎉 Local mockups upload pipeline complete!');
+    console.log('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
+    if (isDryRun) {
+        console.log('🔍 DRY RUN COMPLETE — no uploads were performed');
+    } else {
+        console.log('🎉 Local mockups upload pipeline complete!');
+    }
+    console.log(`   Uploaded: ${totalUploaded} | Skipped: ${totalSkipped} | Warnings: ${totalWarnings}`);
 }
 
 main().catch(err => {

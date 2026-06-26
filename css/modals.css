@@ -55,8 +55,8 @@
 
 .close-fullscreen {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: max(20px, env(safe-area-inset-top, 20px));
+    right: max(30px, env(safe-area-inset-right, 30px));
     background: none;
     border: none;
     color: #fff;
@@ -64,6 +64,8 @@
     cursor: pointer;
     z-index: 2010;
     transition: color 0.2s;
+    min-width: 48px;
+    min-height: 48px;
 }
 
 .close-fullscreen:hover {
@@ -183,6 +185,35 @@
 }
 
 #search-input::placeholder { color: var(--color-text-light); }
+
+@media (max-width: 768px) {
+    .search-overlay {
+        padding-top: 8vh;
+    }
+
+    #search-input {
+        font-size: 1.2rem;
+    }
+
+    .close-search {
+        top: -2rem;
+        font-size: 2rem;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .search-result-item {
+        padding: 0.85rem;
+        min-height: 60px;
+    }
+
+    .search-tag {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1.2rem;
+    }
+}
 
 .search-results {
     margin-top: 2rem;
@@ -527,6 +558,18 @@
     
     .quick-add-qty-container {
         margin-bottom: 1.5rem;
+    }
+
+    .close-modal {
+        min-width: 44px;
+        min-height: 44px;
+        top: 0.75rem;
+        right: 1rem;
+    }
+
+    .quick-add-info-sec .variant-btn {
+        min-height: 44px;
+        padding: 0.6rem 1.2rem;
     }
 }
 

@@ -35,6 +35,10 @@ async function init() {
         if (window.location.pathname.includes('product.html')) {
             loadProductDetail();
         }
+
+        if (typeof initMagneticButtons === 'function') {
+            initMagneticButtons();
+        }
     } catch (e) {
         console.error("Initialization error:", e);
         const errorDiv = document.createElement('div');

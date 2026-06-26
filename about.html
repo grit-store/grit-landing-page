@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="icon" type="image/png" href="assets/pointer.png">
     <title>GRIT | About Us</title>
     <meta name="description" content="The story behind GRIT. Born from a belief that everyday clothing should be anything but ordinary.">
@@ -51,8 +51,8 @@
             <div class="about-stat-label">Average Rating</div>
         </div>
         <div class="about-stat">
-            <div class="about-stat-number">14-Day</div>
-            <div class="about-stat-label">Easy Returns</div>
+            <div class="about-stat-number">7-Day</div>
+            <div class="about-stat-label">Free Replacements</div>
         </div>
     </div>
 
@@ -114,40 +114,6 @@
     <script src="js/pages/collection.js"></script>
     <script src="js/pages/product.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        // About-page specific animations (after main.js loads)
-        document.addEventListener('DOMContentLoaded', () => {
-            if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
-            gsap.registerPlugin(ScrollTrigger);
-
-            const sections = [
-                '.about-hero-content',
-                '.about-story',
-                '.about-stats-bar',
-                '.about-values .section-header',
-                '.values-grid',
-                '.about-cta'
-            ];
-            sections.forEach(sel => {
-                const el = document.querySelector(sel);
-                if (!el) return;
-                gsap.from(el, {
-                    y: 40, opacity: 0, duration: 0.9, ease: 'power2.out',
-                    scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
-                });
-            });
-
-            gsap.from('.about-stat', {
-                y: 30, opacity: 0, duration: 0.7, stagger: 0.15, ease: 'power2.out',
-                scrollTrigger: { trigger: '.about-stats-bar', start: 'top 85%' }
-            });
-
-            gsap.from('.value-card', {
-                y: 30, opacity: 0, duration: 0.7, stagger: 0.15, ease: 'power2.out',
-                scrollTrigger: { trigger: '.values-grid', start: 'top 85%' }
-            });
-        });
-    </script>
 </body>
 </html>
 

@@ -274,4 +274,46 @@
     box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 3.5px var(--color-accent);
 }
 
+/* Mobile touch optimizations for product cards & cart */
+@media (max-width: 768px) {
+    .product-card-color-swatch {
+        width: 22px;
+        height: 22px;
+        /* Invisible padding to enlarge tap area to ~44px */
+        outline: 11px solid transparent;
+    }
+
+    .product-card-colors {
+        gap: 12px;
+    }
+
+    .quantity-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+
+    .quantity-value {
+        width: 32px;
+        font-size: 0.95rem;
+    }
+
+    .cart-drawer {
+        max-width: 100%;
+    }
+
+    .close-cart {
+        min-width: 44px;
+        min-height: 44px;
+        font-size: 2.2rem;
+    }
+
+    .remove-item {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        font-size: 0.85rem;
+    }
+}
+
 

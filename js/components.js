@@ -302,20 +302,24 @@ function injectComponents() {
                 .hamburger-menu-btn {
                     display: none;
                     flex-direction: column;
-                    justify-content: space-between;
-                    width: 24px;
-                    height: 16px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    width: 44px;
+                    height: 44px;
                     background: none;
                     border: none;
                     cursor: pointer;
-                    padding: 0;
+                    padding: 10px;
                     z-index: 1001;
+                    -webkit-tap-highlight-color: transparent;
                 }
                 .hamburger-bar {
-                    width: 100%;
+                    width: 22px;
                     height: 2px;
                     background-color: var(--color-text);
                     transition: all 0.3s ease;
+                    display: block;
                 }
                 
                 /* Mobile Menu Overlay & Drawer */
@@ -341,12 +345,15 @@ function injectComponents() {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    width: 80%;
-                    max-width: 320px;
+                    width: 85%;
+                    max-width: 340px;
                     height: 100%;
                     background: #121212;
                     border-right: 1px solid rgba(196, 159, 112, 0.2);
                     padding: 2.5rem 1.8rem;
+                    padding-top: max(2.5rem, env(safe-area-inset-top));
+                    padding-bottom: max(2.5rem, env(safe-area-inset-bottom));
+                    padding-left: max(1.8rem, env(safe-area-inset-left));
                     display: flex;
                     flex-direction: column;
                     transform: translateX(-100%);
@@ -378,6 +385,12 @@ function injectComponents() {
                     cursor: pointer;
                     padding: 0;
                     line-height: 1;
+                    min-width: 44px;
+                    min-height: 44px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    -webkit-tap-highlight-color: transparent;
                 }
                 .close-mobile-menu:hover {
                     color: var(--color-primary);
@@ -396,11 +409,14 @@ function injectComponents() {
                     letter-spacing: 1px;
                     text-decoration: none;
                     font-family: 'Outfit', sans-serif;
+                    min-height: 44px;
+                    display: flex;
+                    align-items: center;
                 }
                 .mobile-nav-group {
                     display: flex;
                     flex-direction: column;
-                    gap: 0.8rem;
+                    gap: 0.5rem;
                 }
                 .mobile-nav-group-title {
                     font-size: 0.8rem;
@@ -416,12 +432,22 @@ function injectComponents() {
                     text-decoration: none;
                     transition: color 0.2s;
                     font-family: 'Outfit', sans-serif;
+                    min-height: 44px;
+                    display: flex;
+                    align-items: center;
                 }
                 .mobile-sub-link:hover {
                     color: var(--color-primary);
                 }
                 .mobile-menu-footer {
                     margin-top: auto;
+                    padding-top: 1.5rem;
+                }
+                .mobile-menu-footer .btn {
+                    min-height: 48px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
 
 

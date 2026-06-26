@@ -31,6 +31,19 @@
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    .site-footer {
+        padding-left: max(5%, env(safe-area-inset-left));
+        padding-right: max(5%, env(safe-area-inset-right));
+        padding-bottom: max(2rem, env(safe-area-inset-bottom));
+    }
+
+    .footer-links a {
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 0.25rem 0;
+    }
 }
 
 .footer-brand h3 {

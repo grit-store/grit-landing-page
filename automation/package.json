@@ -4,6 +4,10 @@
   "private": true,
   "scripts": {
     "get-token": "node get-shopify-token.js",
-    "automate": "node automate-mockups.js"
+    "generate": "node generate-mockups.js",
+    "generate:status": "node generate-mockups.js --status",
+    "generate:plan": "node generate-mockups.js --plan-only",
+    "upload": "node automate-mockups.js",
+    "upload:dry": "node automate-mockups.js --dry-run"
   }
 }

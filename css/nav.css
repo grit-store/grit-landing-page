@@ -126,5 +126,23 @@ img.hero-slide {
         font-size: 1rem;
         margin-bottom: 1.8rem;
     }
+
+    .hero-vertical-text {
+        display: none; /* Overflows on narrow phones */
+    }
+
+    .hero-content .btn {
+        min-height: 48px;
+        padding: 0.9rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-vertical-text {
+        font-size: 1rem;
+        letter-spacing: 8px;
+        right: 20px;
+    }
 }
 

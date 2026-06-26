@@ -711,6 +711,8 @@
 @media (max-width: 768px) {
     .collection-hero {
         padding: 6.5rem 5% 3rem;
+        padding-left: max(5%, env(safe-area-inset-left));
+        padding-right: max(5%, env(safe-area-inset-right));
     }
     .collection-hero.has-video-bg {
         min-height: 50vh;
@@ -718,6 +720,42 @@
     .category-section-title {
         font-size: 1.8rem;
         margin-bottom: 1.5rem;
+    }
+
+    /* Touch target improvements */
+    .accordion-header {
+        min-height: 52px;
+        padding: 1.2rem 0;
+    }
+
+    .filter-checkbox-label {
+        min-height: 44px;
+        padding: 0.4rem 0;
+        align-items: center;
+    }
+
+    .filter-checkbox-label input {
+        width: 20px;
+        height: 20px;
+    }
+
+    .mobile-filter-toggle {
+        min-height: 48px;
+    }
+
+    .sort-select {
+        min-height: 48px;
+        font-size: 1rem;
+    }
+
+    .hero-mute-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .collection-layout-wrapper {
+        padding-left: max(5%, env(safe-area-inset-left));
+        padding-right: max(5%, env(safe-area-inset-right));
     }
 }
 

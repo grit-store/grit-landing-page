@@ -194,6 +194,8 @@
 @media (max-width: 768px) {
     .pdp-section {
         padding: 6.5rem 5% var(--spacing-lg) !important;
+        padding-left: max(5%, env(safe-area-inset-left)) !important;
+        padding-right: max(5%, env(safe-area-inset-right)) !important;
     }
     .pdp-title {
         font-size: 1.75rem !important;
@@ -207,8 +209,18 @@
     .pdp-gallery {
         gap: 0.5rem;
     }
+    /* Horizontal scroll thumbnails instead of cramming 4 tiny ones */
     .pdp-thumbnails {
+        grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
         gap: 0.5rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.25rem;
+    }
+    .pdp-thumbnail {
+        scroll-snap-align: start;
+        min-width: 72px;
     }
     .pdp-options {
         gap: 1.2rem;
@@ -217,16 +229,36 @@
     .pdp-actions {
         margin-bottom: 2rem;
     }
+    /* Proper tap targets for variant buttons */
+    .variant-btn {
+        min-height: 44px;
+        padding: 0.7rem 1.3rem;
+        font-size: 0.95rem;
+    }
     .pdp-arrow-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
     }
     .pdp-arrow-btn.prev {
         left: 0.5rem;
     }
     .pdp-arrow-btn.next {
         right: 0.5rem;
+    }
+    /* Ensure description is readable */
+    .pdp-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    /* Trust badges stack nicely */
+    .trust-badges {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .trust-badge {
+        flex: 0 0 calc(50% - 0.5rem);
     }
 }
 

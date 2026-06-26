@@ -1,0 +1,69 @@
+{
+  "version": "1.0",
+  "description": "Product mockup generation configuration. Each product defines its graphic placement and color variants.",
+  "products": {
+    "the-so-baked-oversized-tee": {
+      "shopify_title": "The \"So Baked\" Oversized Tee",
+      "front_has_graphic": false,
+      "back_has_graphic": true,
+      "product_description": "Oversized tee with back graphic print reading 'I'M SO BAKED'",
+      "colors": {
+        "bottle-green": {
+          "display_name": "Bottle Green",
+          "shopify_color_code": "c_8"
+        },
+        "red": {
+          "display_name": "Red",
+          "shopify_color_code": "c_10"
+        },
+        "off-white": {
+          "display_name": "Off White",
+          "shopify_color_code": "c_61"
+        }
+      },
+      "generation_status": "completed"
+    },
+    "ricks-lineup-tee": {
+      "shopify_title": "Rick's Lineup Tee",
+      "front_has_graphic": true,
+      "back_has_graphic": true,
+      "product_description": "Oversized tee with front and back graphic prints",
+      "colors": {
+        "beige": {
+          "display_name": "Beige",
+          "shopify_color_code": "c_1"
+        },
+        "lavender": {
+          "display_name": "Lavender",
+          "shopify_color_code": "c_49"
+        },
+        "black": {
+          "display_name": "Black",
+          "shopify_color_code": "c_51"
+        }
+      },
+      "generation_status": "completed"
+    },
+    "zenitsu-oversized-tee": {
+      "shopify_title": "ZENITSU Oversized Tee",
+      "front_has_graphic": true,
+      "back_has_graphic": true,
+      "product_description": "Anime-themed oversized tee with Zenitsu graphic prints on front and back",
+      "colors": {
+        "black": {
+          "display_name": "Black",
+          "shopify_color_code": null
+        },
+        "red": {
+          "display_name": "Red",
+          "shopify_color_code": null
+        },
+        "off-white": {
+          "display_name": "Off White",
+          "shopify_color_code": null
+        }
+      },
+      "generation_status": "completed"
+    }
+  }
+}
